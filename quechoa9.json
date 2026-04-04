@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 05:55 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 06:07 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -23,12 +23,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1770403894211-card-bongro.png",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -64,7 +64,7 @@
                       "name": "🎙 VĂN MINH",
                       "stream_links": [
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk0",
+                          "id": "qc-1-philadelphia-76ers-vs-de-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -81,7 +81,7 @@
                           ]
                         },
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk1",
+                          "id": "qc-1-philadelphia-76ers-vs-de-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -98,7 +98,7 @@
                           ]
                         },
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk2",
+                          "id": "qc-1-philadelphia-76ers-vs-de-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -129,12 +129,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1765247633323-card-bongchuyen-2.png",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -147,6 +147,12 @@
               "text": "🎙 NGƯỜI CHYM",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra04:05|05.04SV.Leagu",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -170,7 +176,7 @@
                       "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk0",
+                          "id": "qc-2-gunma-bank-green-wings-w-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -187,7 +193,7 @@
                           ]
                         },
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk1",
+                          "id": "qc-2-gunma-bank-green-wings-w-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -204,7 +210,7 @@
                           ]
                         },
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk2",
+                          "id": "qc-2-gunma-bank-green-wings-w-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -235,12 +241,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1765247633323-card-bongchuyen-2.png",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -253,6 +259,12 @@
               "text": "🎙 KHU MẤN",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra04:05|05.04SV.Leagu",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -276,7 +288,7 @@
                       "name": "🎙 KHU MẤN",
                       "stream_links": [
                         {
-                          "id": "qc-3-ageo-w-vs-okayama-seagul-blv0-lnk0",
+                          "id": "qc-3-ageo-w-vs-okayama-seagul-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -307,12 +319,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1765247633323-card-bongchuyen-2.png",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -325,6 +337,12 @@
               "text": "🎙 PUMA",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra04:05|05.04SV.Leagu",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -348,7 +366,7 @@
                       "name": "🎙 PUMA",
                       "stream_links": [
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk0",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -365,7 +383,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk1",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -382,7 +400,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk2",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -413,12 +431,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1765247633323-card-bongchuyen-2.png",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -431,6 +449,12 @@
               "text": "🎙 KHOAI TÂY",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra04:05|05.04SV.Leagu",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -454,7 +478,7 @@
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk0",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -471,7 +495,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk1",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -488,7 +512,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk2",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -519,12 +543,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -537,6 +561,12 @@
               "text": "🎙 KHOAI TÂY",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra10:00|05.04V.League",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -560,7 +590,7 @@
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk0",
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -577,7 +607,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk1",
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -594,7 +624,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk2",
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -625,12 +655,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -643,6 +673,12 @@
               "text": "🎙 VĂN MINH",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra11:00|05.04V.League",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -666,7 +702,7 @@
                       "name": "🎙 VĂN MINH",
                       "stream_links": [
                         {
-                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk0",
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -683,7 +719,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk1",
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -700,7 +736,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk2",
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -731,12 +767,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -749,6 +785,12 @@
               "text": "🎙 NEM CHUA",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra11:00|05.04V.League",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -772,7 +814,7 @@
                       "name": "🎙 NEM CHUA",
                       "stream_links": [
                         {
-                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk0",
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -789,7 +831,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk1",
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -806,7 +848,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk2",
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -837,12 +879,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 2,
+            "background_color": "#0f3460",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
+            "url": "https://quechoa9.live/favicon.ico",
+            "width": 512,
+            "height": 512
           },
           "labels": [
             {
@@ -855,6 +897,12 @@
               "text": "🎙 KHOAI TÂY",
               "position": "top-right",
               "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra15:30|05.04FA CupWe",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             },
             {
@@ -878,7 +926,7 @@
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk0",
+                          "id": "qc-9-west-ham-vs-leeds-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -895,7 +943,7 @@
                           ]
                         },
                         {
-                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk1",
+                          "id": "qc-9-west-ham-vs-leeds-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -912,7 +960,7 @@
                           ]
                         },
                         {
-                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk2",
+                          "id": "qc-9-west-ham-vs-leeds-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,

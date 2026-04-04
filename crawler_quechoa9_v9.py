@@ -445,72 +445,89 @@ def build_channel(m: dict, all_streams: list, index: int) -> dict:
             labels.append({"text":f"🕐 {tl}","position":"bottom-left",
                            "color":"#1a5fa8","text_color":"#ffffff"})
 
-    # ── Stream links ──────────────────────────────────────────
-    slinks    = []
-    link_idx  = 0
+    # ── Nhóm stream theo BLV → mỗi BLV = 1 stream riêng ────────
+    #
+    # Cấu trúc MonPlayer:
+    #   sources > contents > streams[] > stream_links[]
+    #
+    # Mỗi phần tử trong streams[] hiện ra như 1 tab/nhóm riêng
+    # để người dùng chọn BLV trước, rồi chọn chất lượng bên trong.
 
-    if all_streams:
-        # Nhóm stream theo BLV
-        blv_groups: dict[str, list] = {}
-        for s in all_streams:
-            key = s.get("blv") or "Không rõ"
-            blv_groups.setdefault(key, []).append(s)
+    # Bước 1: gom stream theo BLV
+    blv_groups: dict[str, list] = {}
+    for s in all_streams:
+        key = s.get("blv") or "__no_blv__"
+        blv_groups.setdefault(key, []).append(s)
 
-        for blv_name, streams in blv_groups.items():
-            filtered = filter_match_streams(streams)
-            for s in filtered:
-                quality   = s.get("name","Auto")
-                # Đặt tên link: "BLV Tên — HD" hoặc "BLV Tên" nếu chỉ 1 chất lượng
-                if blv_name and blv_name != "Không rõ":
-                    if len(filtered) > 1:
-                        link_name = f"🎙 {blv_name} — {quality}"
-                    else:
-                        link_name = f"🎙 {blv_name}"
-                else:
-                    link_name = f"Link {link_idx+1}" if quality == "Auto" else quality
+    # Bước 2: tạo stream_links cho từng BLV
+    stream_objs = []
+    blv_idx     = 0
+    for blv_key, raw_streams in blv_groups.items():
+        filtered = filter_match_streams(raw_streams)
+        if not filtered:
+            continue
 
-                # Referer từ trang BLV tương ứng
-                referer = s.get("referer", m["blv_sources"][0]["detail_url"] if blv_sources else BASE_URL+"/")
+        # Tên nhóm stream (hiển thị trong MonPlayer khi chọn BLV)
+        if blv_key == "__no_blv__":
+            stream_label = f"Nguồn {blv_idx + 1}"
+        else:
+            stream_label = f"🎙 {blv_key}"
 
-                slinks.append({
-                    "id":      make_id(ch_id, "lnk", str(link_idx)),
-                    "name":    link_name,
-                    "type":    s["type"],
-                    "default": link_idx == 0,
-                    "url":     s["url"],
-                    "request_headers": [
-                        {"key":"Referer",    "value":referer},
-                        {"key":"User-Agent", "value":CHROME_UA},
-                    ],
-                })
-                link_idx += 1
+        # stream_links trong nhóm này (các chất lượng)
+        slinks = []
+        for lnk_idx, s in enumerate(filtered):
+            quality   = s.get("name", "Auto")
+            link_name = quality if quality != "Auto" else f"Link {lnk_idx + 1}"
+            referer   = s.get("referer", blv_sources[0]["detail_url"] if blv_sources else BASE_URL + "/")
+            slinks.append({
+                "id":      make_id(ch_id, f"blv{blv_idx}", f"lnk{lnk_idx}"),
+                "name":    link_name,
+                "type":    s["type"],
+                "default": lnk_idx == 0,
+                "url":     s["url"],
+                "request_headers": [
+                    {"key": "Referer",    "value": referer},
+                    {"key": "User-Agent", "value": CHROME_UA},
+                ],
+            })
 
-    # Fallback: không có stream → link trang đầu tiên
-    if not slinks:
-        fallback_url = blv_sources[0]["detail_url"] if blv_sources else BASE_URL+"/"
-        slinks.append({
-            "id":      make_id(ch_id, "lnk", "0"),
-            "name":    "Link 1",
-            "type":    "iframe",
-            "default": True,
-            "url":     fallback_url,
-            "request_headers": [
-                {"key":"Referer",    "value":fallback_url},
-                {"key":"User-Agent", "value":CHROME_UA},
-            ],
+        stream_objs.append({
+            "id":           make_id(ch_id, f"st{blv_idx}"),
+            "name":         stream_label,
+            "stream_links": slinks,
+        })
+        blv_idx += 1
+
+    # Fallback: không có stream nào
+    if not stream_objs:
+        fallback_url = blv_sources[0]["detail_url"] if blv_sources else BASE_URL + "/"
+        stream_objs.append({
+            "id":   make_id(ch_id, "st0"),
+            "name": "Trực tiếp",
+            "stream_links": [{
+                "id":      make_id(ch_id, "lnk0"),
+                "name":    "Link 1",
+                "type":    "iframe",
+                "default": True,
+                "url":     fallback_url,
+                "request_headers": [
+                    {"key": "Referer",    "value": fallback_url},
+                    {"key": "User-Agent", "value": CHROME_UA},
+                ],
+            }],
         })
 
     # ── Thumbnail ─────────────────────────────────────────────
-    img_obj = None
+    # MonPlayer báo lỗi nếu display="thumbnail-only" mà image=null
     if m["thumbnail"]:
         img_obj = {"padding":1,"background_color":"#ececec","display":"contain",
                    "url":m["thumbnail"],"width":1600,"height":1200}
+    else:
+        img_obj = PLACEHOLDER_IMG
 
-    # ── Stream group name ─────────────────────────────────────
-    parts = ["Trực tiếp"]
-    if m["league"]:  parts.append(m["league"])
-    if n_blv > 1:    parts.append(f"{n_blv} BLV")
-    stream_name = " · ".join(parts)
+    # ── Tên content ───────────────────────────────────────────
+    content_name = display_name
+    if m["league"]: content_name += f" · {m['league']}"
 
     return {
         "id":            ch_id,
@@ -524,13 +541,9 @@ def build_channel(m: dict, all_streams: list, index: int) -> dict:
             "id":   make_id(ch_id, "src"),
             "name": "QueCho9 Live",
             "contents": [{
-                "id":   make_id(ch_id, "ct"),
-                "name": display_name,
-                "streams": [{
-                    "id":           make_id(ch_id, "st"),
-                    "name":         stream_name,
-                    "stream_links": slinks,
-                }],
+                "id":      make_id(ch_id, "ct"),
+                "name":    content_name,
+                "streams": stream_objs,   # nhiều stream = nhiều BLV
             }],
         }],
     }

@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 04/04/2026 23:19 ICT (ICT)",
+  "description": "Cập nhật lúc 04/04/2026 23:59 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -230,7 +230,7 @@
         },
         {
           "id": "qc-3-chelsea-vs-port-vale",
-          "name": "Chelsea 0-0 Port Vale  🔴",
+          "name": "Chelsea 2-0 Port Vale  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -256,7 +256,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "⚽ 0-0",
+              "text": "⚽ 2-0",
               "position": "bottom-right",
               "color": "#E73131",
               "text_color": "#ffffff"
@@ -269,11 +269,11 @@
               "contents": [
                 {
                   "id": "qc-3-chelsea-vs-port-vale-ct",
-                  "name": "Chelsea 0-0 Port Vale  🔴",
+                  "name": "Chelsea 2-0 Port Vale  🔴",
                   "streams": [
                     {
                       "id": "qc-3-chelsea-vs-port-vale-st",
-                      "name": "Trực tiếp · Live16:15|04.04FA CupChelsea0:0Port ValeRRƯỢU MẬNĐặt cược · 2 BLV",
+                      "name": "Trực tiếp · Live16:15|04.04FA CupChelsea2:0Port ValeRRƯỢU MẬNĐặt cược · 2 BLV",
                       "stream_links": [
                         {
                           "id": "qc-3-chelsea-vs-port-vale-lnk-0",

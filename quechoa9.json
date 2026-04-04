@@ -17,8 +17,8 @@
       "image": null,
       "channels": [
         {
-          "id": "qc-1-fro-vs-fro",
-          "name": "FRO vs FRO",
+          "id": "qc-1-vietnam-u20-w-vs-thailan",
+          "name": "Vietnam U20 W vs Thailand U20 W",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -26,7 +26,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1770630810466-card-boxing.png",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
             "width": 1600,
             "height": 1200
           },
@@ -46,19 +46,19 @@
           ],
           "sources": [
             {
-              "id": "qc-1-fro-vs-fro-src",
+              "id": "qc-1-vietnam-u20-w-vs-thailan-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-1-fro-vs-fro-ct",
-                  "name": "FRO vs FRO",
+                  "id": "qc-1-vietnam-u20-w-vs-thailan-ct",
+                  "name": "Vietnam U20 W vs Thailand U20 W",
                   "streams": [
                     {
-                      "id": "qc-1-fro-vs-fro-st",
+                      "id": "qc-1-vietnam-u20-w-vs-thailan-st",
                       "name": "🎙 BÒ SỮA",
                       "stream_links": [
                         {
-                          "id": "qc-1-fro-vs-fro-lnk-0",
+                          "id": "qc-1-vietnam-u20-w-vs-thailan-lnk-0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -66,7 +66,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/fro-vs-fro-mcw-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/vietnam-u20-w-vs-thailand-u20-w-tdz-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -75,7 +75,7 @@
                           ]
                         },
                         {
-                          "id": "qc-1-fro-vs-fro-lnk-1",
+                          "id": "qc-1-vietnam-u20-w-vs-thailan-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -83,7 +83,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/fro-vs-fro-mcw-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/vietnam-u20-w-vs-thailand-u20-w-tdz-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -92,7 +92,7 @@
                           ]
                         },
                         {
-                          "id": "qc-1-fro-vs-fro-lnk-2",
+                          "id": "qc-1-vietnam-u20-w-vs-thailan-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -100,7 +100,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/fro-vs-fro-mcw-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/vietnam-u20-w-vs-thailand-u20-w-tdz-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -117,8 +117,8 @@
           ]
         },
         {
-          "id": "qc-2-togami-s-vs-calderano-h",
-          "name": "Togami S. vs Calderano H.",
+          "id": "qc-2-sc-freiburg-vs-bayern-m",
+          "name": "SC Freiburg vs Bayern München",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -126,13 +126,13 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1775186364318-blue-table-tennis-quote-facebook-post-1-.png",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 PUMA",
+              "text": "🎙 KHOAI TÂY",
               "position": "top-left",
               "color": "#00601f",
               "text_color": "#ffffff"
@@ -146,27 +146,27 @@
           ],
           "sources": [
             {
-              "id": "qc-2-togami-s-vs-calderano-h-src",
+              "id": "qc-2-sc-freiburg-vs-bayern-m-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-2-togami-s-vs-calderano-h-ct",
-                  "name": "Togami S. vs Calderano H.",
+                  "id": "qc-2-sc-freiburg-vs-bayern-m-ct",
+                  "name": "SC Freiburg vs Bayern München",
                   "streams": [
                     {
-                      "id": "qc-2-togami-s-vs-calderano-h-st",
-                      "name": "🎙 PUMA",
+                      "id": "qc-2-sc-freiburg-vs-bayern-m-st",
+                      "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-2-togami-s-vs-calderano-h-lnk-0",
-                          "name": "Full HD",
+                          "id": "qc-2-sc-freiburg-vs-bayern-m-lnk-0",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_full-hd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/togami-s-vs-calderano-h-cre-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -175,15 +175,15 @@
                           ]
                         },
                         {
-                          "id": "qc-2-togami-s-vs-calderano-h-lnk-1",
+                          "id": "qc-2-sc-freiburg-vs-bayern-m-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_hd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/togami-s-vs-calderano-h-cre-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -192,15 +192,15 @@
                           ]
                         },
                         {
-                          "id": "qc-2-togami-s-vs-calderano-h-lnk-2",
+                          "id": "qc-2-sc-freiburg-vs-bayern-m-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_sd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/togami-s-vs-calderano-h-cre-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -217,8 +217,8 @@
           ]
         },
         {
-          "id": "qc-3-leicester-vs-preston",
-          "name": "Leicester vs Preston",
+          "id": "qc-3-mallorca-vs-real-madrid",
+          "name": "Mallorca vs Real Madrid",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -246,19 +246,19 @@
           ],
           "sources": [
             {
-              "id": "qc-3-leicester-vs-preston-src",
+              "id": "qc-3-mallorca-vs-real-madrid-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-3-leicester-vs-preston-ct",
-                  "name": "Leicester vs Preston",
+                  "id": "qc-3-mallorca-vs-real-madrid-ct",
+                  "name": "Mallorca vs Real Madrid",
                   "streams": [
                     {
-                      "id": "qc-3-leicester-vs-preston-st",
+                      "id": "qc-3-mallorca-vs-real-madrid-st",
                       "name": "🎙 DƯA HẤU",
                       "stream_links": [
                         {
-                          "id": "qc-3-leicester-vs-preston-lnk-0",
+                          "id": "qc-3-mallorca-vs-real-madrid-lnk-0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -266,7 +266,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/leicester-vs-preston-iky-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/mallorca-vs-real-madrid-ehr-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -275,7 +275,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-leicester-vs-preston-lnk-1",
+                          "id": "qc-3-mallorca-vs-real-madrid-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -283,7 +283,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/leicester-vs-preston-iky-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/mallorca-vs-real-madrid-ehr-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -292,7 +292,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-leicester-vs-preston-lnk-2",
+                          "id": "qc-3-mallorca-vs-real-madrid-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -300,7 +300,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/leicester-vs-preston-iky-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/mallorca-vs-real-madrid-ehr-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -317,74 +317,8 @@
           ]
         },
         {
-          "id": "qc-4-joshua-filler-vs-justin",
-          "name": "Joshua Filler vs Justin Bergman",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1767467876769-card-bida.png",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🎙 KHU MẤN",
-              "position": "top-left",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "● Live",
-              "position": "top-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-4-joshua-filler-vs-justin-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-4-joshua-filler-vs-justin-ct",
-                  "name": "Joshua Filler vs Justin Bergman",
-                  "streams": [
-                    {
-                      "id": "qc-4-joshua-filler-vs-justin-st",
-                      "name": "🎙 KHU MẤN",
-                      "stream_links": [
-                        {
-                          "id": "qc-4-joshua-filler-vs-justin-lnk-0",
-                          "name": "Full HD",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_lachanh_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/joshua-filler-vs-justin-bergman-xme-03-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-5-gil-vicente-vs-avs",
-          "name": "GIL Vicente vs AVS",
+          "id": "qc-4-bayer-leverkusen-vs-vfl",
+          "name": "Bayer Leverkusen vs VfL Wolfsburg",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -412,19 +346,19 @@
           ],
           "sources": [
             {
-              "id": "qc-5-gil-vicente-vs-avs-src",
+              "id": "qc-4-bayer-leverkusen-vs-vfl-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-5-gil-vicente-vs-avs-ct",
-                  "name": "GIL Vicente vs AVS",
+                  "id": "qc-4-bayer-leverkusen-vs-vfl-ct",
+                  "name": "Bayer Leverkusen vs VfL Wolfsburg",
                   "streams": [
                     {
-                      "id": "qc-5-gil-vicente-vs-avs-st",
+                      "id": "qc-4-bayer-leverkusen-vs-vfl-st",
                       "name": "🎙 NEM CHUA",
                       "stream_links": [
                         {
-                          "id": "qc-5-gil-vicente-vs-avs-lnk-0",
+                          "id": "qc-4-bayer-leverkusen-vs-vfl-lnk-0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -432,7 +366,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/gil-vicente-vs-avs-wyv-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -441,7 +375,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-gil-vicente-vs-avs-lnk-1",
+                          "id": "qc-4-bayer-leverkusen-vs-vfl-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -449,7 +383,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/gil-vicente-vs-avs-wyv-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -458,7 +392,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-gil-vicente-vs-avs-lnk-2",
+                          "id": "qc-4-bayer-leverkusen-vs-vfl-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -466,7 +400,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/gil-vicente-vs-avs-wyv-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -483,107 +417,7 @@
           ]
         },
         {
-          "id": "qc-6-sc-freiburg-vs-bayern-m",
-          "name": "SC Freiburg vs Bayern München",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🎙 KHOAI TÂY",
-              "position": "top-left",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 Sắp diễn ra",
-              "position": "top-right",
-              "color": "#d54f1a",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-6-sc-freiburg-vs-bayern-m-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-6-sc-freiburg-vs-bayern-m-ct",
-                  "name": "SC Freiburg vs Bayern München",
-                  "streams": [
-                    {
-                      "id": "qc-6-sc-freiburg-vs-bayern-m-st",
-                      "name": "🎙 KHOAI TÂY",
-                      "stream_links": [
-                        {
-                          "id": "qc-6-sc-freiburg-vs-bayern-m-lnk-0",
-                          "name": "Link 1",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-6-sc-freiburg-vs-bayern-m-lnk-1",
-                          "name": "HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-6-sc-freiburg-vs-bayern-m-lnk-2",
-                          "name": "SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju",
+          "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju",
           "name": "Dương Quốc Hoàng vs Pijus Labutis",
           "type": "single",
           "display": "thumbnail-only",
@@ -612,19 +446,19 @@
           ],
           "sources": [
             {
-              "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-src",
+              "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-ct",
+                  "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-ct",
                   "name": "Dương Quốc Hoàng vs Pijus Labutis",
                   "streams": [
                     {
-                      "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-st",
+                      "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-st",
                       "name": "🎙 PUMA",
                       "stream_links": [
                         {
-                          "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-lnk-0",
+                          "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-lnk-0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -632,7 +466,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-xte-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -641,7 +475,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-lnk-1",
+                          "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -649,7 +483,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-xte-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -658,7 +492,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-d-ng-qu-c-ho-ng-vs-piju-lnk-2",
+                          "id": "qc-5-d-ng-qu-c-ho-ng-vs-piju-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -666,7 +500,7 @@
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-xte-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -683,74 +517,8 @@
           ]
         },
         {
-          "id": "qc-8-kledio-kaci-vs-shane-van",
-          "name": "Kledio Kaci vs Shane Van Boening",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1767467876769-card-bida.png",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🎙 KHU MẤN",
-              "position": "top-left",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 Sắp diễn ra",
-              "position": "top-right",
-              "color": "#d54f1a",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-8-kledio-kaci-vs-shane-van-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-8-kledio-kaci-vs-shane-van-ct",
-                  "name": "Kledio Kaci vs Shane Van Boening",
-                  "streams": [
-                    {
-                      "id": "qc-8-kledio-kaci-vs-shane-van-st",
-                      "name": "🎙 KHU MẤN",
-                      "stream_links": [
-                        {
-                          "id": "qc-8-kledio-kaci-vs-shane-van-lnk-0",
-                          "name": "Full HD",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_lachanh_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/kledio-kaci-vs-shane-van-boening-iuq-03-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-9-budaiya-vs-al-hidd",
-          "name": "Budaiya vs Al-Hidd",
+          "id": "qc-6-chelsea-vs-port-vale",
+          "name": "Chelsea vs Port Vale",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -764,7 +532,7 @@
           },
           "labels": [
             {
-              "text": "🎙 VĂN MINH",
+              "text": "🎙 RƯỢU MẬN",
               "position": "top-left",
               "color": "#00601f",
               "text_color": "#ffffff"
@@ -778,27 +546,27 @@
           ],
           "sources": [
             {
-              "id": "qc-9-budaiya-vs-al-hidd-src",
+              "id": "qc-6-chelsea-vs-port-vale-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-9-budaiya-vs-al-hidd-ct",
-                  "name": "Budaiya vs Al-Hidd",
+                  "id": "qc-6-chelsea-vs-port-vale-ct",
+                  "name": "Chelsea vs Port Vale",
                   "streams": [
                     {
-                      "id": "qc-9-budaiya-vs-al-hidd-st",
-                      "name": "🎙 VĂN MINH",
+                      "id": "qc-6-chelsea-vs-port-vale-st",
+                      "name": "🎙 RƯỢU MẬN",
                       "stream_links": [
                         {
-                          "id": "qc-9-budaiya-vs-al-hidd-lnk-0",
+                          "id": "qc-6-chelsea-vs-port-vale-lnk-0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/budaiya-vs-al-hidd-enn-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -807,15 +575,15 @@
                           ]
                         },
                         {
-                          "id": "qc-9-budaiya-vs-al-hidd-lnk-1",
+                          "id": "qc-6-chelsea-vs-port-vale-lnk-1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/budaiya-vs-al-hidd-enn-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
                             },
                             {
                               "key": "User-Agent",
@@ -824,15 +592,215 @@
                           ]
                         },
                         {
-                          "id": "qc-9-budaiya-vs-al-hidd-lnk-2",
+                          "id": "qc-6-chelsea-vs-port-vale-lnk-2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/budaiya-vs-al-hidd-enn-03-04-2026"
+                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-7-southampton-vs-arsenal",
+          "name": "Southampton vs Arsenal",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🎙 DƯA HẤU",
+              "position": "top-left",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 Sắp diễn ra",
+              "position": "top-right",
+              "color": "#d54f1a",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-7-southampton-vs-arsenal-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-7-southampton-vs-arsenal-ct",
+                  "name": "Southampton vs Arsenal",
+                  "streams": [
+                    {
+                      "id": "qc-7-southampton-vs-arsenal-st",
+                      "name": "🎙 DƯA HẤU",
+                      "stream_links": [
+                        {
+                          "id": "qc-7-southampton-vs-arsenal-lnk-0",
+                          "name": "Full HD",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_full-hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-7-southampton-vs-arsenal-lnk-1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-7-southampton-vs-arsenal-lnk-2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-8-atletico-madrid-vs-barce",
+          "name": "Atletico Madrid vs Barcelona",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🎙 RƯỢU MẬN",
+              "position": "top-left",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 Sắp diễn ra",
+              "position": "top-right",
+              "color": "#d54f1a",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-8-atletico-madrid-vs-barce-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-8-atletico-madrid-vs-barce-ct",
+                  "name": "Atletico Madrid vs Barcelona",
+                  "streams": [
+                    {
+                      "id": "qc-8-atletico-madrid-vs-barce-st",
+                      "name": "🎙 RƯỢU MẬN",
+                      "stream_links": [
+                        {
+                          "id": "qc-8-atletico-madrid-vs-barce-lnk-0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-8-atletico-madrid-vs-barce-lnk-1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-8-atletico-madrid-vs-barce-lnk-2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
                             },
                             {
                               "key": "User-Agent",

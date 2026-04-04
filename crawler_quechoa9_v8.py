@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════╗
-║   Crawler Trận Đấu Tâm Điểm — quechoa9.live  v7             ║
-║   Schema khớp 100% với MonPlayer (dựa trên tctv.pro mẫu)    ║
+║   Crawler Trận Đấu Tâm Điểm — quechoa9.live  v8             ║
+║   + Tên kênh hiển thị ngày giờ thi đấu                      ║
+║   + Label tỉ số cập nhật theo trạng thái trận               ║
+║   + Parse ngày/giờ chuẩn, group theo ngày                   ║
 ╚══════════════════════════════════════════════════════════════╝
 Cài đặt: pip install cloudscraper beautifulsoup4 lxml
 """
 
 import argparse, hashlib, json, re, sys, time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
 
 try:
@@ -21,21 +23,8 @@ BASE_URL    = "https://quechoa9.live"
 OUTPUT_FILE = "quechoa9_iptv.json"
 CHROME_UA   = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
-# Regex tìm thumbnail CDN quechoa (dạng pub-*.r2.dev/quechoa_thumbs/kaytee-*.webp)
-CDN_THUMB_RE = re.compile(
-    r'https?://pub-[a-f0-9]+\.r2\.dev/quechoa[_-]?thumbs?/[^\s\'"<>\\]+\.webp(?:\?[^\s\'"<>\\]*)?',
-    re.I
-)
-# Logo fallback từ storage.quechoa*.live/logos/teams (không match backgrounds)
-LOGO_TEAMS_RE = re.compile(
-    r'https?://storage\.quechoa\d*\.live/logos/(?:teams|leagues)/[^\s\'"<>\\]+\.(?:png|jpg|webp)',
-    re.I
-)
-# Logo từ api-sports.io (football, basketball...)
-API_LOGO_RE = re.compile(
-    r'https?://media\.api-sports\.io/[^\s\'"<>\\]+/teams/\d+\.png',
-    re.I
-)
+# Múi giờ Việt Nam UTC+7
+VN_TZ = timezone(timedelta(hours=7))
 
 def make_id(*parts):
     raw  = "-".join(str(p) for p in parts if p)
@@ -97,6 +86,36 @@ def filter_match_streams(streams):
 
 def parse_html(html): return BeautifulSoup(html,"lxml")
 
+# ── Parse ngày giờ từ chuỗi match_time ───────────────────────
+def parse_match_datetime(match_time: str) -> tuple[str, str, str]:
+    """
+    Phân tích chuỗi giờ/ngày từ card.
+    Trả về (time_str, date_str, sort_key)
+    Ví dụ: "20:00 | 05.04" → ("20:00", "05/04", "04-05 20:00")
+    """
+    if not match_time:
+        return ("", "", "")
+
+    # Dạng: "20:00 | 05.04" hoặc "20:00|05.04"
+    m = re.search(r"(\d{1,2}):(\d{2})\s*\|?\s*(\d{1,2})[./](\d{1,2})", match_time)
+    if m:
+        hh, mm, day, mon = m.group(1), m.group(2), m.group(3).zfill(2), m.group(4).zfill(2)
+        time_str = f"{hh}:{mm}"
+        date_str = f"{day}/{mon}"
+        sort_key = f"{mon}-{day} {hh}:{mm}"
+        return (time_str, date_str, sort_key)
+
+    # Chỉ có giờ: "20:00"
+    m2 = re.search(r"(\d{1,2}):(\d{2})", match_time)
+    if m2:
+        hh, mm = m2.group(1), m2.group(2)
+        today = datetime.now(VN_TZ)
+        date_str = today.strftime("%d/%m")
+        sort_key = f"{today.strftime('%m-%d')} {hh}:{mm}"
+        return (f"{hh}:{mm}", date_str, sort_key)
+
+    return (match_time, "", "")
+
 def find_match_cards(bs, only_featured=True):
     all_cards = find_all_with(bs,"a","hover:border-[#83ff65]","rounded-xl","block")
     if not only_featured or not all_cards:
@@ -139,19 +158,33 @@ def parse_card(card):
     href = card.get("href","")
     detail_url = href if href.startswith("http") else urljoin(BASE_URL,href)
     raw_text   = card.get_text(" ",strip=True)
-    if re.search(r"\bLive\b",raw_text,re.I):              status = "live"
+
+    # Trạng thái trận
+    if re.search(r"\bLive\b",raw_text,re.I):                   status = "live"
     elif re.search(r"Kết thúc|Finished|\bFT\b",raw_text,re.I): status = "finished"
-    else:                                                   status = "upcoming"
+    else:                                                        status = "upcoming"
+
+    # Giờ thi đấu (raw)
     time_div = next((d for d in card.find_all("div",class_="from-[#051f00]") if d.get_text(strip=True)),None)
-    match_time = time_div.get_text(strip=True) if time_div else ""
-    if not match_time:
-        m = re.search(r"\d{1,2}:\d{2}\s*\|\s*\d{2}\.\d{2}",raw_text)
-        if m: match_time = m.group(0)
+    match_time_raw = time_div.get_text(strip=True) if time_div else ""
+    if not match_time_raw:
+        m = re.search(r"\d{1,2}:\d{2}\s*\|?\s*\d{2}[./]\d{2}",raw_text)
+        if m: match_time_raw = m.group(0)
+        else:
+            m2 = re.search(r"\d{1,2}:\d{2}",raw_text)
+            if m2: match_time_raw = m2.group(0)
+
+    # Parse ngày giờ chuẩn
+    time_str, date_str, sort_key = parse_match_datetime(match_time_raw)
+
+    # Giải đấu
     league = ""
     for d in card.find_all("div",class_="justify-center"):
         if not has_classes(d,"gap-1","w-full"): continue
         txt = d.get_text(strip=True)
         if txt and len(txt)>3 and not re.fullmatch(r"[\d:\s]+",txt): league=txt; break
+
+    # Đội bóng
     home_team = away_team = ""
     team_texts = []
     for d in [d for d in card.find_all("div",class_="flex-1") if has_classes(d,"flex-col","items-center")]:
@@ -162,140 +195,91 @@ def parse_card(card):
     if not home_team:
         vm = re.search(r"([\w\u00C0-\u024F\u1E00-\u1EFF][\w\u00C0-\u024F\u1E00-\u1EFF .'-]{1,34}?)\s+(?:VS|vs)\s+([\w\u00C0-\u024F\u1E00-\u1EFF][\w\u00C0-\u024F\u1E00-\u1EFF .'-]{1,34})",raw_text,re.UNICODE)
         if vm: home_team,away_team = vm.group(1).strip(),vm.group(2).strip()
+
+    # Tỉ số
     score = ""
     score_div = next((d for d in card.find_all("div",class_="rounded-[20px]") if has_classes(d,"border-[#83ff65]")),None)
     if score_div:
         nums = re.findall(r"\d+",score_div.get_text())
-        score = f"{nums[0]}:{nums[1]}" if len(nums)>=2 else ("VS" if score_div.get_text(strip=True).upper()=="VS" else "")
+        score = f"{nums[0]}-{nums[1]}" if len(nums)>=2 else ("VS" if score_div.get_text(strip=True).upper()=="VS" else "")
+
     blv = _extract_blv(card)
 
-    # Thumbnail: ưu tiên CDN quechoa_thumbs, sau đó data-src/src
     thumbnail = ""
-    card_html = str(card)
+    img = card.find("img")
+    if img:
+        src = img.get("src") or img.get("data-src") or ""
+        thumbnail = src if src.startswith("http") else urljoin(BASE_URL,src)
 
-    # ① CDN pattern trực tiếp trong card HTML (background-image hoặc data attribute)
-    cdn_m = CDN_THUMB_RE.search(card_html)
-    if cdn_m:
-        thumbnail = cdn_m.group(0)
+    base_title = (f"{home_team} vs {away_team}" if home_team and away_team
+                  else home_team or re.sub(r"\s{2,}"," ",raw_text)[:60])
+    if not base_title or not detail_url: return None
 
-    # ② <img> data-src (lazy loading) hoặc src
-    if not thumbnail:
-        img = card.find("img")
-        if img:
-            src = img.get("data-src") or img.get("src") or ""
-            if src and src.startswith("http"):
-                thumbnail = src
+    return {
+        "base_title":   base_title,
+        "home_team":    home_team,
+        "away_team":    away_team,
+        "score":        score,
+        "status":       status,
+        "league":       league,
+        "match_time":   match_time_raw,
+        "time_str":     time_str,
+        "date_str":     date_str,
+        "sort_key":     sort_key,
+        "detail_url":   detail_url,
+        "thumbnail":    thumbnail,
+        "blv":          blv,
+    }
 
-    # ③ background-image trong style attribute
-    if not thumbnail:
-        for bg in re.finditer(r'url[(][^)]*?(https?://[^)]+)[)]', card_html):
-            u = bg.group(1)
-            if not u.endswith(".ico"):
-                thumbnail = u; break
-    title = (f"{home_team} vs {away_team}" if home_team and away_team
-             else home_team or re.sub(r"\s{2,}"," ",raw_text)[:60])
-    if not title or not detail_url: return None
-    return {"title":title,"home_team":home_team,"away_team":away_team,"score":score,
-            "status":status,"league":league,"match_time":match_time,
-            "detail_url":detail_url,"thumbnail":thumbnail,"blv":blv}
+def build_display_title(m: dict) -> str:
+    """
+    Tên kênh hiển thị trên MonPlayer:
+    - Live có tỉ số:   "Man City 2-1 Arsenal  🔴"
+    - Live chưa có:    "Man City vs Arsenal  🔴 LIVE"
+    - Upcoming:        "Man City vs Arsenal  🕐 20:00 | 05/04"
+    - Finished:        "Man City vs Arsenal  ✅ 2-1"
+    """
+    base  = m["base_title"]
+    score = m["score"]
+    t     = m["time_str"]
+    d     = m["date_str"]
+
+    if m["status"] == "live":
+        if score and score != "VS":
+            # Nhúng tỉ số vào giữa tên
+            home, away = m["home_team"], m["away_team"]
+            if home and away:
+                return f"{home} {score} {away}  🔴"
+        return f"{base}  🔴 LIVE"
+
+    elif m["status"] == "finished":
+        if score and score != "VS":
+            home, away = m["home_team"], m["away_team"]
+            if home and away:
+                return f"{home} {score} {away}  ✅"
+        return f"{base}  ✅ KT"
+
+    else:  # upcoming
+        time_info = ""
+        if t and d:   time_info = f"  🕐 {t} | {d}"
+        elif t:       time_info = f"  🕐 {t}"
+        elif d:       time_info = f"  📅 {d}"
+        return f"{base}{time_info}"
 
 def extract_matches(html, only_featured=True):
     bs = parse_html(html)
     result, seen = [], set()
     for card in find_match_cards(bs, only_featured):
         m = parse_card(card)
-        if m and m["title"].lower() not in seen:
-            seen.add(m["title"].lower()); result.append(m)
+        if m and m["base_title"].lower() not in seen:
+            seen.add(m["base_title"].lower()); result.append(m)
     return result
-
-def extract_match_meta(bs, html: str, detail_url: str) -> dict:
-    """
-    Lấy thumbnail + logo_a + logo_b từ trang chi tiết quechoa9.live (Next.js).
-
-    Nguồn ưu tiên:
-      ① __NEXT_DATA__ JSON: CDN thumb + logo_a/logo_b
-      ② CDN regex toàn HTML: quechoa_thumbs/*.webp
-      ③ storage.quechoa*.live/logos/teams/*.png (KHÔNG lấy backgrounds/)
-      ④ media.api-sports.io/*/teams/*.png
-    """
-    result = {"thumbnail": "", "logo_a": "", "logo_b": ""}
-
-    # ① __NEXT_DATA__ (Next.js) — chứa toàn bộ match data
-    next_tag = bs.find("script", id="__NEXT_DATA__")
-    data_str = next_tag.string if (next_tag and next_tag.string) else ""
-
-    if data_str:
-        # CDN thumbnail
-        m = CDN_THUMB_RE.search(data_str)
-        if m:
-            result["thumbnail"] = m.group(0)
-
-        # logo_a / logo_b từ JSON keys
-        for json_key, out_key in [
-            ("logo_a","logo_a"), ("logo_b","logo_b"),
-            ("logoA","logo_a"),  ("logoB","logo_b"),
-            ("logo_home","logo_a"), ("logo_away","logo_b"),
-        ]:
-            if result[out_key]:
-                continue
-            km = re.search('"' + json_key + r'"\s*:\s*"(https?://[^"]+\.(?:png|jpg|webp)[^"]*)"', data_str)
-            if km:
-                result[out_key] = km.group(1)
-
-        # thumb/thumbnail key nếu chưa có CDN
-        if not result["thumbnail"]:
-            for key_re in (
-                r'"(?:thumb|thumbnail|poster)"\s*:\s*"(https?://[^"]+\.webp[^"]*)"',
-                r'"(?:thumb|thumbnail|poster)"\s*:\s*"(https?://[^"]+\.(?:jpg|jpeg|png)[^"]*)"',
-            ):
-                km = re.search(key_re, data_str)
-                if km and "opengraph" not in km.group(1) and "backgrounds" not in km.group(1):
-                    result["thumbnail"] = km.group(1)
-                    break
-
-    # ② CDN regex toàn HTML (fallback nếu __NEXT_DATA__ không có)
-    if not result["thumbnail"]:
-        m = CDN_THUMB_RE.search(html)
-        if m:
-            result["thumbnail"] = m.group(0)
-
-    # ③ Logo từ storage.quechoa*.live/logos/teams/ (bỏ backgrounds/)
-    if not result["logo_a"]:
-        ms = LOGO_TEAMS_RE.findall(html)
-        if ms:
-            result["logo_a"] = ms[0]
-        if len(ms) > 1:
-            result["logo_b"] = ms[1]
-
-    # ④ Logo từ media.api-sports.io
-    if not result["logo_a"]:
-        ms = API_LOGO_RE.findall(html)
-        if ms:
-            result["logo_a"] = ms[0]
-        if len(ms) > 1:
-            result["logo_b"] = ms[1]
-
-    # Dùng logo_a làm thumbnail nếu vẫn chưa có
-    if not result["thumbnail"] and result["logo_a"]:
-        result["thumbnail"] = result["logo_a"]
-
-    return result
-
 
 def extract_streams(detail_url, scraper):
-    """Trả về (streams, thumbnail) từ trang chi tiết trận đấu."""
-    if not detail_url: return [], ""
+    if not detail_url: return []
     html = fetch(detail_url, scraper, retries=2)
-    if not html: return [], ""
+    if not html: return []
     bs = parse_html(html)
-
-    # ── Thumbnail + logos từ detail page ────────────────────────
-    meta = extract_match_meta(bs, html, detail_url)
-    thumbnail = meta["thumbnail"]
-    logo_a    = meta["logo_a"]
-    logo_b    = meta["logo_b"]
-
-    # ── Stream links ──────────────────────────────────────────
     seen, raw = set(), []
     def add(name, url, kind):
         url = url.strip()
@@ -320,70 +304,74 @@ def extract_streams(detail_url, scraper):
         href,txt = a["href"],a.get_text(strip=True)
         if re.search(r"xem|live|watch|stream|truc.?tiep|play|server",txt+href,re.I):
             if href.startswith("http") and href!=detail_url: add(txt or "Link",href,"hls")
-    if not raw:
-        add("Trang trực tiếp",detail_url,"iframe")
-        return raw, thumbnail, logo_a, logo_b
-    return filter_match_streams(raw), thumbnail, logo_a, logo_b
+    if not raw: add("Trang trực tiếp",detail_url,"iframe"); return raw
+    return filter_match_streams(raw)
 
-# ── Schema khớp file mẫu MonPlayer (tctv.pro / quechoa.json) ──
+# ── Build channel ─────────────────────────────────────────────
 
 def build_channel(m, streams, index):
-    ch_id = make_id("qc", str(index), re.sub(r"[^a-z0-9]","-",m["title"].lower())[:24])
-    blv   = m.get("blv","")
+    ch_id        = make_id("qc", str(index), re.sub(r"[^a-z0-9]","-",m["base_title"].lower())[:24])
+    blv          = m.get("blv","")
+    display_name = build_display_title(m)
 
-    # ── Labels: status + BLV + thời gian + tỉ số ───────────────
+    # Labels
     labels = []
 
-    # Status badge (top-left)
-    status_cfg = {
-        "live":     {"text": "● Live",        "color": "#E73131", "text_color": "#ffffff"},
-        "upcoming": {"text": "⏳ Sắp diễn ra", "color": "#d54f1a", "text_color": "#ffffff"},
-        "finished": {"text": "✅ Kết thúc",    "color": "#555555", "text_color": "#ffffff"},
-    }.get(m["status"], {"text": "● Live", "color": "#E73131", "text_color": "#ffffff"})
-    labels.append({
-        "text":       status_cfg["text"],
-        "position":   "top-left",
-        "color":      status_cfg["color"],
-        "text_color": status_cfg["text_color"],
-    })
+    # Label 1: tỉ số (nếu đang live hoặc kết thúc và có tỉ số)
+    score = m.get("score","")
+    if score and score != "VS":
+        if m["status"] == "live":
+            labels.append({
+                "text":       f"⚽ {score}",
+                "position":   "bottom-right",
+                "color":      "#E73131",
+                "text_color": "#ffffff",
+            })
+        elif m["status"] == "finished":
+            labels.append({
+                "text":       f"KT {score}",
+                "position":   "bottom-right",
+                "color":      "#444444",
+                "text_color": "#ffffff",
+            })
 
-    # BLV badge (top-right, nếu có)
+    # Label 2: ngày giờ (upcoming)
+    if m["status"] == "upcoming" and (m["time_str"] or m["date_str"]):
+        time_label = ""
+        if m["time_str"] and m["date_str"]: time_label = f"{m['time_str']} | {m['date_str']}"
+        elif m["time_str"]:                 time_label = m["time_str"]
+        elif m["date_str"]:                 time_label = m["date_str"]
+        if time_label:
+            labels.append({
+                "text":       f"🕐 {time_label}",
+                "position":   "bottom-left",
+                "color":      "#d54f1a",
+                "text_color": "#ffffff",
+            })
+
+    # Label 3: BLV (top-left)
     if blv:
         labels.append({
             "text":       f"🎙 {blv}",
-            "position":   "top-right",
-            "color":      "#006020",
+            "position":   "top-left",
+            "color":      "#00601f",
             "text_color": "#ffffff",
         })
 
-    # Thời gian (bottom-left)
-    if m.get("match_time"):
-        labels.append({
-            "text":       f"⏰ {m['match_time']}",
-            "position":   "bottom-left",
-            "color":      "#00000099",
-            "text_color": "#ffffff",
-        })
+    # Label 4: trạng thái (top-right)
+    status_label = {
+        "live":     {"text": "● Live",         "color": "#E73131", "text_color": "#ffffff"},
+        "upcoming": {"text": "🕐 Sắp diễn ra", "color": "#d54f1a", "text_color": "#ffffff"},
+        "finished": {"text": "✅ Kết thúc",    "color": "#444444", "text_color": "#ffffff"},
+    }.get(m["status"], {"text": "● Live", "color": "#E73131", "text_color": "#ffffff"})
+    labels.append({
+        "text":       status_label["text"],
+        "position":   "top-right" if blv else "top-left",
+        "color":      status_label["color"],
+        "text_color": status_label["text_color"],
+    })
 
-    # Tỉ số (bottom-right) nếu đang live hoặc kết thúc
-    score = m.get("score","")
-    league = m.get("league","")
-    if score and score != "VS" and m["status"] in ("live","finished"):
-        labels.append({
-            "text":       f"🥅 {score}",
-            "position":   "bottom-right",
-            "color":      "#00000099",
-            "text_color": "#ffff00",
-        })
-    elif league:
-        labels.append({
-            "text":       league[:30],
-            "position":   "bottom-right",
-            "color":      "#00000099",
-            "text_color": "#ffffff",
-        })
-
-    # request_headers — chỉ Referer + User-Agent (bỏ Origin, khớp mẫu)
+    # Headers
     req_headers = [
         {"key": "Referer",    "value": m["detail_url"]},
         {"key": "User-Agent", "value": CHROME_UA},
@@ -412,7 +400,7 @@ def build_channel(m, streams, index):
             "request_headers": req_headers,
         })
 
-    # Image — khớp với mẫu quechoa.json
+    # Thumbnail
     img_obj = None
     if m["thumbnail"]:
         img_obj = {
@@ -424,11 +412,13 @@ def build_channel(m, streams, index):
             "height":           1200,
         }
 
+    # Tên nguồn stream
     stream_name = f"🎙 {blv}" if blv else "Trực tiếp"
+    if m["league"]: stream_name += f" · {m['league']}"
 
     return {
         "id":            ch_id,
-        "name":          m["title"],
+        "name":          display_name,
         "type":          "single",
         "display":       "thumbnail-only",
         "enable_detail": False,
@@ -439,7 +429,7 @@ def build_channel(m, streams, index):
             "name": "QueCho9 Live",
             "contents": [{
                 "id":   make_id(ch_id, "ct"),
-                "name": m["title"],
+                "name": display_name,
                 "streams": [{
                     "id":           make_id(ch_id, "st"),
                     "name":         stream_name,
@@ -450,17 +440,11 @@ def build_channel(m, streams, index):
     }
 
 def build_iptv_json(channels, now_str, group_name):
-    """
-    Root schema khớp với tctv.pro / quechoa.json:
-    - Có 'description' và 'disable_ads'
-    - 'image' dùng {'type':'cover','url':...}
-    - group KHÔNG có 'display', 'grid_number', 'enable_detail' ở root group
-    """
     return {
         "id":          "quechoa9-live",
         "name":        "QueCho9 — Trực tiếp bóng đá",
         "url":         BASE_URL + "/",
-        "description": "Xem trực tiếp bóng đá và thể thao tổng hợp",
+        "description": f"Cập nhật lúc {now_str} (ICT)",
         "disable_ads": True,
         "color":       "#0f3460",
         "grid_number": 3,
@@ -481,10 +465,11 @@ def main():
     args = ap.parse_args()
 
     log("\n" + "═"*62)
-    log("  🏟  CRAWLER — quechoa9.live  v7  (schema MonPlayer)")
+    log("  🏟  CRAWLER — quechoa9.live  v8  (ngày giờ + tỉ số)")
     log("═"*62 + "\n")
 
-    now_str       = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    now_vn        = datetime.now(VN_TZ)
+    now_str       = now_vn.strftime("%d/%m/%Y %H:%M ICT")
     only_featured = not args.all
     group_name    = "🔥 Tất cả trận đấu" if args.all else "🔥 Trận đấu tâm điểm"
     scraper       = make_scraper()
@@ -501,24 +486,23 @@ def main():
 
     log(f"\n  ✅ {len(matches)} trận:\n")
     for i, m in enumerate(matches, 1):
-        icon = {"live":"🔴","finished":"✅","upcoming":"🕐"}.get(m["status"],"⚽")
-        log(f"  {icon} [{i:02d}] {m['title']}" + (f"  🎙 {m['blv']}" if m.get("blv") else ""))
+        icon  = {"live":"🔴","finished":"✅","upcoming":"🕐"}.get(m["status"],"⚽")
+        score = f"  [{m['score']}]" if m.get("score") and m["score"] != "VS" else ""
+        dt    = f"  {m['time_str']}" if m.get("time_str") else ""
+        dt   += f" {m['date_str']}" if m.get("date_str") else ""
+        blv_s = f"  🎙 {m['blv']}" if m.get("blv") else ""
+        log(f"  {icon} [{i:02d}] {m['base_title']}{score}{dt}{blv_s}")
 
     channels = []
     if args.no_stream:
-        log("\n⏭ Bỏ qua stream (thumbnail từ homepage)")
-        for i, m in enumerate(matches, 1): channels.append(build_channel(m, [], i))
-    else:
-        log(f"\n📡 Bước 3: Lấy stream links + thumbnail từng trận...")
+        log("\n⏭ Bỏ qua stream")
         for i, m in enumerate(matches, 1):
-            log(f"\n  [{i:02d}/{len(matches)}] {m['title']}")
-            streams, detail_thumb, logo_a, logo_b = extract_streams(m["detail_url"], scraper)
-            if detail_thumb:
-                m["thumbnail"] = detail_thumb
-            if logo_a: m["logo_a"] = logo_a
-            if logo_b: m["logo_b"] = logo_b
-            thumb_short = (m["thumbnail"] or "")[:65]
-            log(f"    🖼  {thumb_short or '(không có thumbnail)'}")
+            channels.append(build_channel(m, [], i))
+    else:
+        log(f"\n📡 Bước 3: Lấy stream links...")
+        for i, m in enumerate(matches, 1):
+            log(f"\n  [{i:02d}/{len(matches)}] {m['base_title']}")
+            streams = extract_streams(m["detail_url"], scraper)
             log(f"    📡 {len(streams)} stream" if streams else "    ⚠  Không có stream")
             channels.append(build_channel(m, streams, i))
             time.sleep(1.0)
@@ -529,6 +513,7 @@ def main():
 
     log(f"\n{'═'*62}")
     log(f"  ✅ Xong!  📁 {args.output}  ⚽ {len(channels)} trận")
+    log(f"  🕐 Cập nhật: {now_str}")
     log("═"*62 + "\n")
 
 if __name__ == "__main__":

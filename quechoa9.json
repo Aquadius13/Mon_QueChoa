@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 00:42 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 01:21 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -17,270 +17,7 @@
       "image": null,
       "channels": [
         {
-          "id": "qc-1-verona-vs-fiorentina",
-          "name": "Verona 0-0 Fiorentina  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 VĂN MINH",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 0-0",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-1-verona-vs-fiorentina-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-1-verona-vs-fiorentina-ct",
-                  "name": "Verona 0-0 Fiorentina  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-1-verona-vs-fiorentina-st",
-                      "name": "Trực tiếp · Live16:00|04.04Serie AVerona0:0FiorentinaVVĂN MINHĐặt cược",
-                      "stream_links": [
-                        {
-                          "id": "qc-1-verona-vs-fiorentina-lnk-0",
-                          "name": "🎙 VĂN MINH — Auto",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-verona-vs-fiorentina-lnk-1",
-                          "name": "🎙 VĂN MINH — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-verona-vs-fiorentina-lnk-2",
-                          "name": "🎙 VĂN MINH — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-2-chelsea-vs-port-vale",
-          "name": "Chelsea 4-0 Port Vale  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 2 BLV",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 4-0",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-2-chelsea-vs-port-vale-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-2-chelsea-vs-port-vale-ct",
-                  "name": "Chelsea 4-0 Port Vale  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-2-chelsea-vs-port-vale-st",
-                      "name": "Trực tiếp · Live16:15|04.04FA CupChelsea4:0Port ValeRRƯỢU MẬNĐặt cược · 2 BLV",
-                      "stream_links": [
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-0",
-                          "name": "🎙 RƯỢU MẬN — Auto",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-1",
-                          "name": "🎙 RƯỢU MẬN — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-2",
-                          "name": "🎙 RƯỢU MẬN — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-rrm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-3",
-                          "name": "🎙 NGƯỜI CHYM — Auto",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-hjm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-4",
-                          "name": "🎙 NGƯỜI CHYM — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-hjm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-chelsea-vs-port-vale-lnk-5",
-                          "name": "🎙 NGƯỜI CHYM — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/chelsea-vs-port-vale-hjm-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-3-vfb-stuttgart-vs-borussi",
+          "id": "qc-1-vfb-stuttgart-vs-borussi",
           "name": "VfB Stuttgart 0-0 Borussia Dortmund  🔴",
           "type": "single",
           "display": "thumbnail-only",
@@ -315,19 +52,19 @@
           ],
           "sources": [
             {
-              "id": "qc-3-vfb-stuttgart-vs-borussi-src",
+              "id": "qc-1-vfb-stuttgart-vs-borussi-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-3-vfb-stuttgart-vs-borussi-ct",
+                  "id": "qc-1-vfb-stuttgart-vs-borussi-ct",
                   "name": "VfB Stuttgart 0-0 Borussia Dortmund  🔴",
                   "streams": [
                     {
-                      "id": "qc-3-vfb-stuttgart-vs-borussi-st",
+                      "id": "qc-1-vfb-stuttgart-vs-borussi-st",
                       "name": "Trực tiếp · Live16:30|04.04BundesligaVfB Stuttgart0:0Borussia DortmundNNEM CHUAĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-0",
+                          "id": "qc-1-vfb-stuttgart-vs-borussi-lnk-0",
                           "name": "🎙 NEM CHUA — Full HD",
                           "type": "hls",
                           "default": true,
@@ -344,7 +81,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-1",
+                          "id": "qc-1-vfb-stuttgart-vs-borussi-lnk-1",
                           "name": "🎙 NEM CHUA — HD",
                           "type": "hls",
                           "default": false,
@@ -361,7 +98,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-2",
+                          "id": "qc-1-vfb-stuttgart-vs-borussi-lnk-2",
                           "name": "🎙 NEM CHUA — SD",
                           "type": "hls",
                           "default": false,
@@ -386,113 +123,7 @@
           ]
         },
         {
-          "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju",
-          "name": "Dương Quốc Hoàng vs Pijus Labutis  🕐 16:00 | 04/04",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1767467876769-card-bida.png",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 PUMA",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 16:00 | 04/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-ct",
-                  "name": "Dương Quốc Hoàng vs Pijus Labutis  🕐 16:00 | 04/04",
-                  "streams": [
-                    {
-                      "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-st",
-                      "name": "Trực tiếp · Sắp diễn ra16:00|04.048 BALL WORLD CHAMPIONSHIPDương Quốc HoàngVSPijus LabutisPPUMAĐặt cược",
-                      "stream_links": [
-                        {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-lnk-0",
-                          "name": "🎙 PUMA — Full HD",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-lnk-1",
-                          "name": "🎙 PUMA — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-piju-lnk-2",
-                          "name": "🎙 PUMA — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/duong-quoc-hoang-vs-pijus-labutis-jmh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-5-southampton-vs-arsenal",
+          "id": "qc-2-southampton-vs-arsenal",
           "name": "Southampton vs Arsenal  🕐 19:00 | 04/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -527,19 +158,19 @@
           ],
           "sources": [
             {
-              "id": "qc-5-southampton-vs-arsenal-src",
+              "id": "qc-2-southampton-vs-arsenal-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-5-southampton-vs-arsenal-ct",
+                  "id": "qc-2-southampton-vs-arsenal-ct",
                   "name": "Southampton vs Arsenal  🕐 19:00 | 04/04",
                   "streams": [
                     {
-                      "id": "qc-5-southampton-vs-arsenal-st",
+                      "id": "qc-2-southampton-vs-arsenal-st",
                       "name": "Trực tiếp · Sắp diễn ra19:00|04.04FA CupSouthamptonVSArsenalDDƯA HẤUĐặt cược · 2 BLV",
                       "stream_links": [
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-0",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-0",
                           "name": "🎙 DƯA HẤU — Full HD",
                           "type": "hls",
                           "default": true,
@@ -556,7 +187,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-1",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-1",
                           "name": "🎙 DƯA HẤU — HD",
                           "type": "hls",
                           "default": false,
@@ -573,7 +204,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-2",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-2",
                           "name": "🎙 DƯA HẤU — SD",
                           "type": "hls",
                           "default": false,
@@ -590,7 +221,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-3",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-3",
                           "name": "🎙 BÒ SỮA — Auto",
                           "type": "hls",
                           "default": false,
@@ -607,7 +238,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-4",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-4",
                           "name": "🎙 BÒ SỮA — HD",
                           "type": "hls",
                           "default": false,
@@ -624,7 +255,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-southampton-vs-arsenal-lnk-5",
+                          "id": "qc-2-southampton-vs-arsenal-lnk-5",
                           "name": "🎙 BÒ SỮA — SD",
                           "type": "hls",
                           "default": false,
@@ -649,7 +280,7 @@
           ]
         },
         {
-          "id": "qc-6-atletico-madrid-vs-barce",
+          "id": "qc-3-atletico-madrid-vs-barce",
           "name": "Atletico Madrid vs Barcelona  🕐 19:00 | 04/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -684,19 +315,19 @@
           ],
           "sources": [
             {
-              "id": "qc-6-atletico-madrid-vs-barce-src",
+              "id": "qc-3-atletico-madrid-vs-barce-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-atletico-madrid-vs-barce-ct",
+                  "id": "qc-3-atletico-madrid-vs-barce-ct",
                   "name": "Atletico Madrid vs Barcelona  🕐 19:00 | 04/04",
                   "streams": [
                     {
-                      "id": "qc-6-atletico-madrid-vs-barce-st",
+                      "id": "qc-3-atletico-madrid-vs-barce-st",
                       "name": "Trực tiếp · Sắp diễn ra19:00|04.04La LigaAtletico MadridVSBarcelonaRRƯỢU MẬNĐặt cược · 3 BLV",
                       "stream_links": [
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-0",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-0",
                           "name": "🎙 RƯỢU MẬN — Auto",
                           "type": "hls",
                           "default": true,
@@ -713,7 +344,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-1",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-1",
                           "name": "🎙 RƯỢU MẬN — HD",
                           "type": "hls",
                           "default": false,
@@ -730,7 +361,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-2",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-2",
                           "name": "🎙 RƯỢU MẬN — SD",
                           "type": "hls",
                           "default": false,
@@ -747,7 +378,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-3",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-3",
                           "name": "🎙 KHU MẤN",
                           "type": "hls",
                           "default": false,
@@ -764,7 +395,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-4",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-4",
                           "name": "🎙 KHOAI TÂY — Auto",
                           "type": "hls",
                           "default": false,
@@ -781,7 +412,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-5",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-5",
                           "name": "🎙 KHOAI TÂY — HD",
                           "type": "hls",
                           "default": false,
@@ -798,7 +429,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-atletico-madrid-vs-barce-lnk-6",
+                          "id": "qc-3-atletico-madrid-vs-barce-lnk-6",
                           "name": "🎙 KHOAI TÂY — SD",
                           "type": "hls",
                           "default": false,

@@ -427,21 +427,64 @@ def filter_streams(streams):
         return group + other
     return other
 
-# ── Thumbnail từ detail page (từ v9_2) ───────────────────────
+# ── Thumbnail từ detail page ───────────────────────────────────────────
 CDN_THUMB_RE = re.compile(
-    r'https?://pub-[a-f0-9]+\.r2\.dev/quechoa[_-]?thumbs?/'
-    r'[^\s\'"<>\\]+\.webp(?:\?[^\s\'"<>\\]*)?',
+    r'https?://pub-[a-f0-9]+\.r2\.dev/[^\s\'"<>\\]+\.webp(?:\?[^\s\'"<>\\]*)?',
+    re.I
+)
+IMG_URL_RE = re.compile(
+    r'https?://[^\s\'"<>\\]+\.(?:webp|jpg|jpeg|png)(?:\?[^\s\'"<>\\]*)?',
+    re.I
+)
+_THUMB_DOMAINS = re.compile(
+    r'(?:r2\.dev|cloudinary\.com|imgbb\.com|imgur\.com'
+    r'|api-sports\.io|thesportsdb\.com|media\.|images\.|img\.|cdn\.|static\.)',
+    re.I
+)
+_THUMB_EXCLUDE = re.compile(
+    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/)',
     re.I
 )
 
+def _is_valid_thumb(url: str) -> bool:
+    return bool(url) and not _THUMB_EXCLUDE.search(url) and len(url) > 20
+
 def extract_thumb_from_detail(html: str, bs) -> str:
-    next_tag = bs.find("script", id="__NEXT_DATA__")
+    # 1) __NEXT_DATA__ CDN webp
+    next_tag = bs.find('script', id='__NEXT_DATA__')
     if next_tag and next_tag.string:
         m = CDN_THUMB_RE.search(next_tag.string)
-        if m: return m.group(0)
+        if m and _is_valid_thumb(m.group(0)):
+            return m.group(0)
+    # 2) og:image / twitter:image
+    for attr in [{'property':'og:image'}, {'name':'og:image'}, {'name':'twitter:image'}]:
+        tag = bs.find('meta', attrs=attr)
+        if tag:
+            url = tag.get('content', '')
+            if url and _is_valid_thumb(url) and IMG_URL_RE.match(url):
+                return url
+    # 3) CDN r2.dev webp bat ky trong HTML
     m = CDN_THUMB_RE.search(html)
-    if m: return m.group(0)
-    return ""
+    if m and _is_valid_thumb(m.group(0)):
+        return m.group(0)
+    # 4) <img> lon nhat (width >= 200)
+    best_url, best_w = '', 0
+    for img in bs.find_all('img', src=True):
+        src = img.get('src', '') or img.get('data-src', '')
+        if not src or not src.startswith('http'): continue
+        if not _is_valid_thumb(src):              continue
+        if not IMG_URL_RE.search(src):            continue
+        try:    w = int(img.get('width', 0))
+        except: w = 0
+        if w > best_w: best_w, best_url = w, src
+    if best_url and best_w >= 200:
+        return best_url
+    # 5) URL anh hop le trong HTML tu domain CDN
+    for m in IMG_URL_RE.finditer(html):
+        url = m.group(0)
+        if _is_valid_thumb(url) and _THUMB_DOMAINS.search(url):
+            return url
+    return best_url
 
 # ── Crawl stream từ 1 URL (từ v9) ────────────────────────────
 def extract_streams_from_url(detail_url: str, html: str, bs) -> list:

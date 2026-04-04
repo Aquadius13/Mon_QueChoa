@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 05:48 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 05:55 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -18,7 +18,7 @@
       "channels": [
         {
           "id": "qc-1-philadelphia-76ers-vs-de",
-          "name": "Philadelphia 76ers vs Detroit Pistons  🕐 23:00 | 04/04",
+          "name": "Philadelphia 76ers 0-0 Detroit Pistons  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -32,8 +32,8 @@
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -44,9 +44,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "🕐 23:00 | 04/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -57,15 +57,15 @@
               "contents": [
                 {
                   "id": "qc-1-philadelphia-76ers-vs-de-ct",
-                  "name": "Philadelphia 76ers vs Detroit Pistons  🕐 23:00 | 04/04",
+                  "name": "Philadelphia 76ers 0-0 Detroit Pistons  🔴 · Live23:00|04.04NBAPhiladelphia 76ers0:0Detroit PistonsVVĂN MINHĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-1-philadelphia-76ers-vs-de-st",
-                      "name": "Trực tiếp · Sắp diễn ra23:00|04.04NBAPhiladelphia 76ersVSDetroit PistonsVVĂN MINHĐặt cược",
+                      "id": "qc-1-philadelphia-76ers-vs-de-st0",
+                      "name": "🎙 VĂN MINH",
                       "stream_links": [
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-0",
-                          "name": "🎙 VĂN MINH — Auto",
+                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk0",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
@@ -81,8 +81,8 @@
                           ]
                         },
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-1",
-                          "name": "🎙 VĂN MINH — HD",
+                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk1",
+                          "name": "HD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
@@ -98,8 +98,8 @@
                           ]
                         },
                         {
-                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-2",
-                          "name": "🎙 VĂN MINH — SD",
+                          "id": "qc-1-philadelphia-76ers-vs-de-blv0-lnk2",
+                          "name": "SD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
@@ -163,15 +163,15 @@
               "contents": [
                 {
                   "id": "qc-2-gunma-bank-green-wings-w-ct",
-                  "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04",
+                  "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04 · Sắp diễn ra04:05|05.04SV.League WomenGunma Bank Green Wings WVSHimeji Victorina WNNGƯỜI CHYMĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-2-gunma-bank-green-wings-w-st",
-                      "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.League WomenGunma Bank Green Wings WVSHimeji Victorina WNNGƯỜI CHYMĐặt cược",
+                      "id": "qc-2-gunma-bank-green-wings-w-st0",
+                      "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-lnk-0",
-                          "name": "🎙 NGƯỜI CHYM — Auto",
+                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk0",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1.m3u8",
@@ -187,8 +187,8 @@
                           ]
                         },
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-lnk-1",
-                          "name": "🎙 NGƯỜI CHYM — HD",
+                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk1",
+                          "name": "HD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1_hd.m3u8",
@@ -204,8 +204,8 @@
                           ]
                         },
                         {
-                          "id": "qc-2-gunma-bank-green-wings-w-lnk-2",
-                          "name": "🎙 NGƯỜI CHYM — SD",
+                          "id": "qc-2-gunma-bank-green-wings-w-blv0-lnk2",
+                          "name": "SD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai1_sd.m3u8",
@@ -269,15 +269,15 @@
               "contents": [
                 {
                   "id": "qc-3-ageo-w-vs-okayama-seagul-ct",
-                  "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04",
+                  "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04 · Sắp diễn ra04:05|05.04SV.League WomenAgeo WVSOkayama Seagulls WKKHU MẤNĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-3-ageo-w-vs-okayama-seagul-st",
-                      "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.League WomenAgeo WVSOkayama Seagulls WKKHU MẤNĐặt cược",
+                      "id": "qc-3-ageo-w-vs-okayama-seagul-st0",
+                      "name": "🎙 KHU MẤN",
                       "stream_links": [
                         {
-                          "id": "qc-3-ageo-w-vs-okayama-seagul-lnk-0",
-                          "name": "🎙 KHU MẤN",
+                          "id": "qc-3-ageo-w-vs-okayama-seagul-blv0-lnk0",
+                          "name": "Full HD",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_lachanh_full-hd.m3u8",
@@ -341,15 +341,15 @@
               "contents": [
                 {
                   "id": "qc-4-voreas-hokkaido-vs-osaka-ct",
-                  "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04",
+                  "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04 · Sắp diễn ra04:05|05.04SV.LeagueVoreas HokkaidoVSOsaka BluteonPPUMAĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-4-voreas-hokkaido-vs-osaka-st",
-                      "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.LeagueVoreas HokkaidoVSOsaka BluteonPPUMAĐặt cược",
+                      "id": "qc-4-voreas-hokkaido-vs-osaka-st0",
+                      "name": "🎙 PUMA",
                       "stream_links": [
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-0",
-                          "name": "🎙 PUMA — Full HD",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk0",
+                          "name": "Full HD",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_full-hd.m3u8",
@@ -365,8 +365,8 @@
                           ]
                         },
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-1",
-                          "name": "🎙 PUMA — HD",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk1",
+                          "name": "HD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_hd.m3u8",
@@ -382,8 +382,8 @@
                           ]
                         },
                         {
-                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-2",
-                          "name": "🎙 PUMA — SD",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-blv0-lnk2",
+                          "name": "SD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_sd.m3u8",
@@ -447,15 +447,15 @@
               "contents": [
                 {
                   "id": "qc-5-suntory-sunbirds-vs-jt-t-ct",
-                  "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04",
+                  "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04 · Sắp diễn ra04:05|05.04SV.LeagueSuntory SunbirdsVSJT ThundersKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-5-suntory-sunbirds-vs-jt-t-st",
-                      "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.LeagueSuntory SunbirdsVSJT ThundersKKHOAI TÂYĐặt cược",
+                      "id": "qc-5-suntory-sunbirds-vs-jt-t-st0",
+                      "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-0",
-                          "name": "🎙 KHOAI TÂY — Auto",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk0",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
@@ -471,8 +471,8 @@
                           ]
                         },
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-1",
-                          "name": "🎙 KHOAI TÂY — HD",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk1",
+                          "name": "HD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
@@ -488,8 +488,8 @@
                           ]
                         },
                         {
-                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-2",
-                          "name": "🎙 KHOAI TÂY — SD",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-blv0-lnk2",
+                          "name": "SD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
@@ -513,7 +513,325 @@
           ]
         },
         {
-          "id": "qc-6-west-ham-vs-leeds",
+          "id": "qc-6-hoang-anh-gia-lai-vs-phu",
+          "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🕐 Sắp diễn ra",
+              "color": "#d54f1a",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 KHOAI TÂY",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 10:00 | 05/04",
+              "position": "bottom-left",
+              "color": "#1a5fa8",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-6-hoang-anh-gia-lai-vs-phu-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-6-hoang-anh-gia-lai-vs-phu-ct",
+                  "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04 · Sắp diễn ra10:00|05.04V.League 1Hoang Anh Gia LaiVSPhu DongKKHOAI TÂYĐặt cược",
+                  "streams": [
+                    {
+                      "id": "qc-6-hoang-anh-gia-lai-vs-phu-st0",
+                      "name": "🎙 KHOAI TÂY",
+                      "stream_links": [
+                        {
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hoang-anh-gia-lai-vs-phu-dong-meo-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hoang-anh-gia-lai-vs-phu-dong-meo-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-6-hoang-anh-gia-lai-vs-phu-blv0-lnk2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hoang-anh-gia-lai-vs-phu-dong-meo-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-7-song-lam-nghe-an-vs-viet",
+          "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🕐 Sắp diễn ra",
+              "color": "#d54f1a",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 VĂN MINH",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 11:00 | 05/04",
+              "position": "bottom-left",
+              "color": "#1a5fa8",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-7-song-lam-nghe-an-vs-viet-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-7-song-lam-nghe-an-vs-viet-ct",
+                  "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Song Lam Nghe AnVSViettelVVĂN MINHĐặt cược",
+                  "streams": [
+                    {
+                      "id": "qc-7-song-lam-nghe-an-vs-viet-st0",
+                      "name": "🎙 VĂN MINH",
+                      "stream_links": [
+                        {
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-7-song-lam-nghe-an-vs-viet-blv0-lnk2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam",
+          "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🕐 Sắp diễn ra",
+              "color": "#d54f1a",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 NEM CHUA",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 11:00 | 05/04",
+              "position": "bottom-left",
+              "color": "#1a5fa8",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-ct",
+                  "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Hồng Lĩnh Hà TĩnhVSNam DinhNNEM CHUAĐặt cược",
+                  "streams": [
+                    {
+                      "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-st0",
+                      "name": "🎙 NEM CHUA",
+                      "stream_links": [
+                        {
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk0",
+                          "name": "Full HD",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_full-hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hong-linh-ha-tinh-vs-nam-dinh-ccf-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hong-linh-ha-tinh-vs-nam-dinh-ccf-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-8-h-ng-l-nh-h-t-nh-vs-nam-blv0-lnk2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/hong-linh-ha-tinh-vs-nam-dinh-ccf-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-9-west-ham-vs-leeds",
           "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -548,20 +866,20 @@
           ],
           "sources": [
             {
-              "id": "qc-6-west-ham-vs-leeds-src",
+              "id": "qc-9-west-ham-vs-leeds-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-west-ham-vs-leeds-ct",
-                  "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
+                  "id": "qc-9-west-ham-vs-leeds-ct",
+                  "name": "West Ham vs Leeds  🕐 15:30 | 05/04 · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-6-west-ham-vs-leeds-st",
-                      "name": "Trực tiếp · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
+                      "id": "qc-9-west-ham-vs-leeds-st0",
+                      "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-6-west-ham-vs-leeds-lnk-0",
-                          "name": "🎙 KHOAI TÂY — Auto",
+                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk0",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
@@ -577,8 +895,8 @@
                           ]
                         },
                         {
-                          "id": "qc-6-west-ham-vs-leeds-lnk-1",
-                          "name": "🎙 KHOAI TÂY — HD",
+                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk1",
+                          "name": "HD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
@@ -594,8 +912,8 @@
                           ]
                         },
                         {
-                          "id": "qc-6-west-ham-vs-leeds-lnk-2",
-                          "name": "🎙 KHOAI TÂY — SD",
+                          "id": "qc-9-west-ham-vs-leeds-blv0-lnk2",
+                          "name": "SD",
                           "type": "hls",
                           "default": false,
                           "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",

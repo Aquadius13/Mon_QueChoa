@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 04/04/2026 22:03 ICT (ICT)",
+  "description": "Cập nhật lúc 04/04/2026 22:46 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -17,219 +17,7 @@
       "image": null,
       "channels": [
         {
-          "id": "qc-1-sc-freiburg-vs-bayern-m",
-          "name": "SC Freiburg 2-0 Bayern München  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 KHOAI TÂY",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 2-0",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-1-sc-freiburg-vs-bayern-m-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-1-sc-freiburg-vs-bayern-m-ct",
-                  "name": "SC Freiburg 2-0 Bayern München  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-1-sc-freiburg-vs-bayern-m-st",
-                      "name": "Trực tiếp · Live13:30|04.04BundesligaSC Freiburg2:0Bayern MünchenKKHOAI TÂYĐặt cược",
-                      "stream_links": [
-                        {
-                          "id": "qc-1-sc-freiburg-vs-bayern-m-lnk-0",
-                          "name": "🎙 KHOAI TÂY — Auto",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-sc-freiburg-vs-bayern-m-lnk-1",
-                          "name": "🎙 KHOAI TÂY — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-sc-freiburg-vs-bayern-m-lnk-2",
-                          "name": "🎙 KHOAI TÂY — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sc-freiburg-vs-bayern-munchen-ebt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-2-bayer-leverkusen-vs-vfl",
-          "name": "Bayer Leverkusen 4-3 VfL Wolfsburg  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 NEM CHUA",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 4-3",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-2-bayer-leverkusen-vs-vfl-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-2-bayer-leverkusen-vs-vfl-ct",
-                  "name": "Bayer Leverkusen 4-3 VfL Wolfsburg  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-2-bayer-leverkusen-vs-vfl-st",
-                      "name": "Trực tiếp · Live13:30|04.04BundesligaBayer Leverkusen4:3VfL WolfsburgNNEM CHUAĐặt cược",
-                      "stream_links": [
-                        {
-                          "id": "qc-2-bayer-leverkusen-vs-vfl-lnk-0",
-                          "name": "🎙 NEM CHUA — Full HD",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-bayer-leverkusen-vs-vfl-lnk-1",
-                          "name": "🎙 NEM CHUA — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-bayer-leverkusen-vs-vfl-lnk-2",
-                          "name": "🎙 NEM CHUA — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bayer-leverkusen-vs-vfl-wolfsburg-qeh-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-3-mallorca-vs-real-madrid",
+          "id": "qc-1-mallorca-vs-real-madrid",
           "name": "Mallorca 1-0 Real Madrid  🔴",
           "type": "single",
           "display": "thumbnail-only",
@@ -264,19 +52,19 @@
           ],
           "sources": [
             {
-              "id": "qc-3-mallorca-vs-real-madrid-src",
+              "id": "qc-1-mallorca-vs-real-madrid-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-3-mallorca-vs-real-madrid-ct",
+                  "id": "qc-1-mallorca-vs-real-madrid-ct",
                   "name": "Mallorca 1-0 Real Madrid  🔴",
                   "streams": [
                     {
-                      "id": "qc-3-mallorca-vs-real-madrid-st",
+                      "id": "qc-1-mallorca-vs-real-madrid-st",
                       "name": "Trực tiếp · Live14:15|04.04La LigaMallorca1:0Real MadridDDƯA HẤUĐặt cược · 3 BLV",
                       "stream_links": [
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-0",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-0",
                           "name": "🎙 DƯA HẤU — Full HD",
                           "type": "hls",
                           "default": true,
@@ -293,7 +81,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-1",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-1",
                           "name": "🎙 DƯA HẤU — HD",
                           "type": "hls",
                           "default": false,
@@ -310,7 +98,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-2",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-2",
                           "name": "🎙 DƯA HẤU — SD",
                           "type": "hls",
                           "default": false,
@@ -327,7 +115,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-3",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-3",
                           "name": "🎙 KHU MẤN",
                           "type": "hls",
                           "default": false,
@@ -344,7 +132,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-4",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-4",
                           "name": "🎙 PUMA — Full HD",
                           "type": "hls",
                           "default": false,
@@ -361,7 +149,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-5",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-5",
                           "name": "🎙 PUMA — HD",
                           "type": "hls",
                           "default": false,
@@ -378,7 +166,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-mallorca-vs-real-madrid-lnk-6",
+                          "id": "qc-1-mallorca-vs-real-madrid-lnk-6",
                           "name": "🎙 PUMA — SD",
                           "type": "hls",
                           "default": false,
@@ -387,6 +175,218 @@
                             {
                               "key": "Referer",
                               "value": "https://quechoa9.live/truc-tiep/mallorca-vs-real-madrid-ffz-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-2-verona-vs-fiorentina",
+          "name": "Verona 0-0 Fiorentina  🔴",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "● Live",
+              "color": "#E73131",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 VĂN MINH",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-2-verona-vs-fiorentina-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-2-verona-vs-fiorentina-ct",
+                  "name": "Verona 0-0 Fiorentina  🔴",
+                  "streams": [
+                    {
+                      "id": "qc-2-verona-vs-fiorentina-st",
+                      "name": "Trực tiếp · Live16:00|04.04Serie AVerona0:0FiorentinaVVĂN MINHĐặt cược",
+                      "stream_links": [
+                        {
+                          "id": "qc-2-verona-vs-fiorentina-lnk-0",
+                          "name": "🎙 VĂN MINH — Auto",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-2-verona-vs-fiorentina-lnk-1",
+                          "name": "🎙 VĂN MINH — HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-2-verona-vs-fiorentina-lnk-2",
+                          "name": "🎙 VĂN MINH — SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/verona-vs-fiorentina-ezp-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-3-vfb-stuttgart-vs-borussi",
+          "name": "VfB Stuttgart 0-0 Borussia Dortmund  🔴",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "● Live",
+              "color": "#E73131",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 NEM CHUA",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-3-vfb-stuttgart-vs-borussi-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-3-vfb-stuttgart-vs-borussi-ct",
+                  "name": "VfB Stuttgart 0-0 Borussia Dortmund  🔴",
+                  "streams": [
+                    {
+                      "id": "qc-3-vfb-stuttgart-vs-borussi-st",
+                      "name": "Trực tiếp · Live16:30|04.04BundesligaVfB Stuttgart0:0Borussia DortmundNNEM CHUAĐặt cược",
+                      "stream_links": [
+                        {
+                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-0",
+                          "name": "🎙 NEM CHUA — Full HD",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_full-hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/vfb-stuttgart-vs-borussia-dortmund-gqs-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-1",
+                          "name": "🎙 NEM CHUA — HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/vfb-stuttgart-vs-borussia-dortmund-gqs-04-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-3-vfb-stuttgart-vs-borussi-lnk-2",
+                          "name": "🎙 NEM CHUA — SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhmuot_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/vfb-stuttgart-vs-borussia-dortmund-gqs-04-04-2026"
                             },
                             {
                               "key": "User-Agent",

@@ -1,11 +1,8 @@
 name: 🏟 IPTV Auto Update
 
 on:
-  # Chạy tự động theo lịch (UTC — Việt Nam = UTC+7)
   schedule:
-    - cron: '*/10 * * * *'   # Mỗi 10 phút (phù hợp cho trận đang live)
-
-  # Cho phép chạy thủ công từ GitHub UI
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -14,30 +11,26 @@ on:
         default: 'featured'
         type: choice
         options:
-          - featured   # Chỉ tâm điểm
-          - all        # Tất cả trận
+          - featured
+          - all
 
 jobs:
   update-iptv:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # Cần để commit file JSON
+      contents: write
 
     steps:
       - name: 📥 Checkout repo
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: 📦 Cài đặt dependencies
-        run: |
-          pip install cloudscraper beautifulsoup4 lxml
+        run: pip install cloudscraper beautifulsoup4 lxml
 
       - name: 🕷 Chạy crawler
         run: |
@@ -58,34 +51,22 @@ jobs:
           total = sum(len(g.get('channels',[])) for g in d.get('groups',[]))
           print(total)
             ")
-            echo "✅ Crawler OK — $CHANNELS trận đấu"
+            echo "✅ $CHANNELS trận đấu"
             echo "CHANNELS=$CHANNELS" >> $GITHUB_ENV
           else
             echo "❌ Không tìm thấy quechoa9.json"
             exit 1
           fi
 
-      - name: 🚀 Commit & Push JSON
+      - name: 🚀 Commit & Push
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add quechoa9.json
-          # Chỉ commit nếu có thay đổi
           if git diff --staged --quiet; then
-            echo "ℹ Không có thay đổi — bỏ qua commit"
+            echo "ℹ Không có thay đổi"
           else
             TIMESTAMP=$(TZ='Asia/Ho_Chi_Minh' date '+%d/%m/%Y %H:%M:%S ICT')
-            git commit -m "🏟 Update IPTV: ${{ env.CHANNELS }} trận — $TIMESTAMP"
+            git commit -m "🏟 Update: ${{ env.CHANNELS }} trận — $TIMESTAMP"
             git push
-            echo "✅ Đã push lên GitHub"
           fi
-
-      - name: 📋 In URL MonPlayer
-        run: |
-          REPO="${{ github.repository }}"
-          BRANCH="main"
-          echo ""
-          echo "══════════════════════════════════════════"
-          echo "  🌐 URL Thêm vào MonPlayer:"
-          echo "  https://raw.githubusercontent.com/$REPO/$BRANCH/quechoa9.json"
-          echo "══════════════════════════════════════════"

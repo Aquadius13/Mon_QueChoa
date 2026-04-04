@@ -442,49 +442,81 @@ _THUMB_DOMAINS = re.compile(
     re.I
 )
 _THUMB_EXCLUDE = re.compile(
-    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/)',
+    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/'
+    r'|backgrounds?/|opengraph|og-image|og_image|placeholder|default[-_]img)',
     re.I
 )
+# Ảnh mặc định site quechoa9.live (og:image luôn trả về cái này)
+_SITE_DEFAULT = re.compile(r'opengraph-image\d*\.png|quechoatv-logo|favicon\.ico', re.I)
 
 def _is_valid_thumb(url: str) -> bool:
     return bool(url) and not _THUMB_EXCLUDE.search(url) and len(url) > 20
 
 def extract_thumb_from_detail(html: str, bs) -> str:
-    # 1) __NEXT_DATA__ CDN webp
+    """
+    Lấy thumbnail từ trang chi tiết quechoa9.live (Next.js).
+
+    Thứ tự ưu tiên:
+      ① __NEXT_DATA__ JSON → org_metadata.thumb (CDN kaytee-*.webp) ← chính xác nhất
+      ② CDN r2.dev webp regex trong toàn HTML
+      ③ og:image (CHỈ khi không phải ảnh mặc định site)
+      ④ <img> lớn nhất (width >= 300) từ domain hợp lệ
+    Loại bỏ: backgrounds/, opengraph-image*.png, favicon, logo site
+    """
+    # ① Parse __NEXT_DATA__ JSON — tìm org_metadata.thumb hoặc CDN URL
     next_tag = bs.find('script', id='__NEXT_DATA__')
     if next_tag and next_tag.string:
-        m = CDN_THUMB_RE.search(next_tag.string)
+        nd = next_tag.string
+        # 1a. Parse JSON và tìm key "thumb" trong org_metadata
+        try:
+            nd_data = json.loads(nd)
+            nd_str  = json.dumps(nd_data)  # flat string để regex nhanh
+        except Exception:
+            nd_str = nd
+
+        # Tìm CDN kaytee URL (chính xác nhất)
+        m = CDN_THUMB_RE.search(nd_str)
         if m and _is_valid_thumb(m.group(0)):
             return m.group(0)
-    # 2) og:image / twitter:image
-    for attr in [{'property':'og:image'}, {'name':'og:image'}, {'name':'twitter:image'}]:
-        tag = bs.find('meta', attrs=attr)
-        if tag:
-            url = tag.get('content', '')
-            if url and _is_valid_thumb(url) and IMG_URL_RE.match(url):
-                return url
-    # 3) CDN r2.dev webp bat ky trong HTML
+
+        # Tìm key "thumb" hoặc "thumbnail" bất kỳ
+        for key_re in (
+            r'"(?:thumb|thumbnail|poster|coverImage)"\s*:\s*"(https?://[^"]+\.(?:webp|jpg|jpeg|png)[^"]*)"',
+        ):
+            km = re.search(key_re, nd_str)
+            if km:
+                url = km.group(1)
+                if _is_valid_thumb(url) and not _SITE_DEFAULT.search(url):
+                    return url
+
+    # ② CDN r2.dev trong toàn bộ HTML
     m = CDN_THUMB_RE.search(html)
     if m and _is_valid_thumb(m.group(0)):
         return m.group(0)
-    # 4) <img> lon nhat (width >= 200)
+
+    # ③ og:image — chỉ khi KHÔNG phải ảnh mặc định site
+    for attr in [{'property':'og:image'}, {'name':'twitter:image'}]:
+        tag = bs.find('meta', attrs=attr)
+        if tag:
+            url = tag.get('content', '').strip()
+            if url and _is_valid_thumb(url) and not _SITE_DEFAULT.search(url):
+                return url
+
+    # ④ <img> lớn nhất từ domain CDN hợp lệ (width >= 300)
     best_url, best_w = '', 0
     for img in bs.find_all('img', src=True):
-        src = img.get('src', '') or img.get('data-src', '')
+        src = img.get('src','') or img.get('data-src','')
         if not src or not src.startswith('http'): continue
-        if not _is_valid_thumb(src):              continue
-        if not IMG_URL_RE.search(src):            continue
-        try:    w = int(img.get('width', 0))
+        if not _is_valid_thumb(src) or not IMG_URL_RE.search(src): continue
+        if _SITE_DEFAULT.search(src): continue
+        try:    w = int(img.get('width', 0) or 0)
         except: w = 0
-        if w > best_w: best_w, best_url = w, src
-    if best_url and best_w >= 200:
+        if w > best_w and _THUMB_DOMAINS.search(src):
+            best_w, best_url = w, src
+    if best_url and best_w >= 300:
         return best_url
-    # 5) URL anh hop le trong HTML tu domain CDN
-    for m in IMG_URL_RE.finditer(html):
-        url = m.group(0)
-        if _is_valid_thumb(url) and _THUMB_DOMAINS.search(url):
-            return url
-    return best_url
+
+    return ""
 
 # ── Crawl stream từ 1 URL (từ v9) ────────────────────────────
 def extract_streams_from_url(detail_url: str, html: str, bs) -> list:

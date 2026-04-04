@@ -36,9 +36,9 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'featured' }}"
           if [ "$MODE" = "all" ]; then
-            python crawler_quechoa9_v8.py --all --output quechoa9.json
+            python crawler_quechoa9_v9.py --all --output quechoa9.json
           else
-            python crawler_quechoa9_v8.py --output quechoa9.json
+            python crawler_quechoa9_v9.py --output quechoa9.json
           fi
 
       - name: 📊 Kiểm tra kết quả

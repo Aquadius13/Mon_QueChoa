@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 03:52 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 04:37 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -17,338 +17,7 @@
       "image": null,
       "channels": [
         {
-          "id": "qc-1-southampton-vs-arsenal",
-          "name": "Southampton 2-1 Arsenal  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 2 BLV",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 2-1",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-1-southampton-vs-arsenal-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-1-southampton-vs-arsenal-ct",
-                  "name": "Southampton 2-1 Arsenal  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-1-southampton-vs-arsenal-st",
-                      "name": "Trực tiếp · Live19:00|04.04FA CupSouthampton2:1ArsenalDDƯA HẤUĐặt cược · 2 BLV",
-                      "stream_links": [
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-0",
-                          "name": "🎙 DƯA HẤU — Full HD",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-1",
-                          "name": "🎙 DƯA HẤU — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-2",
-                          "name": "🎙 DƯA HẤU — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_supluon_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-wlo-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-3",
-                          "name": "🎙 BÒ SỮA — Auto",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-pea-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-4",
-                          "name": "🎙 BÒ SỮA — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-pea-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-southampton-vs-arsenal-lnk-5",
-                          "name": "🎙 BÒ SỮA — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/southampton-vs-arsenal-pea-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-2-atletico-madrid-vs-barce",
-          "name": "Atletico Madrid 1-1 Barcelona  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 3 BLV",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 1-1",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-2-atletico-madrid-vs-barce-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-2-atletico-madrid-vs-barce-ct",
-                  "name": "Atletico Madrid 1-1 Barcelona  🔴",
-                  "streams": [
-                    {
-                      "id": "qc-2-atletico-madrid-vs-barce-st",
-                      "name": "Trực tiếp · Live19:00|04.04La LigaAtletico Madrid1:1BarcelonaRRƯỢU MẬNĐặt cược · 3 BLV",
-                      "stream_links": [
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-0",
-                          "name": "🎙 RƯỢU MẬN — Auto",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-1",
-                          "name": "🎙 RƯỢU MẬN — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-2",
-                          "name": "🎙 RƯỢU MẬN — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-kxk-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-3",
-                          "name": "🎙 KHU MẤN",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_lachanh_full-hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-zfj-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-4",
-                          "name": "🎙 KHOAI TÂY — Auto",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-jrt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-5",
-                          "name": "🎙 KHOAI TÂY — HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-jrt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-atletico-madrid-vs-barce-lnk-6",
-                          "name": "🎙 KHOAI TÂY — SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/atletico-madrid-vs-barcelona-jrt-04-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-3-philadelphia-76ers-vs-de",
+          "id": "qc-1-philadelphia-76ers-vs-de",
           "name": "Philadelphia 76ers vs Detroit Pistons  🕐 23:00 | 04/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -383,19 +52,19 @@
           ],
           "sources": [
             {
-              "id": "qc-3-philadelphia-76ers-vs-de-src",
+              "id": "qc-1-philadelphia-76ers-vs-de-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-3-philadelphia-76ers-vs-de-ct",
+                  "id": "qc-1-philadelphia-76ers-vs-de-ct",
                   "name": "Philadelphia 76ers vs Detroit Pistons  🕐 23:00 | 04/04",
                   "streams": [
                     {
-                      "id": "qc-3-philadelphia-76ers-vs-de-st",
+                      "id": "qc-1-philadelphia-76ers-vs-de-st",
                       "name": "Trực tiếp · Sắp diễn ra23:00|04.04NBAPhiladelphia 76ersVSDetroit PistonsVVĂN MINHĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-3-philadelphia-76ers-vs-de-lnk-0",
+                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-0",
                           "name": "🎙 VĂN MINH — Auto",
                           "type": "hls",
                           "default": true,
@@ -412,7 +81,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-philadelphia-76ers-vs-de-lnk-1",
+                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-1",
                           "name": "🎙 VĂN MINH — HD",
                           "type": "hls",
                           "default": false,
@@ -429,7 +98,7 @@
                           ]
                         },
                         {
-                          "id": "qc-3-philadelphia-76ers-vs-de-lnk-2",
+                          "id": "qc-1-philadelphia-76ers-vs-de-lnk-2",
                           "name": "🎙 VĂN MINH — SD",
                           "type": "hls",
                           "default": false,
@@ -454,7 +123,7 @@
           ]
         },
         {
-          "id": "qc-4-gunma-bank-green-wings-w",
+          "id": "qc-2-gunma-bank-green-wings-w",
           "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -489,19 +158,19 @@
           ],
           "sources": [
             {
-              "id": "qc-4-gunma-bank-green-wings-w-src",
+              "id": "qc-2-gunma-bank-green-wings-w-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-4-gunma-bank-green-wings-w-ct",
+                  "id": "qc-2-gunma-bank-green-wings-w-ct",
                   "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-4-gunma-bank-green-wings-w-st",
+                      "id": "qc-2-gunma-bank-green-wings-w-st",
                       "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.League WomenGunma Bank Green Wings WVSHimeji Victorina WNNGƯỜI CHYMĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-4-gunma-bank-green-wings-w-lnk-0",
+                          "id": "qc-2-gunma-bank-green-wings-w-lnk-0",
                           "name": "🎙 NGƯỜI CHYM — Auto",
                           "type": "hls",
                           "default": true,
@@ -518,7 +187,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-gunma-bank-green-wings-w-lnk-1",
+                          "id": "qc-2-gunma-bank-green-wings-w-lnk-1",
                           "name": "🎙 NGƯỜI CHYM — HD",
                           "type": "hls",
                           "default": false,
@@ -535,7 +204,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-gunma-bank-green-wings-w-lnk-2",
+                          "id": "qc-2-gunma-bank-green-wings-w-lnk-2",
                           "name": "🎙 NGƯỜI CHYM — SD",
                           "type": "hls",
                           "default": false,
@@ -560,7 +229,7 @@
           ]
         },
         {
-          "id": "qc-5-ageo-w-vs-okayama-seagul",
+          "id": "qc-3-ageo-w-vs-okayama-seagul",
           "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -595,19 +264,19 @@
           ],
           "sources": [
             {
-              "id": "qc-5-ageo-w-vs-okayama-seagul-src",
+              "id": "qc-3-ageo-w-vs-okayama-seagul-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-5-ageo-w-vs-okayama-seagul-ct",
+                  "id": "qc-3-ageo-w-vs-okayama-seagul-ct",
                   "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-5-ageo-w-vs-okayama-seagul-st",
+                      "id": "qc-3-ageo-w-vs-okayama-seagul-st",
                       "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.League WomenAgeo WVSOkayama Seagulls WKKHU MẤNĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-5-ageo-w-vs-okayama-seagul-lnk-0",
+                          "id": "qc-3-ageo-w-vs-okayama-seagul-lnk-0",
                           "name": "🎙 KHU MẤN",
                           "type": "hls",
                           "default": true,
@@ -632,7 +301,7 @@
           ]
         },
         {
-          "id": "qc-6-voreas-hokkaido-vs-osaka",
+          "id": "qc-4-voreas-hokkaido-vs-osaka",
           "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -667,19 +336,19 @@
           ],
           "sources": [
             {
-              "id": "qc-6-voreas-hokkaido-vs-osaka-src",
+              "id": "qc-4-voreas-hokkaido-vs-osaka-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-voreas-hokkaido-vs-osaka-ct",
+                  "id": "qc-4-voreas-hokkaido-vs-osaka-ct",
                   "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-6-voreas-hokkaido-vs-osaka-st",
+                      "id": "qc-4-voreas-hokkaido-vs-osaka-st",
                       "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.LeagueVoreas HokkaidoVSOsaka BluteonPPUMAĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-6-voreas-hokkaido-vs-osaka-lnk-0",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-0",
                           "name": "🎙 PUMA — Full HD",
                           "type": "hls",
                           "default": true,
@@ -696,7 +365,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-voreas-hokkaido-vs-osaka-lnk-1",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-1",
                           "name": "🎙 PUMA — HD",
                           "type": "hls",
                           "default": false,
@@ -713,7 +382,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-voreas-hokkaido-vs-osaka-lnk-2",
+                          "id": "qc-4-voreas-hokkaido-vs-osaka-lnk-2",
                           "name": "🎙 PUMA — SD",
                           "type": "hls",
                           "default": false,
@@ -738,7 +407,7 @@
           ]
         },
         {
-          "id": "qc-7-suntory-sunbirds-vs-jt-t",
+          "id": "qc-5-suntory-sunbirds-vs-jt-t",
           "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -773,19 +442,19 @@
           ],
           "sources": [
             {
-              "id": "qc-7-suntory-sunbirds-vs-jt-t-src",
+              "id": "qc-5-suntory-sunbirds-vs-jt-t-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-7-suntory-sunbirds-vs-jt-t-ct",
+                  "id": "qc-5-suntory-sunbirds-vs-jt-t-ct",
                   "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-7-suntory-sunbirds-vs-jt-t-st",
+                      "id": "qc-5-suntory-sunbirds-vs-jt-t-st",
                       "name": "Trực tiếp · Sắp diễn ra04:05|05.04SV.LeagueSuntory SunbirdsVSJT ThundersKKHOAI TÂYĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-7-suntory-sunbirds-vs-jt-t-lnk-0",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-0",
                           "name": "🎙 KHOAI TÂY — Auto",
                           "type": "hls",
                           "default": true,
@@ -802,7 +471,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-suntory-sunbirds-vs-jt-t-lnk-1",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-1",
                           "name": "🎙 KHOAI TÂY — HD",
                           "type": "hls",
                           "default": false,
@@ -819,7 +488,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-suntory-sunbirds-vs-jt-t-lnk-2",
+                          "id": "qc-5-suntory-sunbirds-vs-jt-t-lnk-2",
                           "name": "🎙 KHOAI TÂY — SD",
                           "type": "hls",
                           "default": false,
@@ -844,7 +513,7 @@
           ]
         },
         {
-          "id": "qc-8-west-ham-vs-leeds",
+          "id": "qc-6-west-ham-vs-leeds",
           "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -879,19 +548,19 @@
           ],
           "sources": [
             {
-              "id": "qc-8-west-ham-vs-leeds-src",
+              "id": "qc-6-west-ham-vs-leeds-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-8-west-ham-vs-leeds-ct",
+                  "id": "qc-6-west-ham-vs-leeds-ct",
                   "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-8-west-ham-vs-leeds-st",
+                      "id": "qc-6-west-ham-vs-leeds-st",
                       "name": "Trực tiếp · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
                       "stream_links": [
                         {
-                          "id": "qc-8-west-ham-vs-leeds-lnk-0",
+                          "id": "qc-6-west-ham-vs-leeds-lnk-0",
                           "name": "🎙 KHOAI TÂY — Auto",
                           "type": "hls",
                           "default": true,
@@ -908,7 +577,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-west-ham-vs-leeds-lnk-1",
+                          "id": "qc-6-west-ham-vs-leeds-lnk-1",
                           "name": "🎙 KHOAI TÂY — HD",
                           "type": "hls",
                           "default": false,
@@ -925,7 +594,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-west-ham-vs-leeds-lnk-2",
+                          "id": "qc-6-west-ham-vs-leeds-lnk-2",
                           "name": "🎙 KHOAI TÂY — SD",
                           "type": "hls",
                           "default": false,

@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 06:24 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 06:33 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -18,7 +18,7 @@
       "channels": [
         {
           "id": "qc-1-philadelphia-76ers-vs-de",
-          "name": "Philadelphia 76ers 13-17 Detroit Pistons  🔴",
+          "name": "Philadelphia 76ers 21-24 Detroit Pistons  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -44,7 +44,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "⚽ 13-17",
+              "text": "⚽ 21-24",
               "position": "bottom-right",
               "color": "#E73131",
               "text_color": "#ffffff"
@@ -57,7 +57,7 @@
               "contents": [
                 {
                   "id": "qc-1-philadelphia-76ers-vs-de-ct",
-                  "name": "Philadelphia 76ers 13-17 Detroit Pistons  🔴 · Live23:00|04.04NBAPhiladelphia 76ers13:17Detroit PistonsVVĂN MINHĐặt cược",
+                  "name": "Philadelphia 76ers 21-24 Detroit Pistons  🔴 · Live23:00|04.04NBAPhiladelphia 76ers21:24Detroit PistonsVVĂN MINHĐặt cược",
                   "streams": [
                     {
                       "id": "qc-1-philadelphia-76ers-vs-de-st0",

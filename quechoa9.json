@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 02:08 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 02:46 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -18,7 +18,7 @@
       "channels": [
         {
           "id": "qc-1-southampton-vs-arsenal",
-          "name": "Southampton 0-0 Arsenal  🔴",
+          "name": "Southampton 1-0 Arsenal  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -44,7 +44,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "⚽ 0-0",
+              "text": "⚽ 1-0",
               "position": "bottom-right",
               "color": "#E73131",
               "text_color": "#ffffff"
@@ -57,11 +57,11 @@
               "contents": [
                 {
                   "id": "qc-1-southampton-vs-arsenal-ct",
-                  "name": "Southampton 0-0 Arsenal  🔴",
+                  "name": "Southampton 1-0 Arsenal  🔴",
                   "streams": [
                     {
                       "id": "qc-1-southampton-vs-arsenal-st",
-                      "name": "Trực tiếp · Live19:00|04.04FA CupSouthampton0:0ArsenalDDƯA HẤUĐặt cược · 2 BLV",
+                      "name": "Trực tiếp · Live19:00|04.04FA CupSouthampton1:0ArsenalDDƯA HẤUĐặt cược · 2 BLV",
                       "stream_links": [
                         {
                           "id": "qc-1-southampton-vs-arsenal-lnk-0",
@@ -175,7 +175,7 @@
         },
         {
           "id": "qc-2-atletico-madrid-vs-barce",
-          "name": "Atletico Madrid 0-0 Barcelona  🔴",
+          "name": "Atletico Madrid 1-1 Barcelona  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -201,7 +201,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "⚽ 0-0",
+              "text": "⚽ 1-1",
               "position": "bottom-right",
               "color": "#E73131",
               "text_color": "#ffffff"
@@ -214,11 +214,11 @@
               "contents": [
                 {
                   "id": "qc-2-atletico-madrid-vs-barce-ct",
-                  "name": "Atletico Madrid 0-0 Barcelona  🔴",
+                  "name": "Atletico Madrid 1-1 Barcelona  🔴",
                   "streams": [
                     {
                       "id": "qc-2-atletico-madrid-vs-barce-st",
-                      "name": "Trực tiếp · Live19:00|04.04La LigaAtletico Madrid0:0BarcelonaRRƯỢU MẬNĐặt cược · 3 BLV",
+                      "name": "Trực tiếp · Live19:00|04.04La LigaAtletico Madrid1:1BarcelonaRRƯỢU MẬNĐặt cược · 3 BLV",
                       "stream_links": [
                         {
                           "id": "qc-2-atletico-madrid-vs-barce-lnk-0",

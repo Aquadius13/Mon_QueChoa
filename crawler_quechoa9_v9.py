@@ -1,185 +1,48 @@
 #!/usr/bin/env python3
 """
 ╔══════════════════════════════════════════════════════════════╗
-║   Crawler Trận Đấu — quechoa9.live  v9                      ║
-║   Nguồn thumbnail: quechoa.json CDN (thumbnail cả 2 đội)    ║
-║   Nguồn streams:   quechoa.json CDN hoặc quechoa9.live      ║
+║   Crawler Trận Đấu Tâm Điểm — quechoa9.live  v9             ║
+║   + Gộp trận trùng tên thành 1 channel                      ║
+║   + Mỗi BLV = 1 stream riêng để chọn                        ║
+║   + Label hiển thị số lượng BLV nếu có nhiều                ║
 ╚══════════════════════════════════════════════════════════════╝
-
-Cài đặt: pip install cloudscraper beautifulsoup4 lxml requests
-
-Chạy:
-    python crawler_quechoa9_v9.py                   # mặc định
-    python crawler_quechoa9_v9.py --all             # tất cả trận
-    python crawler_quechoa9_v9.py --json-only       # chỉ dùng quechoa.json
-    python crawler_quechoa9_v9.py --output out.json
+Cài đặt: pip install cloudscraper beautifulsoup4 lxml
 """
 
 import argparse, hashlib, json, re, sys, time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
 
 try:
     import cloudscraper
-    from bs4 import BeautifulSoup, NavigableString
-    import requests
+    from bs4 import BeautifulSoup, NavigableString, Tag
 except ImportError:
-    print("Cài đặt: pip install cloudscraper beautifulsoup4 lxml requests"); sys.exit(1)
+    print("Cài đặt: pip install cloudscraper beautifulsoup4 lxml"); sys.exit(1)
 
-# ── Constants ──────────────────────────────────────────────────
-BASE_URL      = "https://quechoa9.live"
-QUECHOA_JSON  = "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa.json"
-OUTPUT_FILE   = "quechoa9_iptv.json"
-CHROME_UA     = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+BASE_URL    = "https://quechoa9.live"
+OUTPUT_FILE = "quechoa9_iptv.json"
+CHROME_UA   = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+VN_TZ       = timezone(timedelta(hours=7))
 
-# ── Helpers ────────────────────────────────────────────────────
+# Ảnh placeholder khi trận không có thumbnail
+# (MonPlayer báo lỗi nếu image = null với display = thumbnail-only)
+PLACEHOLDER_IMG = {
+    "padding":          2,
+    "background_color": "#0f3460",
+    "display":          "contain",
+    "url":              f"https://quechoa9.live/favicon.ico",
+    "width":            512,
+    "height":           512,
+}
+
+# ── Helpers ───────────────────────────────────────────────────
+
 def make_id(*parts):
     raw  = "-".join(str(p) for p in parts if p)
     slug = re.sub(r"[^a-zA-Z0-9]+", "-", raw).strip("-").lower()
-    return (slug[:48] + "-" + hashlib.md5(raw.encode()).hexdigest()[:8]
-            if len(slug) > 56 else slug)
+    return (slug[:48] + "-" + hashlib.md5(raw.encode()).hexdigest()[:8] if len(slug) > 56 else slug)
 
 def log(msg): print(msg, flush=True)
-
-def normalize_name(name: str) -> str:
-    """Chuẩn hóa tên đội để so sánh fuzzy."""
-    return re.sub(r"[^a-z0-9]", "", name.lower())
-
-# ── HTTP ───────────────────────────────────────────────────────
-def make_scraper():
-    sc = cloudscraper.create_scraper(
-        browser={"browser": "chrome", "platform": "windows", "mobile": False}
-    )
-    sc.headers.update({"Accept-Language": "vi-VN,vi;q=0.9", "Referer": BASE_URL + "/"})
-    return sc
-
-def fetch_html(url, scraper, retries=3):
-    for i in range(retries):
-        try:
-            r = scraper.get(url, timeout=25, allow_redirects=True)
-            r.raise_for_status()
-            log(f"  ✓ [{r.status_code}] {url[:72]}")
-            return r.text
-        except Exception as e:
-            wait = 2 ** i
-            log(f"  ⚠ Lần {i+1}/{retries}: {e} → chờ {wait}s")
-            if i < retries - 1: time.sleep(wait)
-    return None
-
-def fetch_quechoa_json() -> dict:
-    """Fetch quechoa.json từ CDN — chứa thumbnail cả 2 đội + streams."""
-    try:
-        r = requests.get(QUECHOA_JSON, timeout=15,
-                         headers={"User-Agent": CHROME_UA})
-        r.raise_for_status()
-        data = r.json()
-        log(f"  ✓ quechoa.json: {sum(len(g.get('channels',[])) for g in data.get('groups',[]))} trận")
-        return data
-    except Exception as e:
-        log(f"  ⚠ Không fetch được quechoa.json: {e}")
-        return {}
-
-# ── Build lookup từ quechoa.json ───────────────────────────────
-def build_quechoa_lookup(qdata: dict) -> dict:
-    """
-    Tạo dict: normalized_team_pair → channel_info
-    Key: "teamA_vs_teamB" (normalized)
-    Value: {thumb, streams, league, logo_a, logo_b, labels, referer_url}
-    """
-    lookup = {}
-    for group in qdata.get("groups", []):
-        for ch in group.get("channels", []):
-            meta = ch.get("org_metadata", {})
-            team_a = meta.get("team_a", "")
-            team_b = meta.get("team_b", "")
-            if not team_a or not team_b:
-                continue
-
-            # Lấy thumbnail từ org_metadata.thumb (chính xác nhất)
-            thumb = (meta.get("thumb")
-                     or (ch.get("image") or {}).get("url", ""))
-
-            # Lấy streams + referer từ sources
-            streams = []
-            referer_url = ""
-            for src in ch.get("sources", []):
-                for cnt in src.get("contents", []):
-                    for strm in cnt.get("streams", []):
-                        for sl in strm.get("stream_links", []):
-                            url = sl.get("url", "")
-                            stype = sl.get("type", "hls")
-                            sname = sl.get("name", "")
-                            # Lấy Referer từ request_headers
-                            if not referer_url:
-                                for hdr in sl.get("request_headers", []):
-                                    if hdr.get("key","").lower() == "referer":
-                                        referer_url = hdr.get("value","")
-                            if url:
-                                streams.append({
-                                    "name": sname,
-                                    "url":  url,
-                                    "type": stype,
-                                })
-
-            info = {
-                "thumb":       thumb,
-                "streams":     streams,
-                "league":      meta.get("league", ""),
-                "logo_a":      meta.get("logo_a", ""),
-                "logo_b":      meta.get("logo_b", ""),
-                "labels":      ch.get("labels", []),
-                "referer_url": referer_url,
-                "ch_id":       ch.get("id", ""),
-                "ch_name":     ch.get("name", ""),
-            }
-
-            # Index theo cả 2 chiều (home/away có thể đổi)
-            key_ab = normalize_name(team_a) + "_" + normalize_name(team_b)
-            key_ba = normalize_name(team_b) + "_" + normalize_name(team_a)
-            lookup[key_ab] = info
-            lookup[key_ba] = info
-
-            # Index thêm theo từng tên đội riêng lẻ (fallback)
-            lookup["_" + normalize_name(team_a)] = info
-            lookup["_" + normalize_name(team_b)] = info
-
-    log(f"  → Lookup: {len(lookup)} entries từ quechoa.json")
-    return lookup
-
-def find_in_lookup(lookup: dict, home: str, away: str) -> dict | None:
-    """Tìm thông tin trận trong lookup, dùng fuzzy match nếu cần."""
-    if not lookup:
-        return None
-
-    h = normalize_name(home)
-    a = normalize_name(away)
-
-    # Exact pair match
-    for key in (f"{h}_{a}", f"{a}_{h}"):
-        if key in lookup:
-            return lookup[key]
-
-    # Substring match: team name xuất hiện trong key
-    for key, info in lookup.items():
-        if key.startswith("_"):
-            continue
-        parts = key.split("_", 1)
-        if len(parts) == 2:
-            k1, k2 = parts
-            if (h in k1 or k1 in h) and (a in k2 or k2 in a):
-                return info
-            if (a in k1 or k1 in a) and (h in k2 or k2 in h):
-                return info
-
-    # Single team fallback
-    for name in (h, a):
-        if len(name) >= 4 and f"_{name}" in lookup:
-            return lookup[f"_{name}"]
-
-    return None
-
-# ── HTML Parser (quechoa9.live) ────────────────────────────────
-def parse_html(html): return BeautifulSoup(html, "lxml")
 
 def has_classes(tag, *classes):
     j = " ".join(tag.get("class", []))
@@ -187,34 +50,99 @@ def has_classes(tag, *classes):
 
 def find_all_with(tag, element, *classes):
     if not classes: return []
-    return [t for t in tag.find_all(element, class_=classes[0])
-            if has_classes(t, *classes[1:])]
+    return [t for t in tag.find_all(element, class_=classes[0]) if has_classes(t, *classes[1:])]
+
+def make_scraper():
+    sc = cloudscraper.create_scraper(browser={"browser":"chrome","platform":"windows","mobile":False})
+    sc.headers.update({"Accept-Language":"vi-VN,vi;q=0.9","Referer":BASE_URL+"/"})
+    return sc
+
+def fetch(url, scraper, retries=3):
+    for i in range(retries):
+        try:
+            r = scraper.get(url, timeout=25, allow_redirects=True)
+            r.raise_for_status()
+            log(f"  ✓ [{r.status_code}] {url[:72]}")
+            return r.text
+        except Exception as e:
+            wait = 2**i
+            log(f"  ⚠ Lần {i+1}/{retries}: {e} → chờ {wait}s")
+            if i < retries-1: time.sleep(wait)
+    return None
+
+# ── Stream quality ────────────────────────────────────────────
+
+_QUALITY_RE  = re.compile(r"[_-](?:full[_-]?hd|fhd|1080p?|720p?|480p?|360p?|hd|sd)$", re.I)
+_QUALITY_MAP = {"hd":"HD","sd":"SD","full-hd":"Full HD","full_hd":"Full HD","fhd":"Full HD",
+                "1080":"Full HD","1080p":"Full HD","720":"HD","720p":"HD",
+                "480":"SD","480p":"SD","360":"360p","360p":"360p"}
+_QUALITY_ORDER = {"Auto":0,"Full HD":1,"HD":2,"SD":3}
+
+def _stream_base(url):
+    fname = re.sub(r"\.\w+$","",url.rstrip("/").split("/")[-1])
+    return _QUALITY_RE.sub("",fname).lower()
+
+def _quality_label(url):
+    fname = re.sub(r"\.\w+$","",url.rstrip("/").split("/")[-1]).lower()
+    m = _QUALITY_RE.search(fname)
+    return _QUALITY_MAP.get(m.group(0).lstrip("-_").lower(), m.group(0).upper()) if m else "Auto"
+
+def filter_match_streams(streams):
+    if not streams: return streams
+    hls   = [s for s in streams if s["type"]=="hls"]
+    other = [s for s in streams if s["type"]!="hls"]
+    if hls:
+        base  = _stream_base(hls[0]["url"])
+        group = [{**s,"name":_quality_label(s["url"])} for s in hls if _stream_base(s["url"])==base]
+        group.sort(key=lambda x:_QUALITY_ORDER.get(x["name"],99))
+        return group + other
+    return other
+
+# ── Date/time parse ───────────────────────────────────────────
+
+def parse_match_datetime(match_time: str):
+    if not match_time:
+        return ("", "", "")
+    m = re.search(r"(\d{1,2}):(\d{2})\s*\|?\s*(\d{1,2})[./](\d{1,2})", match_time)
+    if m:
+        hh, mm, day, mon = m.group(1), m.group(2), m.group(3).zfill(2), m.group(4).zfill(2)
+        return (f"{hh}:{mm}", f"{day}/{mon}", f"{mon}-{day} {hh}:{mm}")
+    m2 = re.search(r"(\d{1,2}):(\d{2})", match_time)
+    if m2:
+        hh, mm = m2.group(1), m2.group(2)
+        today  = datetime.now(VN_TZ)
+        return (f"{hh}:{mm}", today.strftime("%d/%m"), f"{today.strftime('%m-%d')} {hh}:{mm}")
+    return (match_time, "", "")
+
+# ── Card parsing ──────────────────────────────────────────────
+
+def parse_html(html): return BeautifulSoup(html,"lxml")
 
 def find_match_cards(bs, only_featured=True):
-    all_cards = find_all_with(bs, "a", "hover:border-[#83ff65]", "rounded-xl", "block")
+    all_cards = find_all_with(bs,"a","hover:border-[#83ff65]","rounded-xl","block")
     if not only_featured or not all_cards:
         log(f"  → {len(all_cards)} card (toàn trang)"); return all_cards
     header_node = None
-    for node in bs.find_all(string=re.compile(r"TÂM ĐIỂM|tâm điểm", re.I)):
+    for node in bs.find_all(string=re.compile(r"TÂM ĐIỂM|tâm điểm",re.I)):
         header_node = node.find_parent()
         if header_node: break
     if not header_node:
-        return all_cards
+        log("  ℹ Không thấy 'Tâm điểm' → toàn trang"); return all_cards
     section = header_node
     for _ in range(8):
         parent = section.find_parent()
         if not parent: break
-        if find_all_with(parent, "a", "hover:border-[#83ff65]"):
+        if find_all_with(parent,"a","hover:border-[#83ff65]"):
             section = parent; break
         section = parent
-    featured = find_all_with(section, "a", "hover:border-[#83ff65]", "rounded-xl")
+    featured = find_all_with(section,"a","hover:border-[#83ff65]","rounded-xl")
     if featured:
         log(f"  ✅ {len(featured)} trận 'Tâm điểm'"); return featured
     return all_cards
 
 def _extract_blv(card):
-    avatar = next((s for s in card.find_all("span", class_="rounded-full")
-                   if has_classes(s, "bg-neutral-700")), None)
+    avatar = next((s for s in card.find_all("span",class_="rounded-full")
+                   if has_classes(s,"bg-neutral-700")), None)
     if not avatar: return ""
     parent = avatar.find_parent("div")
     if not parent: return ""
@@ -229,210 +157,364 @@ def _extract_blv(card):
         if len(c) >= 2: return c
     return ""
 
-def parse_card(card) -> dict | None:
-    href       = card.get("href", "")
+def parse_card(card):
+    href       = card.get("href","")
     detail_url = href if href.startswith("http") else urljoin(BASE_URL, href)
     raw_text   = card.get_text(" ", strip=True)
 
-    if re.search(r"\bLive\b", raw_text, re.I):               status = "live"
+    if re.search(r"\bLive\b", raw_text, re.I):                    status = "live"
     elif re.search(r"Kết thúc|Finished|\bFT\b", raw_text, re.I): status = "finished"
-    else:                                                      status = "upcoming"
+    else:                                                           status = "upcoming"
 
-    time_div = next((d for d in card.find_all("div", class_="from-[#051f00]")
-                     if d.get_text(strip=True)), None)
-    match_time = time_div.get_text(strip=True) if time_div else ""
-    if not match_time:
-        m = re.search(r"\d{1,2}:\d{2}\s*\|\s*\d{2}\.\d{2}", raw_text)
-        if m: match_time = m.group(0)
+    time_div       = next((d for d in card.find_all("div",class_="from-[#051f00]")
+                           if d.get_text(strip=True)), None)
+    match_time_raw = time_div.get_text(strip=True) if time_div else ""
+    if not match_time_raw:
+        m = re.search(r"\d{1,2}:\d{2}\s*\|?\s*\d{2}[./]\d{2}", raw_text)
+        if m: match_time_raw = m.group(0)
+        else:
+            m2 = re.search(r"\d{1,2}:\d{2}", raw_text)
+            if m2: match_time_raw = m2.group(0)
+
+    time_str, date_str, sort_key = parse_match_datetime(match_time_raw)
 
     league = ""
     for d in card.find_all("div", class_="justify-center"):
-        if not has_classes(d, "gap-1", "w-full"): continue
+        if not has_classes(d,"gap-1","w-full"): continue
         txt = d.get_text(strip=True)
-        if txt and len(txt) > 3 and not re.fullmatch(r"[\d:\s]+", txt):
-            league = txt; break
+        if txt and len(txt)>3 and not re.fullmatch(r"[\d:\s]+",txt): league=txt; break
 
     home_team = away_team = ""
     team_texts = []
-    for d in [d for d in card.find_all("div", class_="flex-1")
-              if has_classes(d, "flex-col", "items-center")]:
+    for d in [d for d in card.find_all("div",class_="flex-1")
+              if has_classes(d,"flex-col","items-center")]:
         t = d.get_text(" ", strip=True)
-        if t and len(t) >= 2 and not re.fullmatch(r"[\d\s:]+", t):
-            team_texts.append(t)
-    if len(team_texts) >= 2: home_team, away_team = team_texts[0], team_texts[1]
-    elif len(team_texts) == 1: home_team = team_texts[0]
+        if t and len(t)>=2 and not re.fullmatch(r"[\d\s:]+",t): team_texts.append(t)
+    if len(team_texts)>=2: home_team,away_team = team_texts[0],team_texts[1]
+    elif len(team_texts)==1: home_team = team_texts[0]
     if not home_team:
         vm = re.search(
             r"([\w\u00C0-\u024F\u1E00-\u1EFF][\w\u00C0-\u024F\u1E00-\u1EFF .'-]{1,34}?)"
             r"\s+(?:VS|vs)\s+"
             r"([\w\u00C0-\u024F\u1E00-\u1EFF][\w\u00C0-\u024F\u1E00-\u1EFF .'-]{1,34})",
             raw_text, re.UNICODE)
-        if vm: home_team, away_team = vm.group(1).strip(), vm.group(2).strip()
+        if vm: home_team,away_team = vm.group(1).strip(),vm.group(2).strip()
 
     score = ""
-    score_div = next((d for d in card.find_all("div", class_="rounded-[20px]")
-                      if has_classes(d, "border-[#83ff65]")), None)
+    score_div = next((d for d in card.find_all("div",class_="rounded-[20px]")
+                      if has_classes(d,"border-[#83ff65]")), None)
     if score_div:
         nums = re.findall(r"\d+", score_div.get_text())
-        score = (f"{nums[0]}:{nums[1]}" if len(nums) >= 2
-                 else ("VS" if score_div.get_text(strip=True).upper() == "VS" else ""))
+        score = (f"{nums[0]}-{nums[1]}" if len(nums)>=2
+                 else ("VS" if score_div.get_text(strip=True).upper()=="VS" else ""))
 
     blv = _extract_blv(card)
 
-    title = (f"{home_team} vs {away_team}" if home_team and away_team
-             else home_team or re.sub(r"\s{2,}", " ", raw_text)[:60])
-    if not title or not detail_url: return None
+    thumbnail = ""
+    img = card.find("img")
+    if img:
+        src = img.get("src") or img.get("data-src") or ""
+        thumbnail = src if src.startswith("http") else urljoin(BASE_URL,src)
+
+    base_title = (f"{home_team} vs {away_team}" if home_team and away_team
+                  else home_team or re.sub(r"\s{2,}"," ",raw_text)[:60])
+    if not base_title or not detail_url: return None
 
     return {
-        "title": title, "home_team": home_team, "away_team": away_team,
-        "score": score, "status": status, "league": league,
-        "match_time": match_time, "detail_url": detail_url, "blv": blv,
+        "base_title":  base_title,
+        "home_team":   home_team,
+        "away_team":   away_team,
+        "score":       score,
+        "status":      status,
+        "league":      league,
+        "match_time":  match_time_raw,
+        "time_str":    time_str,
+        "date_str":    date_str,
+        "sort_key":    sort_key,
+        "detail_url":  detail_url,
+        "thumbnail":   thumbnail,
+        "blv":         blv,
     }
+
+# ── Gộp trận trùng tên ────────────────────────────────────────
+
+def _normalize_title(title: str) -> str:
+    """Chuẩn hóa tên để so sánh: bỏ dấu cách thừa, lower, bỏ ký tự đặc biệt."""
+    t = title.lower().strip()
+    t = re.sub(r"\s+", " ", t)
+    t = re.sub(r"[^\w\s]", "", t)
+    return t
+
+def merge_matches(raw_matches: list) -> list:
+    """
+    Gộp các card cùng tên trận thành 1 match duy nhất.
+    - Mỗi card riêng → 1 entry trong danh sách "blv_sources"
+    - blv_sources: [{"blv": "Tên BLV", "detail_url": "..."}]
+    - Lấy thông tin chung (score, status, league...) từ card đầu tiên
+    """
+    merged: dict[str, dict] = {}  # key = normalized title
+
+    for m in raw_matches:
+        key = _normalize_title(m["base_title"])
+        if key not in merged:
+            # Tạo entry mới, khởi tạo danh sách blv_sources
+            merged[key] = {**m, "blv_sources": []}
+
+        entry = merged[key]
+
+        # Cập nhật score/status nếu card mới có thông tin tốt hơn
+        if not entry["score"] and m["score"]:
+            entry["score"] = m["score"]
+        if entry["status"] == "upcoming" and m["status"] in ("live","finished"):
+            entry["status"] = m["status"]
+        if not entry["thumbnail"] and m["thumbnail"]:
+            entry["thumbnail"] = m["thumbnail"]
+        if not entry["league"] and m["league"]:
+            entry["league"] = m["league"]
+
+        # Thêm nguồn BLV (tránh duplicate URL)
+        existing_urls = {s["detail_url"] for s in entry["blv_sources"]}
+        if m["detail_url"] not in existing_urls:
+            entry["blv_sources"].append({
+                "blv":        m["blv"] or "",
+                "detail_url": m["detail_url"],
+            })
+
+    result = list(merged.values())
+    # Sắp xếp: live trước → upcoming → finished, rồi theo sort_key
+    priority = {"live": 0, "upcoming": 1, "finished": 2}
+    result.sort(key=lambda x: (priority.get(x["status"],9), x.get("sort_key","")))
+    return result
 
 def extract_matches(html, only_featured=True):
     bs = parse_html(html)
-    result, seen = [], set()
+    raw, seen_urls = [], set()
     for card in find_match_cards(bs, only_featured):
         m = parse_card(card)
-        if m and m["title"].lower() not in seen:
-            seen.add(m["title"].lower()); result.append(m)
-    return result
+        if m and m["detail_url"] not in seen_urls:
+            seen_urls.add(m["detail_url"])
+            raw.append(m)
+    # Gộp trận trùng tên
+    merged = merge_matches(raw)
+    log(f"  → {len(raw)} card → gộp còn {len(merged)} trận")
+    return merged
 
-# ── Stream fallback từ detail page ────────────────────────────
-_QUALITY_RE  = re.compile(r"[_-](?:full[_-]?hd|fhd|1080p?|720p?|480p?|360p?|hd|sd)$", re.I)
-_QUALITY_MAP = {"hd":"HD","sd":"SD","full-hd":"Full HD","full_hd":"Full HD","fhd":"Full HD",
-                "1080":"Full HD","1080p":"Full HD","720":"HD","720p":"HD",
-                "480":"SD","480p":"SD","360":"360p","360p":"360p"}
-_QUALITY_ORDER = {"Auto":0,"Full HD":1,"HD":2,"SD":3}
+# ── Lấy stream từ 1 URL ──────────────────────────────────────
 
-def _stream_base(url):
-    return _QUALITY_RE.sub("", re.sub(r"\.\w+$","",url.rstrip("/").split("/")[-1])).lower()
-
-def _quality_label(url):
-    fname = re.sub(r"\.\w+$","",url.rstrip("/").split("/")[-1]).lower()
-    m = _QUALITY_RE.search(fname)
-    return _QUALITY_MAP.get(m.group(0).lstrip("-_").lower(), m.group(0).upper()) if m else "Auto"
-
-def filter_streams(streams):
-    hls = [s for s in streams if s["type"] == "hls"]
-    other = [s for s in streams if s["type"] != "hls"]
-    if hls:
-        base  = _stream_base(hls[0]["url"])
-        group = [{**s, "name": _quality_label(s["url"])} for s in hls
-                 if _stream_base(s["url"]) == base]
-        group.sort(key=lambda x: _QUALITY_ORDER.get(x["name"], 99))
-        return group + other
-    return other
-
-def extract_streams_from_page(detail_url, scraper):
-    html = fetch_html(detail_url, scraper, retries=2)
+def extract_streams_from_url(detail_url: str, scraper, blv_name: str = "") -> list:
+    """
+    Crawl 1 trang chi tiết, trả về list stream.
+    Mỗi stream đã gắn blv_name để đặt tên link.
+    """
+    if not detail_url: return []
+    html = fetch(detail_url, scraper, retries=2)
     if not html: return []
-    bs   = parse_html(html)
+    bs = parse_html(html)
     seen, raw = set(), []
+
     def add(name, url, kind):
         url = url.strip()
-        if url and url not in seen and len(url) > 12:
-            seen.add(url); raw.append({"name":name,"url":url,"type":kind})
-    for m in re.finditer(r'(https?://[^\s\'"<>\]\\]+\.m3u8(?:[?#][^\s\'"<>\]\\]*)?)', html):
-        add("HLS", m.group(1), "hls")
+        if url and url not in seen and len(url)>12:
+            seen.add(url)
+            raw.append({"name":name,"url":url,"type":kind,"blv":blv_name,"referer":detail_url})
+
+    for iframe in bs.find_all("iframe",src=True):
+        src = iframe["src"]
+        if re.search(r"live|stream|embed|player|sport|watch",src,re.I): add("embed",src,"iframe")
+    for m in re.finditer(r'(https?://[^\s\'"<>\]\\]+\.m3u8(?:[?#][^\s\'"<>\]\\]*)?)',html):
+        add("HLS",m.group(1),"hls")
+    for m in re.finditer(r'(https?://[^\s\'"<>\]\\]+\.mpd(?:[?#][^\s\'"<>\]\\]*)?)',html):
+        add("DASH",m.group(1),"dash")
     for script in bs.find_all("script"):
         c = script.string or ""
-        for m in re.finditer(r'"(?:file|src|url|hls|streamUrl|videoUrl)"\s*:\s*"(https?://[^"]+)"', c):
+        for m in re.finditer(
+            r'"(?:file|src|source|stream|url|hls|playlist|videoUrl|streamUrl)"\s*:\s*"(https?://[^"]+)"',c):
             u = m.group(1)
-            if re.search(r"m3u8|stream|live", u, re.I): add("HLS", u, "hls")
-    for iframe in bs.find_all("iframe", src=True):
-        if re.search(r"live|stream|embed|player", iframe["src"], re.I):
-            add("embed", iframe["src"], "iframe")
-    if not raw: add("Trang trực tiếp", detail_url, "iframe")
-    hls = [s for s in raw if s["type"] == "hls"]
-    return filter_streams(hls) if hls else raw
+            if re.search(r"m3u8|stream|live|video|play",u,re.I): add("Stream config",u,"hls")
+        for m in re.finditer(r'(?:streamUrl|videoUrl|hlsUrl|playerUrl)\s*=\s*["\']([^"\']+)["\']',c):
+            u = m.group(1)
+            if u.startswith("http"): add("JS stream",u,"hls")
+    for a in bs.find_all("a",href=True):
+        href,txt = a["href"],a.get_text(strip=True)
+        if re.search(r"xem|live|watch|stream|truc.?tiep|play|server",txt+href,re.I):
+            if href.startswith("http") and href!=detail_url: add(txt or "Link",href,"hls")
 
-# ── Build channel ──────────────────────────────────────────────
-def build_channel(m: dict, streams: list, index: int,
-                  thumb: str, logo_a: str, logo_b: str,
-                  referer_url: str, qc_league: str) -> dict:
+    if not raw:
+        raw.append({"name":"Trang trực tiếp","url":detail_url,
+                    "type":"iframe","blv":blv_name,"referer":detail_url})
+        return raw
+    return filter_match_streams(raw)
 
-    ch_id = make_id("qc", str(index),
-                    re.sub(r"[^a-z0-9]", "-", m["title"].lower())[:24])
-    blv    = m.get("blv", "")
-    score  = m.get("score", "")
-    league = qc_league or m.get("league", "")
-    ref    = referer_url or m["detail_url"]
+def extract_all_streams(match: dict, scraper) -> list:
+    """
+    Crawl tất cả blv_sources của 1 trận.
+    Trả về list stream đã gắn nhãn BLV, không trùng URL.
+    """
+    all_streams = []
+    seen_urls   = set()
 
-    # ── request_headers ──────────────────────────────────────
-    req_headers = [
-        {"key": "Referer",    "value": ref},
-        {"key": "User-Agent", "value": "Mozilla/5.0"},
-    ]
+    for src in match["blv_sources"]:
+        blv_name   = src["blv"] or ""
+        detail_url = src["detail_url"]
+        streams    = extract_streams_from_url(detail_url, scraper, blv_name)
+        log(f"    🔗 {detail_url[-50:]} → {len(streams)} stream"
+            + (f" (🎙 {blv_name})" if blv_name else ""))
 
-    # ── Stream links ─────────────────────────────────────────
-    slinks = []
-    for j, sl in enumerate(streams):
-        slinks.append({
-            "id":              make_id(ch_id, "lnk", str(j)),
-            "name":            sl.get("name", f"Link {j+1}"),
-            "type":            sl["type"],
-            "default":         j == 0,
-            "url":             sl["url"],
-            "request_headers": req_headers,
-        })
-    if not slinks:
-        slinks.append({
-            "id":              make_id(ch_id, "lnk", "0"),
-            "name":            "Link 1",
-            "type":            "iframe",
-            "default":         True,
-            "url":             m["detail_url"],
-            "request_headers": req_headers,
-        })
+        for s in streams:
+            if s["url"] not in seen_urls:
+                seen_urls.add(s["url"])
+                all_streams.append(s)
 
-    # ── Labels ───────────────────────────────────────────────
+    return all_streams
+
+# ── Display title ─────────────────────────────────────────────
+
+def build_display_title(m: dict) -> str:
+    base  = m["base_title"]
+    score = m["score"]
+    t     = m["time_str"]
+    d     = m["date_str"]
+
+    if m["status"] == "live":
+        if score and score != "VS":
+            home, away = m["home_team"], m["away_team"]
+            if home and away:
+                return f"{home} {score} {away}  🔴"
+        return f"{base}  🔴 LIVE"
+    elif m["status"] == "finished":
+        if score and score != "VS":
+            home, away = m["home_team"], m["away_team"]
+            if home and away:
+                return f"{home} {score} {away}  ✅"
+        return f"{base}  ✅ KT"
+    else:
+        time_info = ""
+        if t and d:  time_info = f"  🕐 {t} | {d}"
+        elif t:      time_info = f"  🕐 {t}"
+        elif d:      time_info = f"  📅 {d}"
+        return f"{base}{time_info}"
+
+# ── Build channel ─────────────────────────────────────────────
+
+def build_channel(m: dict, all_streams: list, index: int) -> dict:
+    ch_id        = make_id("qc", str(index), re.sub(r"[^a-z0-9]","-",m["base_title"].lower())[:24])
+    display_name = build_display_title(m)
+    blv_sources  = m.get("blv_sources", [])
+    n_blv        = len(blv_sources)  # số nguồn BLV
+
+    # ── Labels ────────────────────────────────────────────────
     labels = []
+    score     = m.get("score","")
+    blv_names = [s["blv"] for s in blv_sources if s["blv"]]
+    has_blv   = bool(blv_names) or n_blv > 1
 
-    # Status (top-left)
+    # Label 1 — trạng thái: top-left luôn
     status_cfg = {
-        "live":     {"text": "● Live",        "color": "#E73131", "text_color": "#ffffff"},
-        "upcoming": {"text": "⏳ Sắp diễn ra", "color": "#d54f1a", "text_color": "#ffffff"},
-        "finished": {"text": "✅ Kết thúc",    "color": "#555555", "text_color": "#ffffff"},
-    }.get(m["status"], {"text": "● Live", "color": "#E73131", "text_color": "#ffffff"})
-    labels.append({"text": status_cfg["text"], "position": "top-left",
-                   "color": status_cfg["color"], "text_color": status_cfg["text_color"]})
+        "live":     {"text":"● Live",         "color":"#E73131","text_color":"#ffffff"},
+        "upcoming": {"text":"🕐 Sắp diễn ra","color":"#d54f1a","text_color":"#ffffff"},
+        "finished": {"text":"✅ Kết thúc",    "color":"#444444","text_color":"#ffffff"},
+    }.get(m["status"], {"text":"● Live","color":"#E73131","text_color":"#ffffff"})
+    labels.append({**status_cfg, "position":"top-left"})
 
-    # BLV (top-right)
-    if blv:
-        labels.append({"text": f"🎙 {blv}", "position": "top-right",
-                       "color": "#006020", "text_color": "#ffffff"})
+    # Label 2 — BLV: top-right (chỉ khi có BLV)
+    # - Nhiều BLV → "🎙 3 BLV"
+    # - 1 BLV     → "🎙 Tên BLV"
+    if n_blv > 1:
+        labels.append({"text":f"🎙 {n_blv} BLV","position":"top-right",
+                       "color":"#00601f","text_color":"#ffffff"})
+    elif blv_names:
+        labels.append({"text":f"🎙 {blv_names[0]}","position":"top-right",
+                       "color":"#00601f","text_color":"#ffffff"})
 
-    # Thời gian (bottom-left)
-    if m.get("match_time"):
-        labels.append({"text": f"⏰ {m['match_time']}", "position": "bottom-left",
-                       "color": "#00000099", "text_color": "#ffffff"})
+    # Label 3 — tỉ số: bottom-right
+    if score and score != "VS":
+        if m["status"] == "live":
+            labels.append({"text":f"⚽ {score}","position":"bottom-right",
+                           "color":"#E73131","text_color":"#ffffff"})
+        elif m["status"] == "finished":
+            labels.append({"text":f"KT {score}","position":"bottom-right",
+                           "color":"#444444","text_color":"#ffffff"})
 
-    # Tỉ số hoặc giải đấu (bottom-right)
-    if score and score != "VS" and m["status"] in ("live", "finished"):
-        labels.append({"text": f"🥅 {score}", "position": "bottom-right",
-                       "color": "#00000099", "text_color": "#ffff00"})
-    elif league:
-        labels.append({"text": league[:30], "position": "bottom-right",
-                       "color": "#00000099", "text_color": "#ffffff"})
+    # Label 4 — ngày giờ: bottom-left (chỉ upcoming)
+    if m["status"] == "upcoming" and (m["time_str"] or m["date_str"]):
+        tl = ""
+        if m["time_str"] and m["date_str"]: tl = f"{m['time_str']} | {m['date_str']}"
+        elif m["time_str"]:                 tl = m["time_str"]
+        elif m["date_str"]:                 tl = m["date_str"]
+        if tl:
+            labels.append({"text":f"🕐 {tl}","position":"bottom-left",
+                           "color":"#1a5fa8","text_color":"#ffffff"})
 
-    # ── Image (thumbnail cả 2 đội từ quechoa CDN) ────────────
+    # ── Stream links ──────────────────────────────────────────
+    slinks    = []
+    link_idx  = 0
+
+    if all_streams:
+        # Nhóm stream theo BLV
+        blv_groups: dict[str, list] = {}
+        for s in all_streams:
+            key = s.get("blv") or "Không rõ"
+            blv_groups.setdefault(key, []).append(s)
+
+        for blv_name, streams in blv_groups.items():
+            filtered = filter_match_streams(streams)
+            for s in filtered:
+                quality   = s.get("name","Auto")
+                # Đặt tên link: "BLV Tên — HD" hoặc "BLV Tên" nếu chỉ 1 chất lượng
+                if blv_name and blv_name != "Không rõ":
+                    if len(filtered) > 1:
+                        link_name = f"🎙 {blv_name} — {quality}"
+                    else:
+                        link_name = f"🎙 {blv_name}"
+                else:
+                    link_name = f"Link {link_idx+1}" if quality == "Auto" else quality
+
+                # Referer từ trang BLV tương ứng
+                referer = s.get("referer", m["blv_sources"][0]["detail_url"] if blv_sources else BASE_URL+"/")
+
+                slinks.append({
+                    "id":      make_id(ch_id, "lnk", str(link_idx)),
+                    "name":    link_name,
+                    "type":    s["type"],
+                    "default": link_idx == 0,
+                    "url":     s["url"],
+                    "request_headers": [
+                        {"key":"Referer",    "value":referer},
+                        {"key":"User-Agent", "value":CHROME_UA},
+                    ],
+                })
+                link_idx += 1
+
+    # Fallback: không có stream → link trang đầu tiên
+    if not slinks:
+        fallback_url = blv_sources[0]["detail_url"] if blv_sources else BASE_URL+"/"
+        slinks.append({
+            "id":      make_id(ch_id, "lnk", "0"),
+            "name":    "Link 1",
+            "type":    "iframe",
+            "default": True,
+            "url":     fallback_url,
+            "request_headers": [
+                {"key":"Referer",    "value":fallback_url},
+                {"key":"User-Agent", "value":CHROME_UA},
+            ],
+        })
+
+    # ── Thumbnail ─────────────────────────────────────────────
     img_obj = None
-    if thumb:
-        img_obj = {
-            "padding":          1,
-            "background_color": "#ececec",
-            "display":          "contain",
-            "url":              thumb,
-            "width":            1600,
-            "height":           1200,
-        }
+    if m["thumbnail"]:
+        img_obj = {"padding":1,"background_color":"#ececec","display":"contain",
+                   "url":m["thumbnail"],"width":1600,"height":1200}
 
-    stream_name = f"🎙 {blv}" if blv else "Trực tiếp"
+    # ── Stream group name ─────────────────────────────────────
+    parts = ["Trực tiếp"]
+    if m["league"]:  parts.append(m["league"])
+    if n_blv > 1:    parts.append(f"{n_blv} BLV")
+    stream_name = " · ".join(parts)
 
     return {
         "id":            ch_id,
-        "name":          m["title"],
+        "name":          display_name,
         "type":          "single",
         "display":       "thumbnail-only",
         "enable_detail": False,
@@ -443,7 +525,7 @@ def build_channel(m: dict, streams: list, index: int,
             "name": "QueCho9 Live",
             "contents": [{
                 "id":   make_id(ch_id, "ct"),
-                "name": m["title"],
+                "name": display_name,
                 "streams": [{
                     "id":           make_id(ch_id, "st"),
                     "name":         stream_name,
@@ -453,17 +535,18 @@ def build_channel(m: dict, streams: list, index: int,
         }],
     }
 
-def build_iptv_json(channels, group_name):
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+# ── Root JSON ─────────────────────────────────────────────────
+
+def build_iptv_json(channels, now_str, group_name):
     return {
         "id":          "quechoa9-live",
         "name":        "QueCho9 — Trực tiếp bóng đá",
         "url":         BASE_URL + "/",
-        "description": f"Cập nhật: {now_str}",
+        "description": f"Cập nhật lúc {now_str} (ICT)",
         "disable_ads": True,
         "color":       "#0f3460",
-        "grid_number": 2,
-        "image":       {"type": "cover", "url": f"{BASE_URL}/favicon.ico"},
+        "grid_number": 3,
+        "image":       {"type":"cover","url":f"{BASE_URL}/favicon.ico"},
         "groups": [{
             "id":       "tam-diem",
             "name":     group_name,
@@ -472,128 +555,67 @@ def build_iptv_json(channels, group_name):
         }],
     }
 
-# ── Main ───────────────────────────────────────────────────────
+# ── Main ──────────────────────────────────────────────────────
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--all",       action="store_true",  help="Tất cả trận")
-    ap.add_argument("--json-only", action="store_true",  help="Chỉ dùng quechoa.json (không crawl quechoa9.live)")
-    ap.add_argument("--no-stream-fallback", action="store_true",
-                    help="Không crawl stream từ detail page khi quechoa.json không có")
+    ap.add_argument("--all",       action="store_true")
+    ap.add_argument("--no-stream", action="store_true")
     ap.add_argument("--output",    default=OUTPUT_FILE)
     args = ap.parse_args()
 
     log("\n" + "═"*62)
-    log("  🏟  CRAWLER — quechoa9.live  v9")
-    log("  📸  Thumbnail: quechoa CDN (ảnh cả 2 đội)")
+    log("  🏟  CRAWLER — quechoa9.live  v9  (gộp BLV + tỉ số)")
     log("═"*62 + "\n")
 
+    now_vn        = datetime.now(VN_TZ)
+    now_str       = now_vn.strftime("%d/%m/%Y %H:%M ICT")
     only_featured = not args.all
     group_name    = "🔥 Tất cả trận đấu" if args.all else "🔥 Trận đấu tâm điểm"
+    scraper       = make_scraper()
 
-    # ── Bước 1: Fetch quechoa.json (thumbnail + streams chuẩn) ──
-    log("📥 Bước 1: Fetch quechoa.json từ CDN...")
-    qdata  = fetch_quechoa_json()
-    lookup = build_quechoa_lookup(qdata)
+    log("📥 Bước 1: Tải trang chủ...")
+    html = fetch(BASE_URL, scraper)
+    if not html: log("❌ Không tải được trang chủ."); sys.exit(1)
+    if "Just a moment" in html or "cf-browser-verification" in html:
+        log("⚠ Cloudflare challenge — thử lại sau."); sys.exit(1)
 
-    # ── Bước 2: Crawl danh sách trận từ quechoa9.live ──────────
-    matches = []
-    if args.json_only:
-        log("\n⚡ --json-only: lấy toàn bộ trận từ quechoa.json")
-        for group in qdata.get("groups", []):
-            for ch in group.get("channels", []):
-                meta = ch.get("org_metadata", {})
-                ta = meta.get("team_a",""); tb = meta.get("team_b","")
-                title = f"{ta} vs {tb}" if ta and tb else ch.get("name","?")
-                # Parse time từ name: "⚽ X vs Y | HH:MM DD/MM"
-                time_m = re.search(r"(\d{1,2}:\d{2}\s*\d{2}/\d{2}|\d{1,2}:\d{2}\s*\|\s*\d{2}\.\d{2})", ch.get("name",""))
-                matches.append({
-                    "title":      title,
-                    "home_team":  ta,
-                    "away_team":  tb,
-                    "score":      "",
-                    "status":     "live" if any(l.get("text","").startswith("●") for l in ch.get("labels",[])) else "upcoming",
-                    "league":     meta.get("league",""),
-                    "match_time": time_m.group(1) if time_m else "",
-                    "detail_url": (ch.get("sources",[{}])[0].get("contents",[{}])[0]
-                                   .get("streams",[{}])[0].get("stream_links",[{}])[0]
-                                   .get("request_headers",[{}])[0].get("value","") or BASE_URL),
-                    "blv":        "",
-                })
-    else:
-        scraper = make_scraper()
-        log(f"\n📥 Bước 2: Tải trang chủ quechoa9.live...")
-        html = fetch_html(BASE_URL, scraper)
-        if not html:
-            log("❌ Không tải được trang chủ."); sys.exit(1)
-        if "Just a moment" in html or "cf-browser-verification" in html:
-            log("⚠ Cloudflare challenge — thử lại sau."); sys.exit(1)
-        log(f"\n🔍 Bước 2b: Phân tích {'tâm điểm' if only_featured else 'tất cả'}...")
-        matches = extract_matches(html, only_featured)
-        if not matches:
-            log("  ⚠ Không tìm thấy trận nào trên quechoa9.live")
-            if lookup:
-                log("  → Dùng dữ liệu từ quechoa.json thay thế")
-                args.json_only = True
-                # Re-run với json_only
-                for group in qdata.get("groups", []):
-                    for ch in group.get("channels", []):
-                        meta = ch.get("org_metadata", {})
-                        ta = meta.get("team_a",""); tb = meta.get("team_b","")
-                        title = f"{ta} vs {tb}" if ta and tb else ch.get("name","?")
-                        matches.append({
-                            "title": title, "home_team": ta, "away_team": tb,
-                            "score": "", "status": "live", "league": meta.get("league",""),
-                            "match_time": "", "detail_url": BASE_URL, "blv": "",
-                        })
-            else:
-                sys.exit(1)
+    log(f"\n🔍 Bước 2: Phân tích + gộp trận trùng tên...")
+    matches = extract_matches(html, only_featured)
+    if not matches: log("  ⚠ Không tìm thấy trận nào."); sys.exit(1)
 
-    log(f"\n  ✅ {len(matches)} trận:\n")
+    log(f"\n  ✅ {len(matches)} trận (sau khi gộp):\n")
     for i, m in enumerate(matches, 1):
-        icon = {"live":"🔴","finished":"✅","upcoming":"🕐"}.get(m["status"],"⚽")
-        log(f"  {icon} [{i:02d}] {m['title']}" + (f"  🎙 {m['blv']}" if m.get("blv") else ""))
+        icon    = {"live":"🔴","finished":"✅","upcoming":"🕐"}.get(m["status"],"⚽")
+        score   = f"  [{m['score']}]" if m.get("score") and m["score"]!="VS" else ""
+        dt      = f"  {m['time_str']}" if m.get("time_str") else ""
+        dt     += f" {m['date_str']}"  if m.get("date_str") else ""
+        n_src   = len(m.get("blv_sources",[]))
+        blv_s   = f"  🎙 {n_src} BLV" if n_src > 1 else (f"  🎙 {m['blv_sources'][0]['blv']}" if n_src==1 and m["blv_sources"][0]["blv"] else "")
+        log(f"  {icon} [{i:02d}] {m['base_title']}{score}{dt}{blv_s}")
 
-    # ── Bước 3: Ghép thumbnail + streams từ quechoa.json ───────
-    log(f"\n🖼  Bước 3: Ghép thumbnail từ quechoa.json CDN...")
     channels = []
-    matched_count = 0
+    if args.no_stream:
+        log("\n⏭ Bỏ qua stream")
+        for i, m in enumerate(matches, 1):
+            channels.append(build_channel(m, [], i))
+    else:
+        log(f"\n📡 Bước 3: Lấy stream links (tất cả BLV)...")
+        for i, m in enumerate(matches, 1):
+            n_src = len(m.get("blv_sources",[]))
+            log(f"\n  [{i:02d}/{len(matches)}] {m['base_title']}  ({n_src} nguồn)")
+            all_streams = extract_all_streams(m, scraper)
+            log(f"    📡 Tổng {len(all_streams)} stream link")
+            channels.append(build_channel(m, all_streams, i))
+            time.sleep(1.0)
 
-    for i, m in enumerate(matches, 1):
-        info = find_in_lookup(lookup, m["home_team"], m["away_team"])
-
-        if info:
-            matched_count += 1
-            thumb       = info["thumb"]
-            streams     = info["streams"]
-            logo_a      = info["logo_a"]
-            logo_b      = info["logo_b"]
-            referer_url = info["referer_url"]
-            qc_league   = info["league"]
-            log(f"  ✅ [{i:02d}] {m['title'][:45]}")
-            log(f"       🖼  {thumb[:65]}")
-        else:
-            thumb = logo_a = logo_b = referer_url = qc_league = ""
-            streams = []
-            log(f"  ⚠  [{i:02d}] {m['title'][:45]} — không tìm thấy trong quechoa.json")
-
-            # Fallback: crawl stream từ detail page
-            if not args.json_only and not args.no_stream_fallback and hasattr(args, '_scraper'):
-                log(f"       → Crawl stream từ detail page...")
-                streams = extract_streams_from_page(m["detail_url"], scraper)
-
-        channels.append(build_channel(
-            m, streams, i, thumb, logo_a, logo_b, referer_url, qc_league
-        ))
-
-    log(f"\n  📊 Ghép thumbnail: {matched_count}/{len(matches)} trận")
-
-    # ── Bước 4: Ghi file ────────────────────────────────────────
-    result = build_iptv_json(channels, group_name)
-    with open(args.output, "w", encoding="utf-8") as f:
+    result = build_iptv_json(channels, now_str, group_name)
+    with open(args.output,"w",encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
     log(f"\n{'═'*62}")
     log(f"  ✅ Xong!  📁 {args.output}  ⚽ {len(channels)} trận")
+    log(f"  🕐 Cập nhật: {now_str}")
     log("═"*62 + "\n")
 
 if __name__ == "__main__":

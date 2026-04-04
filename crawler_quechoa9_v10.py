@@ -432,6 +432,29 @@ CDN_THUMB_RE = re.compile(
     r'https?://pub-[a-f0-9]+\.r2\.dev/[^\s\'"<>\\]+\.webp(?:\?[^\s\'"<>\\]*)?',
     re.I
 )
+
+def find_cdn_thumb_recursive(obj, depth: int = 0) -> str:
+    """Tìm CDN kaytee thumbnail URL ở bất kỳ cấp nào trong JSON."""
+    if depth > 15: return ""
+    if isinstance(obj, str):
+        m = CDN_THUMB_RE.search(obj)
+        return m.group(0) if m else ""
+    if isinstance(obj, dict):
+        for key in ("thumb","thumbnail","thumbUrl","thumb_url","poster","coverImage"):
+            if key in obj and isinstance(obj[key], str):
+                r = find_cdn_thumb_recursive(obj[key], depth + 1)
+                if r: return r
+        if "image" in obj and isinstance(obj["image"], dict):
+            r = find_cdn_thumb_recursive(obj["image"], depth + 1)
+            if r: return r
+        for v in obj.values():
+            r = find_cdn_thumb_recursive(v, depth + 1)
+            if r: return r
+    if isinstance(obj, list):
+        for item in obj:
+            r = find_cdn_thumb_recursive(item, depth + 1)
+            if r: return r
+    return ""
 IMG_URL_RE = re.compile(
     r'https?://[^\s\'"<>\\]+\.(?:webp|jpg|jpeg|png)(?:\?[^\s\'"<>\\]*)?',
     re.I
@@ -463,31 +486,21 @@ def extract_thumb_from_detail(html: str, bs) -> str:
       ④ <img> lớn nhất (width >= 300) từ domain hợp lệ
     Loại bỏ: backgrounds/, opengraph-image*.png, favicon, logo site
     """
-    # ① Parse __NEXT_DATA__ JSON — tìm org_metadata.thumb hoặc CDN URL
+    # ① Parse __NEXT_DATA__ JSON — tìm CDN kaytee URL bằng recursive search
     next_tag = bs.find('script', id='__NEXT_DATA__')
     if next_tag and next_tag.string:
         nd = next_tag.string
-        # 1a. Parse JSON và tìm key "thumb" trong org_metadata
         try:
             nd_data = json.loads(nd)
-            nd_str  = json.dumps(nd_data)  # flat string để regex nhanh
+            cdn_url = find_cdn_thumb_recursive(nd_data)
+            if cdn_url and _is_valid_thumb(cdn_url):
+                return cdn_url
         except Exception:
-            nd_str = nd
-
-        # Tìm CDN kaytee URL (chính xác nhất)
-        m = CDN_THUMB_RE.search(nd_str)
+            pass
+        # Fallback: regex trực tiếp trên raw JSON string
+        m = CDN_THUMB_RE.search(nd)
         if m and _is_valid_thumb(m.group(0)):
             return m.group(0)
-
-        # Tìm key "thumb" hoặc "thumbnail" bất kỳ
-        for key_re in (
-            r'"(?:thumb|thumbnail|poster|coverImage)"\s*:\s*"(https?://[^"]+\.(?:webp|jpg|jpeg|png)[^"]*)"',
-        ):
-            km = re.search(key_re, nd_str)
-            if km:
-                url = km.group(1)
-                if _is_valid_thumb(url) and not _SITE_DEFAULT.search(url):
-                    return url
 
     # ② CDN r2.dev trong toàn bộ HTML
     m = CDN_THUMB_RE.search(html)
@@ -554,13 +567,32 @@ def extract_streams_from_url(detail_url: str, html: str, bs) -> list:
     return filter_streams(hls) if hls else raw
 
 def crawl_blv_source(detail_url: str, blv_name: str, scraper) -> tuple[list, str]:
-    """Crawl 1 trang BLV → (streams, thumb). Tái sử dụng HTML đã fetch."""
+    """
+    Crawl 1 trang BLV → (streams, thumb).
+    Nếu không tìm được CDN thumbnail từ quechoa9.live,
+    tự động thử quechoa6.live với cùng slug (cùng backend, có org_metadata.thumb).
+    """
     html = fetch_html(detail_url, scraper, retries=2)
     if not html:
         return [], ""
     bs     = parse_html(html)
     thumb  = extract_thumb_from_detail(html, bs)
     streams = extract_streams_from_url(detail_url, html, bs)
+
+    # Nếu chưa có thumbnail → thử quechoa6.live cùng slug
+    if not thumb and "quechoa9.live" in detail_url:
+        url6 = detail_url.replace("quechoa9.live", "quechoa6.live")
+        log(f"      → Thử quechoa6.live để lấy thumbnail...")
+        html6 = fetch_html(url6, scraper, retries=2)
+        if html6:
+            bs6   = parse_html(html6)
+            thumb = extract_thumb_from_detail(html6, bs6)
+            if thumb:
+                log(f"      🖼  quechoa6: {thumb.split('/')[-1][:50]}")
+            # Nếu chưa có streams → lấy thêm từ quechoa6
+            if not streams:
+                streams = extract_streams_from_url(url6, html6, bs6)
+
     # Gắn tên BLV vào từng stream
     for s in streams:
         s["blv"] = blv_name

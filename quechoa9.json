@@ -26,22 +26,34 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/23208.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 BÒ SỮA",
+              "text": "● Live",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#E73131",
               "text_color": "#ffffff"
             },
             {
-              "text": "● Live",
+              "text": "🎙 BÒ SỮA",
               "position": "top-right",
-              "color": "#E73131",
+              "color": "#006020",
               "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 13:00|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🥅 1:3",
+              "position": "bottom-right",
+              "color": "#00000099",
+              "text_color": "#ffff00"
             }
           ],
           "sources": [
@@ -126,22 +138,34 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/160.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 KHOAI TÂY",
+              "text": "● Live",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#E73131",
               "text_color": "#ffffff"
             },
             {
-              "text": "● Live",
+              "text": "🎙 KHOAI TÂY",
               "position": "top-right",
-              "color": "#E73131",
+              "color": "#006020",
               "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 13:30|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🥅 1:0",
+              "position": "bottom-right",
+              "color": "#00000099",
+              "text_color": "#ffff00"
             }
           ],
           "sources": [
@@ -226,22 +250,34 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/798.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 DƯA HẤU",
+              "text": "● Live",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#E73131",
               "text_color": "#ffffff"
             },
             {
-              "text": "● Live",
+              "text": "🎙 DƯA HẤU",
               "position": "top-right",
-              "color": "#E73131",
+              "color": "#006020",
               "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 14:15|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🥅 0:0",
+              "position": "bottom-right",
+              "color": "#00000099",
+              "text_color": "#ffff00"
             }
           ],
           "sources": [
@@ -326,22 +362,34 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/168.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 NEM CHUA",
+              "text": "● Live",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#E73131",
               "text_color": "#ffffff"
             },
             {
-              "text": "● Live",
+              "text": "🎙 NEM CHUA",
               "position": "top-right",
-              "color": "#E73131",
+              "color": "#006020",
               "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 13:30|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🥅 2:3",
+              "position": "bottom-right",
+              "color": "#00000099",
+              "text_color": "#ffff00"
             }
           ],
           "sources": [
@@ -426,21 +474,33 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://image.quechoacdn.live/cdn-cgi/image/width=3840,format=auto/https://storage.quechoa2.live/backgrounds/sports/match-card/1767467876769-card-bida.png",
+            "url": "https://storage.quechoa2.live/logos/teams/1767976228787-hoangsao.webp",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 PUMA",
+              "text": "⏳ Sắp diễn ra",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#d54f1a",
               "text_color": "#ffffff"
             },
             {
-              "text": "🕐 Sắp diễn ra",
+              "text": "🎙 PUMA",
               "position": "top-right",
-              "color": "#d54f1a",
+              "color": "#006020",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 16:00|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra16:00|04.048 BALL W",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             }
           ],
@@ -526,21 +586,33 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/49.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 RƯỢU MẬN",
+              "text": "⏳ Sắp diễn ra",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#d54f1a",
               "text_color": "#ffffff"
             },
             {
-              "text": "🕐 Sắp diễn ra",
+              "text": "🎙 RƯỢU MẬN",
               "position": "top-right",
-              "color": "#d54f1a",
+              "color": "#006020",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 16:15|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra16:15|04.04FA CupCh",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             }
           ],
@@ -626,21 +698,33 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/41.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 DƯA HẤU",
+              "text": "⏳ Sắp diễn ra",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#d54f1a",
               "text_color": "#ffffff"
             },
             {
-              "text": "🕐 Sắp diễn ra",
+              "text": "🎙 DƯA HẤU",
               "position": "top-right",
-              "color": "#d54f1a",
+              "color": "#006020",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 19:00|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra19:00|04.04FA CupSo",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             }
           ],
@@ -726,21 +810,33 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/images/cards/card-bg.jpg",
+            "url": "https://media.api-sports.io/football/teams/530.png",
             "width": 1600,
             "height": 1200
           },
           "labels": [
             {
-              "text": "🎙 RƯỢU MẬN",
+              "text": "⏳ Sắp diễn ra",
               "position": "top-left",
-              "color": "#00601f",
+              "color": "#d54f1a",
               "text_color": "#ffffff"
             },
             {
-              "text": "🕐 Sắp diễn ra",
+              "text": "🎙 RƯỢU MẬN",
               "position": "top-right",
-              "color": "#d54f1a",
+              "color": "#006020",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⏰ 19:00|04.04",
+              "position": "bottom-left",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra19:00|04.04La LigaA",
+              "position": "bottom-right",
+              "color": "#00000099",
               "text_color": "#ffffff"
             }
           ],

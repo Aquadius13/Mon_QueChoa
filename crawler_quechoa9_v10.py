@@ -19,7 +19,7 @@ Chạy:
     python crawler_quechoa9_v10.py --output out.json
 """
 
-import argparse, hashlib, io, json, os, re, sys, time, unicodedata
+import argparse, base64, hashlib, io, json, os, re, sys, time, unicodedata
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
@@ -45,6 +45,159 @@ PLACEHOLDER_IMG = {
     "url": "https://quechoa9.live/favicon.ico", "width": 512, "height": 512,
 }
 THUMBS_DIR = Path("thumbs")   # thư mục chứa thumbnail PNG (serve bởi serve_iptv.py)
+
+# ── Tạo SVG thumbnail (không cần Pillow, nhúng base64 vào JSON) ──────
+# Kích thước chuẩn: 800×450 (ratio 16:9) cho MỌI trận — đồng đều
+THUMB_W, THUMB_H = 800, 450
+
+def _esc(s):
+    return (s or "").replace("&","&amp;").replace("<","&lt;") \
+                    .replace(">","&gt;").replace('"',"&quot;")
+
+def build_svg_thumbnail(
+    home_team: str, away_team: str,
+    logo_a: str = "", logo_b: str = "",
+    time_str: str = "", date_str: str = "",
+    status: str = "upcoming", score: str = "",
+    league: str = "",
+) -> str:
+    """
+    Tạo SVG 800×450, nhúng logo qua <image href=URL>.
+    Trả về data:image/svg+xml;base64,...
+    Không cần Pillow, không cần file ngoài.
+    """
+    W, H = THUMB_W, THUMB_H
+    cx   = W // 2   # center x
+
+    # ── Nội dung vùng giữa ──────────────────────────────
+    if status == "live" and score and score not in ("", "VS"):
+        mid_top = score;     mid_top_fill = "#ff4444"; mid_top_fs = 54
+        mid_bot = "● LIVE";  mid_bot_fill = "#ff6666"
+    elif status == "finished" and score and score not in ("", "VS"):
+        mid_top = score;       mid_top_fill = "#ffffff"; mid_top_fs = 54
+        mid_bot = "Kết thúc";  mid_bot_fill = "#aaaaaa"
+    else:
+        mid_top = time_str or "TBD"; mid_top_fill = "#ffffff"; mid_top_fs = 48
+        mid_bot = date_str or "";    mid_bot_fill = "#cccccc"
+
+    # ── Wrap tên đội (max 13 ký tự/dòng, tối đa 2 dòng) ─
+    def wrap(name, mx=13):
+        words = (name or "").split()
+        lines, cur = [], ""
+        for w in words:
+            if len(cur)+len(w)+1 <= mx: cur = (cur+" "+w).strip()
+            else:
+                if cur: lines.append(cur)
+                cur = w
+        if cur: lines.append(cur)
+        return lines[:2]
+
+    hl = wrap(home_team); al = wrap(away_team)
+    lg = _esc((league or "")[:38])
+
+    # ── Logo block: <image> nếu có URL, else circle+initials ─
+    def logo_svg(lx, ly, r, url, name):
+        init = "".join(w[0].upper() for w in (name or "?").split()[:2]) or "?"
+        ring = f'<circle cx="{lx}" cy="{ly}" r="{r+7}" fill="#ffffff15" stroke="#ffffff30" stroke-width="1.5"/>' 
+        if url and url.startswith("http"):
+            # clip-path circle để logo tròn
+            clip_id = f"cl{abs(hash(url))%99999}"
+            return (
+                f'<defs><clipPath id="{clip_id}"><circle cx="{lx}" cy="{ly}" r="{r}"/></clipPath></defs>' +
+                ring +
+                f'<image href="{_esc(url)}" x="{lx-r}" y="{ly-r}" ' +
+                f'width="{r*2}" height="{r*2}" clip-path="url(#{clip_id})" ' +
+                f'preserveAspectRatio="xMidYMid meet"/>' 
+            )
+        else:
+            return (
+                ring +
+                f'<circle cx="{lx}" cy="{ly}" r="{r}" fill="#1a3a6e"/>' +
+                f'<text x="{lx}" y="{ly+1}" text-anchor="middle" dominant-baseline="central" ' +
+                f'font-family="Arial Black,sans-serif" font-size="{r-4}" font-weight="900" fill="#ffffff">{_esc(init)}</text>' 
+            )
+
+    def name_svg(lines, nx, ny):
+        out = ""
+        for i, ln in enumerate(lines):
+            out += (
+                f'<text x="{nx}" y="{ny+i*25}" text-anchor="middle" ' +
+                f'font-family="Arial,sans-serif" font-size="19" font-weight="700" ' +
+                f'fill="#ffffff" paint-order="stroke" stroke="#000" stroke-width="3">{_esc(ln)}</text>'
+            )
+        return out
+
+    # Logo center Y — hơi lên trên trung tâm để nhường chỗ tên
+    LOGO_Y  = 185
+    LOGO_R  = 72
+    NAME_Y  = LOGO_Y + LOGO_R + 20   # y tên đội (dòng 1)
+
+    # Tỉ số/giờ lệch xuống dưới trung tâm một chút
+    SCORE_Y = H // 2 + 18            # lệch xuống 18px từ giữa
+
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
+        f'width="{W}" height="{H}" viewBox="0 0 {W} {H}">' +
+        # Defs
+        '<defs>' +
+        '<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0%" stop-color="#0a1a2e"/>' +
+        '<stop offset="100%" stop-color="#0d2845"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="gl" x1="0" y1="0" x2="1" y2="0">' +
+        '<stop offset="0%" stop-color="#0f3020" stop-opacity="0.6"/>' +
+        '<stop offset="100%" stop-color="#0a1a2e" stop-opacity="0"/>' +
+        '</linearGradient>' +
+        '<linearGradient id="gr" x1="0" y1="0" x2="1" y2="0">' +
+        '<stop offset="0%" stop-color="#0a1a2e" stop-opacity="0"/>' +
+        '<stop offset="100%" stop-color="#102040" stop-opacity="0.6"/>' +
+        '</linearGradient>' +
+        f'<filter id="gw" x="-30%" y="-30%" width="160%" height="160%">' +
+        '<feGaussianBlur stdDeviation="3" result="b"/>' +
+        '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>' +
+        '</defs>' +
+        # Nền
+        f'<rect width="{W}" height="{H}" fill="url(#bg)"/>' +
+        f'<rect x="0" y="0" width="340" height="{H}" fill="url(#gl)"/>' +
+        f'<rect x="460" y="0" width="340" height="{H}" fill="url(#gr)"/>' +
+        # Đường sân
+        f'<ellipse cx="{cx}" cy="{H+80}" rx="360" ry="220" fill="none" stroke="#ffffff07" stroke-width="1.5"/>' +
+        f'<line x1="{cx}" y1="52" x2="{cx}" y2="{H}" stroke="#ffffff06" stroke-width="1"/>' +
+        # League bar
+        f'<rect x="0" y="0" width="{W}" height="50" fill="#00000060"/>' +
+        f'<text x="{cx}" y="32" text-anchor="middle" font-family="Arial,sans-serif" ' +
+        f'font-size="16" font-weight="600" fill="#ffffffcc">{lg}</text>' +
+        f'<line x1="50" y1="50" x2="{W-50}" y2="50" stroke="#ffffff18" stroke-width="0.8"/>' +
+        # Logo + tên đội nhà (trái)
+        logo_svg(175, LOGO_Y, LOGO_R, logo_a, home_team) +
+        name_svg(hl, 175, NAME_Y + (12 if len(hl)==1 else 0)) +
+        # Logo + tên đội khách (phải)
+        logo_svg(W-175, LOGO_Y, LOGO_R, logo_b, away_team) +
+        name_svg(al, W-175, NAME_Y + (12 if len(al)==1 else 0)) +
+        # Đường gạch 2 bên giữa
+        f'<line x1="{cx-65}" y1="{SCORE_Y-12}" x2="{cx-22}" y2="{SCORE_Y-12}" stroke="#ffffff45" stroke-width="1.5"/>' +
+        f'<line x1="{cx+22}" y1="{SCORE_Y-12}" x2="{cx+65}" y2="{SCORE_Y-12}" stroke="#ffffff45" stroke-width="1.5"/>' +
+        # Tỉ số / giờ (lệch xuống dưới giữa)
+        f'<text x="{cx}" y="{SCORE_Y+6}" text-anchor="middle" dominant-baseline="central" ' +
+        f'font-family="Arial Black,sans-serif" font-size="{mid_top_fs}" font-weight="900" ' +
+        f'fill="{mid_top_fill}" filter="url(#gw)" paint-order="stroke" ' +
+        f'stroke="#00000080" stroke-width="5">{_esc(mid_top)}</text>' +
+        # Sub (ngày/trạng thái)
+        (f'<text x="{cx}" y="{SCORE_Y+52}" text-anchor="middle" ' +
+         f'font-family="Arial,sans-serif" font-size="18" font-weight="600" ' +
+         f'fill="{mid_bot_fill}">{_esc(mid_bot)}</text>' if mid_bot else "") +
+        # Fade bottom
+        f'<rect x="0" y="{H-55}" width="{W}" height="55" fill="url(#bg)" opacity="0.7"/>' +
+        '</svg>'
+    )
+    b64 = base64.b64encode(svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{b64}"
+
+# Kích thước chuẩn cho mọi img_obj — dùng THUMB_W × THUMB_H
+_STD_IMG = {"padding": 0, "background_color": "#0d2038",
+            "display": "contain", "width": THUMB_W, "height": THUMB_H}
+
 
 # ── Tạo thumbnail PNG bằng Pillow (logo 2 đội thật) ─────────
 try:
@@ -468,32 +621,9 @@ def parse_card(card) -> dict | None:
     league = ""
     for d in card.find_all("div", class_="justify-center"):
         if not has_classes(d, "gap-1", "w-full"): continue
-        # Chỉ lấy text trực tiếp của div (không lấy text của con cháu)
-        direct_texts = []
-        for child in d.children:
-            from bs4 import NavigableString as _NS
-            if isinstance(child, _NS):
-                t = str(child).strip()
-                if t: direct_texts.append(t)
-            elif hasattr(child, "get_text"):
-                # Chỉ lấy text nếu child là element đơn giản (không có con)
-                if not list(child.children) or len(list(child.children)) <= 2:
-                    t = child.get_text(strip=True)
-                    if t: direct_texts.append(t)
-        txt = " ".join(direct_texts).strip()
-        # League thực tế ngắn: "La Liga", "FA Cup", "Ligue 1"...
-        # Nếu quá dài (>50 ký tự) → bỏ qua, đó là raw text bị lẫn
-        if txt and 3 < len(txt) <= 50 and not re.fullmatch(r"[\d:\s]+", txt):
-            # Thêm kiểm tra: không chứa tên đội (VS pattern)
-            if not re.search(r"\bVS\b|\bvs\b", txt, re.I):
-                league = txt; break
-        # Fallback: tìm span/p con đầu tiên có text ngắn
-        if not league:
-            for child in d.find_all(["span","p","div"], recursive=False):
-                t = child.get_text(strip=True)
-                if t and 3 < len(t) <= 50 and not re.fullmatch(r"[\d:\s]+", t):
-                    if not re.search(r"\bVS\b|\bvs\b", t, re.I):
-                        league = t; break
+        txt = d.get_text(strip=True)
+        if txt and len(txt) > 3 and not re.fullmatch(r"[\d:\s]+", txt):
+            league = txt; break
 
     home_team = away_team = ""
     team_texts = []
@@ -627,21 +757,12 @@ _THUMB_DOMAINS = re.compile(
     re.I
 )
 _THUMB_EXCLUDE = re.compile(
-    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/|opengraph-image|og-image|og_image)',
-    re.I
-)
-
-# Ảnh generic của site (og:image của trang chủ, không phải ảnh trận)
-_SITE_GENERIC_IMGS = re.compile(
-    r'opengraph-image|/favicon\.ico|og[-_]image',
+    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/)',
     re.I
 )
 
 def _is_valid_thumb(url: str) -> bool:
-    if not url or len(url) < 20: return False
-    if _THUMB_EXCLUDE.search(url):   return False
-    if _SITE_GENERIC_IMGS.search(url): return False
-    return True
+    return bool(url) and not _THUMB_EXCLUDE.search(url) and len(url) > 20
 
 def extract_thumb_from_detail(html: str, bs) -> str:
     # 1) __NEXT_DATA__ CDN webp
@@ -794,11 +915,8 @@ def build_channel(m: dict, all_streams: list, thumb: str,
             labels.append({"text":f"KT {score}","position":"bottom-right",
                            "color":"#444444","text_color":"#ffffff"})
     elif league:
-        # Làm sạch: chỉ hiển thị nếu league thực sự ngắn và có nghĩa
-        lg_clean = league.strip()[:30]
-        if lg_clean and len(lg_clean) <= 30:
-            labels.append({"text":lg_clean,"position":"bottom-right",
-                           "color":"#00000099","text_color":"#ffffff"})
+        labels.append({"text":league[:30],"position":"bottom-right",
+                       "color":"#00000099","text_color":"#ffffff"})
 
     # 4. Ngày giờ — bottom-left (chỉ upcoming)
     if m["status"] == "upcoming" and (m["time_str"] or m["date_str"]):
@@ -862,57 +980,28 @@ def build_channel(m: dict, all_streams: list, thumb: str,
             }],
         })
 
-    # ── Thumbnail PNG (logo 2 đội thật) ─────────────────────
+    # ── Thumbnail — kích thước chuẩn 800×450 cho mọi trận ──────
     logo_a_url = m.get("_logo_a", "")
     logo_b_url = m.get("_logo_b", "")
 
-    # Dùng thumbnail CDN nếu có (kaytee-*.webp, chất lượng cao nhất)
-    if thumb and "r2.dev/quechoa_thumbs" in thumb:
-        img_obj = {
-            "padding": 1, "background_color": "#ececec",
-            "display": "contain", "url": thumb,
-            "width": 1600, "height": 1200,
-        }
-    else:
-        # Tạo PNG từ logo 2 đội
-        slug = re.sub(r"[^a-z0-9]", "-",
-                      (m["home_team"]+"_"+m["away_team"]).lower())[:48]
-        png_filename = f"thumb_{slug}.png"
-        png_path     = THUMBS_DIR / png_filename
-
-        # Tạo PNG nếu chưa có
-        if not png_path.exists():
-            THUMBS_DIR.mkdir(exist_ok=True)
-            png_bytes = make_match_thumbnail_png(
-                home_team = m["home_team"],
-                away_team = m["away_team"],
-                logo_a_url = logo_a_url,
-                logo_b_url = logo_b_url,
-                time_str  = m.get("time_str", ""),
-                date_str  = m.get("date_str", ""),
-                status    = m["status"],
-                score     = m.get("score", ""),
-                league    = league,
-            )
-            if png_bytes:
-                png_path.write_bytes(png_bytes)
-
-        if png_path.exists():
-            # URL sẽ được serve bởi serve_iptv.py tại /thumbs/<filename>
-            img_obj = {
-                "padding": 0, "background_color": "#0d2038",
-                "display": "contain",
-                "url": f"__LOCAL_IP__/thumbs/{png_filename}",
-                "width": 800, "height": 450,
-            }
-        else:
-            img_obj = PLACEHOLDER_IMG
+    # Luôn dùng SVG base64 — đồng đều kích thước, không cần file ngoài
+    # Logo 2 đội nhúng qua <image href=URL> trong SVG (Actions có internet)
+    svg_uri = build_svg_thumbnail(
+        home_team = m["home_team"],
+        away_team = m["away_team"],
+        logo_a    = logo_a_url,
+        logo_b    = logo_b_url,
+        time_str  = m.get("time_str", ""),
+        date_str  = m.get("date_str", ""),
+        status    = m["status"],
+        score     = m.get("score", ""),
+        league    = league,
+    )
+    img_obj = {**_STD_IMG, "url": svg_uri}
 
     # ── Tên content ───────────────────────────────────────────
     content_name = display_name
-    # Chỉ thêm league nếu ngắn và sạch
-    if league and len(league.strip()) <= 40:
-        content_name += f" · {league.strip()}"
+    if league: content_name += f" · {league}"
 
     return {
         "id":            ch_id,
@@ -958,8 +1047,6 @@ def main():
     ap.add_argument("--all",       action="store_true", help="Tất cả trận (không chỉ tâm điểm)")
     ap.add_argument("--no-stream", action="store_true", help="Không crawl stream (nhanh hơn)")
     ap.add_argument("--output",    default=OUTPUT_FILE)
-    ap.add_argument("--port", "-p", default=7979, type=int,
-                    help="Port của serve_iptv.py (mặc định 7979)")
     args = ap.parse_args()
 
     log("\n" + "═"*62)
@@ -1057,24 +1144,10 @@ def main():
 
     log(f"\n  📊 Thumbnail CDN: {thumb_matched}/{len(matches)} trận khớp")
 
-    # Bước 4: Ghi file — thay __LOCAL_IP__ bằng IP + port thực tế
+    # Bước 4: Ghi file
     result = build_iptv_json(channels, now_str, group_name)
-    result_str = json.dumps(result, ensure_ascii=False, indent=2)
-
-    # Tự detect IP nội bộ
-    local_ip = "127.0.0.1"
-    try:
-        import socket
-        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as _s:
-            _s.connect(("8.8.8.8", 80))
-            local_ip = _s.getsockname()[0]
-    except Exception:
-        pass
-    port = getattr(args, "port", 7979)
-    result_str = result_str.replace("__LOCAL_IP__", f"http://{local_ip}:{port}")
-
     with open(args.output, "w", encoding="utf-8") as f:
-        f.write(result_str)
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
     log(f"\n{'═'*62}")
     log(f"  ✅ Xong!  📁 {args.output}  ⚽ {len(channels)} trận")

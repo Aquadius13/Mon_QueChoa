@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 09:56 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 11:31 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -23,12 +23,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+TGl2ZTAzOjAwfDA1LjA0V29ybGQgY3VwIE1hY2FvIDIwMjZCw4FOPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5CSzwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+QsOBTiBL4bq+VDwvdGV4dD4KPCEtLSBBV0FZIC0tPgo8Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjYxNSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSI2MTUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPkJLPC90ZXh0Pgo8dGV4dCB4PSI2MTUiIHk9IjMwNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5Cw4FOIEvhur5UPC90ZXh0Pgo8IS0tIENlbnRlciBkaXZpZGVycyAtLT4KPGxpbmUgeDE9IjMzOCIgeTE9IjIxNSIgeDI9IjM3OCIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxsaW5lIHgxPSI0MjIiIHkxPSIyMTUiIHgyPSI0NjIiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8IS0tIENlbnRlcjogdGltZSAvIHNjb3JlIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZjU1NTUiIGZpbHRlcj0idXJsKCNndykiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMDAwMDg4IiBzdHJva2Utd2lkdGg9IjUiPjAtMDwvdGV4dD4KPCEtLSBDZW50ZXI6IGRhdGUgLyBzdGF0dXMgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI2ZmNTU1NSI+4pePIExJVkU8L3RleHQ+CjwhLS0gQm90dG9tIGZhZGUgLS0+CjxyZWN0IHg9IjAiIHk9IjM4MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -124,22 +124,22 @@
         },
         {
           "id": "qc-2-gunma-bank-green-wings-w",
-          "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04",
+          "name": "Gunma Bank Green Wings W 0-0 Himeji Victorina W  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+TGl2ZTA0OjA1fDA1LjA0U1YuTGVhZ3VlIFdvbWVuR3VubWEgQmE8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjUyIiB4Mj0iNzQwIiB5Mj0iNTIiIHN0cm9rZT0iI2ZmZmZmZjE4IiBzdHJva2Utd2lkdGg9IjEiLz4KPCEtLSBIT01FIC0tPgo8Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSIxODUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPkdCPC90ZXh0Pgo8dGV4dCB4PSIxODUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5HdW5tYSBCYW5rPC90ZXh0Pjx0ZXh0IHg9IjE4NSIgeT0iMzE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPkdyZWVuIFdpbmdzIFc8L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5IVjwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+SGltZWppPC90ZXh0Pjx0ZXh0IHg9IjYxNSIgeT0iMzE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPlZpY3RvcmluYSBXPC90ZXh0Pgo8IS0tIENlbnRlciBkaXZpZGVycyAtLT4KPGxpbmUgeDE9IjMzOCIgeTE9IjIxNSIgeDI9IjM3OCIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxsaW5lIHgxPSI0MjIiIHkxPSIyMTUiIHgyPSI0NjIiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8IS0tIENlbnRlcjogdGltZSAvIHNjb3JlIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZjU1NTUiIGZpbHRlcj0idXJsKCNndykiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMDAwMDg4IiBzdHJva2Utd2lkdGg9IjUiPjAtMDwvdGV4dD4KPCEtLSBDZW50ZXI6IGRhdGUgLyBzdGF0dXMgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI2ZmNTU1NSI+4pePIExJVkU8L3RleHQ+CjwhLS0gQm90dG9tIGZhZGUgLS0+CjxyZWN0IHg9IjAiIHk9IjM4MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -150,15 +150,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra04:05|05.04SV.Leagu",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 04:05 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -169,7 +163,7 @@
               "contents": [
                 {
                   "id": "qc-2-gunma-bank-green-wings-w-ct",
-                  "name": "Gunma Bank Green Wings W vs Himeji Victorina W  🕐 04:05 | 05/04 · Sắp diễn ra04:05|05.04SV.League WomenGunma Bank Green Wings WVSHimeji Victorina WNNGƯỜI CHYMĐặt cược",
+                  "name": "Gunma Bank Green Wings W 0-0 Himeji Victorina W  🔴 · Live04:05|05.04SV.League WomenGunma Bank Green Wings W0:0Himeji Victorina WNNGƯỜI CHYMĐặt cược",
                   "streams": [
                     {
                       "id": "qc-2-gunma-bank-green-wings-w-st0",
@@ -236,22 +230,22 @@
         },
         {
           "id": "qc-3-ageo-w-vs-okayama-seagul",
-          "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04",
+          "name": "Ageo W 0-0 Okayama Seagulls W  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-1ed8a6105946.webp?v=1775357698",
-            "width": 1600,
-            "height": 1200
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U1YuTGVhZ3VlIFdvbWVuPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48aW1hZ2UgaHJlZj0iaHR0cHM6Ly9zdG9yYWdlLnF1ZWNob2EyLmxpdmUvbG9nb3MvdGVhbXMvMTc3NDY3Nzc4OTE5NS1hZ2VvLnBuZyIgeD0iMTExIiB5PSIxMjEiIHdpZHRoPSIxNDgiIGhlaWdodD0iMTQ4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiBvcGFjaXR5PSIwLjk1Ii8+Cjx0ZXh0IHg9IjE4NSIgeT0iMzA3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPkFnZW8gVzwvdGV4dD4KPCEtLSBBV0FZIC0tPgo8Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxpbWFnZSBocmVmPSJodHRwczovL21lZGlhLmFwaS1zcG9ydHMuaW8vdm9sbGV5L3RlYW1zLzc3MS5wbmciIHg9IjU0MSIgeT0iMTIxIiB3aWR0aD0iMTQ4IiBoZWlnaHQ9IjE0OCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgbWVldCIgb3BhY2l0eT0iMC45NSIvPgo8dGV4dCB4PSI2MTUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5Pa2F5YW1hPC90ZXh0Pjx0ZXh0IHg9IjYxNSIgeT0iMzE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPlNlYWd1bGxzIFc8L3RleHQ+CjwhLS0gQ2VudGVyIGRpdmlkZXJzIC0tPgo8bGluZSB4MT0iMzM4IiB5MT0iMjE1IiB4Mj0iMzc4IiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGxpbmUgeDE9IjQyMiIgeTE9IjIxNSIgeDI9IjQ2MiIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjwhLS0gQ2VudGVyOiB0aW1lIC8gc2NvcmUgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmNTU1NSIgZmlsdGVyPSJ1cmwoI2d3KSIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwMDAwODgiIHN0cm9rZS13aWR0aD0iNSI+MC0wPC90ZXh0Pgo8IS0tIENlbnRlcjogZGF0ZSAvIHN0YXR1cyAtLT4KPHRleHQgeD0iNDAwIiB5PSIyNjciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjZmY1NTU1Ij7il48gTElWRTwvdGV4dD4KPCEtLSBCb3R0b20gZmFkZSAtLT4KPHJlY3QgeD0iMCIgeT0iMzgwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjcwIiBmaWxsPSJ1cmwoI2JnKSIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -262,15 +256,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "SV.League Women",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 04:05 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -281,7 +269,7 @@
               "contents": [
                 {
                   "id": "qc-3-ageo-w-vs-okayama-seagul-ct",
-                  "name": "Ageo W vs Okayama Seagulls W  🕐 04:05 | 05/04 · SV.League Women",
+                  "name": "Ageo W 0-0 Okayama Seagulls W  🔴 · SV.League Women",
                   "streams": [
                     {
                       "id": "qc-3-ageo-w-vs-okayama-seagul-st0",
@@ -314,41 +302,35 @@
         },
         {
           "id": "qc-4-voreas-hokkaido-vs-osaka",
-          "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04",
+          "name": "Voreas Hokkaido 0-0 Osaka Bluteon  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-9b41908b4987.webp?v=1775357720",
-            "width": 1600,
-            "height": 1200
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+TGl2ZTA0OjA1fDA1LjA0U1YuTGVhZ3VlVm9yZWFzIEhva2thaWQ8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjUyIiB4Mj0iNzQwIiB5Mj0iNTIiIHN0cm9rZT0iI2ZmZmZmZjE4IiBzdHJva2Utd2lkdGg9IjEiLz4KPCEtLSBIT01FIC0tPgo8Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSIxODUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPlZIPC90ZXh0Pgo8dGV4dCB4PSIxODUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5Wb3JlYXM8L3RleHQ+PHRleHQgeD0iMTg1IiB5PSIzMTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+SG9ra2FpZG88L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5PQjwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+T3Nha2EgQmx1dGVvbjwvdGV4dD4KPCEtLSBDZW50ZXIgZGl2aWRlcnMgLS0+CjxsaW5lIHgxPSIzMzgiIHkxPSIyMTUiIHgyPSIzNzgiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8bGluZSB4MT0iNDIyIiB5MT0iMjE1IiB4Mj0iNDYyIiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPCEtLSBDZW50ZXI6IHRpbWUgLyBzY29yZSAtLT4KPHRleHQgeD0iNDAwIiB5PSIyMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjUyIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmY1NTU1IiBmaWx0ZXI9InVybCgjZ3cpIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAwMDA4OCIgc3Ryb2tlLXdpZHRoPSI1Ij4wLTA8L3RleHQ+CjwhLS0gQ2VudGVyOiBkYXRlIC8gc3RhdHVzIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjI2NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZjU1NTUiPuKXjyBMSVZFPC90ZXh0Pgo8IS0tIEJvdHRvbSBmYWRlIC0tPgo8cmVjdCB4PSIwIiB5PSIzODAiIHdpZHRoPSI4MDAiIGhlaWdodD0iNzAiIGZpbGw9InVybCgjYmcpIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
             {
-              "text": "🎙 PUMA",
+              "text": "🎙 Nhà Đài",
               "position": "top-right",
               "color": "#00601f",
               "text_color": "#ffffff"
             },
             {
-              "text": "SV.League",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 04:05 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -359,18 +341,18 @@
               "contents": [
                 {
                   "id": "qc-4-voreas-hokkaido-vs-osaka-ct",
-                  "name": "Voreas Hokkaido vs Osaka Bluteon  🕐 04:05 | 05/04 · SV.League",
+                  "name": "Voreas Hokkaido 0-0 Osaka Bluteon  🔴 · Live04:05|05.04SV.LeagueVoreas Hokkaido0:0Osaka BluteonNNhà ĐàiĐặt cược",
                   "streams": [
                     {
                       "id": "qc-4-voreas-hokkaido-vs-osaka-st0",
-                      "name": "🎙 PUMA",
+                      "name": "🎙 Nhà Đài",
                       "stream_links": [
                         {
                           "id": "qc-4-voreas-hokkaido-vs-osaka-b0-l0",
-                          "name": "Full HD",
+                          "name": "Link 1",
                           "type": "hls",
                           "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_full-hd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
@@ -387,7 +369,7 @@
                           "name": "HD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_hd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1_hd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
@@ -404,7 +386,7 @@
                           "name": "SD",
                           "type": "hls",
                           "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_banhda_sd.m3u8",
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1_sd.m3u8",
                           "request_headers": [
                             {
                               "key": "Referer",
@@ -426,22 +408,22 @@
         },
         {
           "id": "qc-5-suntory-sunbirds-vs-jt-t",
-          "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04",
+          "name": "Suntory Sunbirds 0-0 JT Thunders  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-1d277bdd392a.webp?v=1775357702",
-            "width": 1600,
-            "height": 1200
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+TGl2ZTA0OjA1fDA1LjA0U1YuTGVhZ3VlU3VudG9yeSBTdW5iaXI8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjUyIiB4Mj0iNzQwIiB5Mj0iNTIiIHN0cm9rZT0iI2ZmZmZmZjE4IiBzdHJva2Utd2lkdGg9IjEiLz4KPCEtLSBIT01FIC0tPgo8Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSIxODUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPlNTPC90ZXh0Pgo8dGV4dCB4PSIxODUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5TdW50b3J5PC90ZXh0Pjx0ZXh0IHg9IjE4NSIgeT0iMzE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPlN1bmJpcmRzPC90ZXh0Pgo8IS0tIEFXQVkgLS0+CjxjaXJjbGUgY3g9IjYxNSIgY3k9IjE5NSIgcj0iODAiIGZpbGw9IiNmZmZmZmYxOCIgc3Ryb2tlPSIjZmZmZmZmMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI3NCIgZmlsbD0iIzFhM2E2ZSIvPjx0ZXh0IHg9IjYxNSIgeT0iMjA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZmZmZiI+SlQ8L3RleHQ+Cjx0ZXh0IHg9IjYxNSIgeT0iMzA3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPkpUIFRodW5kZXJzPC90ZXh0Pgo8IS0tIENlbnRlciBkaXZpZGVycyAtLT4KPGxpbmUgeDE9IjMzOCIgeTE9IjIxNSIgeDI9IjM3OCIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxsaW5lIHgxPSI0MjIiIHkxPSIyMTUiIHgyPSI0NjIiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8IS0tIENlbnRlcjogdGltZSAvIHNjb3JlIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTIiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZjU1NTUiIGZpbHRlcj0idXJsKCNndykiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMDAwMDg4IiBzdHJva2Utd2lkdGg9IjUiPjAtMDwvdGV4dD4KPCEtLSBDZW50ZXI6IGRhdGUgLyBzdGF0dXMgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI2ZmNTU1NSI+4pePIExJVkU8L3RleHQ+CjwhLS0gQm90dG9tIGZhZGUgLS0+CjxyZWN0IHg9IjAiIHk9IjM4MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -452,15 +434,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "SV.League",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 04:05 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -471,7 +447,7 @@
               "contents": [
                 {
                   "id": "qc-5-suntory-sunbirds-vs-jt-t-ct",
-                  "name": "Suntory Sunbirds vs JT Thunders  🕐 04:05 | 05/04 · SV.League",
+                  "name": "Suntory Sunbirds 0-0 JT Thunders  🔴 · Live04:05|05.04SV.LeagueSuntory Sunbirds0:0JT ThundersKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
                       "id": "qc-5-suntory-sunbirds-vs-jt-t-st0",
@@ -537,18 +513,124 @@
           ]
         },
         {
-          "id": "qc-6-bergs-z-sinner-j-vs",
+          "id": "qc-6-queenseis-kariya-w-vs-ne",
+          "name": "Queenseis Kariya W 0-0 NEC Red Rockets W  🔴",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 0,
+            "background_color": "#0d2038",
+            "display": "contain",
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+TGl2ZTA0OjA1fDA1LjA0U1YuTGVhZ3VlIFdvbWVuUXVlZW5zZWk8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjUyIiB4Mj0iNzQwIiB5Mj0iNTIiIHN0cm9rZT0iI2ZmZmZmZjE4IiBzdHJva2Utd2lkdGg9IjEiLz4KPCEtLSBIT01FIC0tPgo8Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSIxODUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPlFLPC90ZXh0Pgo8dGV4dCB4PSIxODUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5RdWVlbnNlaXM8L3RleHQ+PHRleHQgeD0iMTg1IiB5PSIzMTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+S2FyaXlhIFc8L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5OUjwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+TkVDIFJlZDwvdGV4dD48dGV4dCB4PSI2MTUiIHk9IjMxOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5Sb2NrZXRzIFc8L3RleHQ+CjwhLS0gQ2VudGVyIGRpdmlkZXJzIC0tPgo8bGluZSB4MT0iMzM4IiB5MT0iMjE1IiB4Mj0iMzc4IiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGxpbmUgeDE9IjQyMiIgeTE9IjIxNSIgeDI9IjQ2MiIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjwhLS0gQ2VudGVyOiB0aW1lIC8gc2NvcmUgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSI1MiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmNTU1NSIgZmlsdGVyPSJ1cmwoI2d3KSIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwMDAwODgiIHN0cm9rZS13aWR0aD0iNSI+MC0wPC90ZXh0Pgo8IS0tIENlbnRlcjogZGF0ZSAvIHN0YXR1cyAtLT4KPHRleHQgeD0iNDAwIiB5PSIyNjciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjZmY1NTU1Ij7il48gTElWRTwvdGV4dD4KPCEtLSBCb3R0b20gZmFkZSAtLT4KPHJlY3QgeD0iMCIgeT0iMzgwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjcwIiBmaWxsPSJ1cmwoI2JnKSIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==",
+            "width": 800,
+            "height": 450
+          },
+          "labels": [
+            {
+              "text": "● Live",
+              "color": "#E73131",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 NHÀ ĐÀI",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-6-queenseis-kariya-w-vs-ne-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-6-queenseis-kariya-w-vs-ne-ct",
+                  "name": "Queenseis Kariya W 0-0 NEC Red Rockets W  🔴 · Live04:05|05.04SV.League WomenQueenseis Kariya W0:0NEC Red Rockets WNNHÀ ĐÀIĐặt cược",
+                  "streams": [
+                    {
+                      "id": "qc-6-queenseis-kariya-w-vs-ne-st0",
+                      "name": "🎙 NHÀ ĐÀI",
+                      "stream_links": [
+                        {
+                          "id": "qc-6-queenseis-kariya-w-vs-ne-b0-l0",
+                          "name": "Full HD",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv5_full-hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/queenseis-kariya-w-vs-nec-red-rockets-w-szr-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-6-queenseis-kariya-w-vs-ne-b0-l1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv5_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/queenseis-kariya-w-vs-nec-red-rockets-w-szr-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-6-queenseis-kariya-w-vs-ne-b0-l2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv5_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/queenseis-kariya-w-vs-nec-red-rockets-w-szr-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-7-bergs-z-sinner-j-vs",
           "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMDk6MDB8MDUuMDRBVFAgTW9udGUgQ2FybG9CPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5CWjwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+QmVyZ3MgWi4gLzwvdGV4dD48dGV4dCB4PSIxODUiIHk9IjMxOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5TaW5uZXIgSi48L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5NVDwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+TWFjaGFjIFQuIC88L3RleHQ+PHRleHQgeD0iNjE1IiB5PSIzMTkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+UnV1ZCBDLjwvdGV4dD4KPCEtLSBDZW50ZXIgZGl2aWRlcnMgLS0+CjxsaW5lIHgxPSIzMzgiIHkxPSIyMTUiIHgyPSIzNzgiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8bGluZSB4MT0iNDIyIiB5MT0iMjE1IiB4Mj0iNDYyIiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPCEtLSBDZW50ZXI6IHRpbWUgLyBzY29yZSAtLT4KPHRleHQgeD0iNDAwIiB5PSIyMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ2IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIiBmaWx0ZXI9InVybCgjZ3cpIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAwMDA4OCIgc3Ryb2tlLXdpZHRoPSI1Ij4wOTowMDwvdGV4dD4KPCEtLSBDZW50ZXI6IGRhdGUgLyBzdGF0dXMgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI2JiYmJiYiI+MDUvMDQ8L3RleHQ+CjwhLS0gQm90dG9tIGZhZGUgLS0+CjxyZWN0IHg9IjAiIHk9IjM4MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -578,19 +660,19 @@
           ],
           "sources": [
             {
-              "id": "qc-6-bergs-z-sinner-j-vs-src",
+              "id": "qc-7-bergs-z-sinner-j-vs-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-bergs-z-sinner-j-vs-ct",
+                  "id": "qc-7-bergs-z-sinner-j-vs-ct",
                   "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04 · Sắp diễn ra09:00|05.04ATP Monte CarloBergs Z. / Sinner J.VSMachac T. / Ruud C.RRƯỢU MẬNĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-6-bergs-z-sinner-j-vs-st0",
+                      "id": "qc-7-bergs-z-sinner-j-vs-st0",
                       "name": "🎙 RƯỢU MẬN",
                       "stream_links": [
                         {
-                          "id": "qc-6-bergs-z-sinner-j-vs-b0-l0",
+                          "id": "qc-7-bergs-z-sinner-j-vs-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -607,7 +689,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-bergs-z-sinner-j-vs-b0-l1",
+                          "id": "qc-7-bergs-z-sinner-j-vs-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -624,7 +706,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-bergs-z-sinner-j-vs-b0-l2",
+                          "id": "qc-7-bergs-z-sinner-j-vs-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -649,18 +731,18 @@
           ]
         },
         {
-          "id": "qc-7-hoang-anh-gia-lai-vs-phu",
+          "id": "qc-8-hoang-anh-gia-lai-vs-phu",
           "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMTA6MDB8MDUuMDRWLkxlYWd1ZSAxSG9hbmcgPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5IQTwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+SG9hbmcgQW5oIEdpYTwvdGV4dD48dGV4dCB4PSIxODUiIHk9IjMxOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5MYWk8L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5QRDwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+UGh1IERvbmc8L3RleHQ+CjwhLS0gQ2VudGVyIGRpdmlkZXJzIC0tPgo8bGluZSB4MT0iMzM4IiB5MT0iMjE1IiB4Mj0iMzc4IiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGxpbmUgeDE9IjQyMiIgeTE9IjIxNSIgeDI9IjQ2MiIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjwhLS0gQ2VudGVyOiB0aW1lIC8gc2NvcmUgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZmZmZiIgZmlsdGVyPSJ1cmwoI2d3KSIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwMDAwODgiIHN0cm9rZS13aWR0aD0iNSI+MTA6MDA8L3RleHQ+CjwhLS0gQ2VudGVyOiBkYXRlIC8gc3RhdHVzIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjI2NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNiYmJiYmIiPjA1LzA0PC90ZXh0Pgo8IS0tIEJvdHRvbSBmYWRlIC0tPgo8cmVjdCB4PSIwIiB5PSIzODAiIHdpZHRoPSI4MDAiIGhlaWdodD0iNzAiIGZpbGw9InVybCgjYmcpIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -690,19 +772,19 @@
           ],
           "sources": [
             {
-              "id": "qc-7-hoang-anh-gia-lai-vs-phu-src",
+              "id": "qc-8-hoang-anh-gia-lai-vs-phu-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-7-hoang-anh-gia-lai-vs-phu-ct",
+                  "id": "qc-8-hoang-anh-gia-lai-vs-phu-ct",
                   "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04 · Sắp diễn ra10:00|05.04V.League 1Hoang Anh Gia LaiVSPhu DongKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-7-hoang-anh-gia-lai-vs-phu-st0",
+                      "id": "qc-8-hoang-anh-gia-lai-vs-phu-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-7-hoang-anh-gia-lai-vs-phu-b0-l0",
+                          "id": "qc-8-hoang-anh-gia-lai-vs-phu-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -719,7 +801,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-hoang-anh-gia-lai-vs-phu-b0-l1",
+                          "id": "qc-8-hoang-anh-gia-lai-vs-phu-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -736,7 +818,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-hoang-anh-gia-lai-vs-phu-b0-l2",
+                          "id": "qc-8-hoang-anh-gia-lai-vs-phu-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -761,18 +843,18 @@
           ]
         },
         {
-          "id": "qc-8-song-lam-nghe-an-vs-viet",
+          "id": "qc-9-song-lam-nghe-an-vs-viet",
           "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMTE6MDB8MDUuMDRWLkxlYWd1ZSAxU29uZyBMPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5TTDwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIyOTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+U29uZyBMYW0gTmdoZTwvdGV4dD48dGV4dCB4PSIxODUiIHk9IjMxOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5BbjwvdGV4dD4KPCEtLSBBV0FZIC0tPgo8Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjYxNSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSI2MTUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPlY8L3RleHQ+Cjx0ZXh0IHg9IjYxNSIgeT0iMzA3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPlZpZXR0ZWw8L3RleHQ+CjwhLS0gQ2VudGVyIGRpdmlkZXJzIC0tPgo8bGluZSB4MT0iMzM4IiB5MT0iMjE1IiB4Mj0iMzc4IiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGxpbmUgeDE9IjQyMiIgeTE9IjIxNSIgeDI9IjQ2MiIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjwhLS0gQ2VudGVyOiB0aW1lIC8gc2NvcmUgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZmZmZiIgZmlsdGVyPSJ1cmwoI2d3KSIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwMDAwODgiIHN0cm9rZS13aWR0aD0iNSI+MTE6MDA8L3RleHQ+CjwhLS0gQ2VudGVyOiBkYXRlIC8gc3RhdHVzIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjI2NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNiYmJiYmIiPjA1LzA0PC90ZXh0Pgo8IS0tIEJvdHRvbSBmYWRlIC0tPgo8cmVjdCB4PSIwIiB5PSIzODAiIHdpZHRoPSI4MDAiIGhlaWdodD0iNzAiIGZpbGw9InVybCgjYmcpIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -802,19 +884,19 @@
           ],
           "sources": [
             {
-              "id": "qc-8-song-lam-nghe-an-vs-viet-src",
+              "id": "qc-9-song-lam-nghe-an-vs-viet-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-8-song-lam-nghe-an-vs-viet-ct",
+                  "id": "qc-9-song-lam-nghe-an-vs-viet-ct",
                   "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Song Lam Nghe AnVSViettelVVĂN MINHĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-8-song-lam-nghe-an-vs-viet-st0",
+                      "id": "qc-9-song-lam-nghe-an-vs-viet-st0",
                       "name": "🎙 VĂN MINH",
                       "stream_links": [
                         {
-                          "id": "qc-8-song-lam-nghe-an-vs-viet-b0-l0",
+                          "id": "qc-9-song-lam-nghe-an-vs-viet-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -831,7 +913,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-song-lam-nghe-an-vs-viet-b0-l1",
+                          "id": "qc-9-song-lam-nghe-an-vs-viet-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -848,7 +930,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-song-lam-nghe-an-vs-viet-b0-l2",
+                          "id": "qc-9-song-lam-nghe-an-vs-viet-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -873,18 +955,18 @@
           ]
         },
         {
-          "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam",
+          "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam",
           "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMTE6MDB8MDUuMDRWLkxlYWd1ZSAxSOG7k25nIEw8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjUyIiB4Mj0iNzQwIiB5Mj0iNTIiIHN0cm9rZT0iI2ZmZmZmZjE4IiBzdHJva2Utd2lkdGg9IjEiLz4KPCEtLSBIT01FIC0tPgo8Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9IjgwIiBmaWxsPSIjZmZmZmZmMTgiIHN0cm9rZT0iI2ZmZmZmZjMzIiBzdHJva2Utd2lkdGg9IjEuNSIvPjxjaXJjbGUgY3g9IjE4NSIgY3k9IjE5NSIgcj0iNzQiIGZpbGw9IiMxYTNhNmUiLz48dGV4dCB4PSIxODUiIHk9IjIwNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiPkhMPC90ZXh0Pgo8dGV4dCB4PSIxODUiIHk9IjI5NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5I4buTbmcgTMSpbmggSMOgPC90ZXh0Pjx0ZXh0IHg9IjE4NSIgeT0iMzE5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPlTEqW5oPC90ZXh0Pgo8IS0tIEFXQVkgLS0+CjxjaXJjbGUgY3g9IjYxNSIgY3k9IjE5NSIgcj0iODAiIGZpbGw9IiNmZmZmZmYxOCIgc3Ryb2tlPSIjZmZmZmZmMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+PGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI3NCIgZmlsbD0iIzFhM2E2ZSIvPjx0ZXh0IHg9IjYxNSIgeT0iMjA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZmZmZiI+TkQ8L3RleHQ+Cjx0ZXh0IHg9IjYxNSIgeT0iMzA3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiPk5hbSBEaW5oPC90ZXh0Pgo8IS0tIENlbnRlciBkaXZpZGVycyAtLT4KPGxpbmUgeDE9IjMzOCIgeTE9IjIxNSIgeDI9IjM3OCIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxsaW5lIHgxPSI0MjIiIHkxPSIyMTUiIHgyPSI0NjIiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8IS0tIENlbnRlcjogdGltZSAvIHNjb3JlIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIEJsYWNrLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiNmZmZmZmYiIGZpbHRlcj0idXJsKCNndykiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMDAwMDg4IiBzdHJva2Utd2lkdGg9IjUiPjExOjAwPC90ZXh0Pgo8IS0tIENlbnRlcjogZGF0ZSAvIHN0YXR1cyAtLT4KPHRleHQgeD0iNDAwIiB5PSIyNjciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjYmJiYmJiIj4wNS8wNDwvdGV4dD4KPCEtLSBCb3R0b20gZmFkZSAtLT4KPHJlY3QgeD0iMCIgeT0iMzgwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjcwIiBmaWxsPSJ1cmwoI2JnKSIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -914,19 +996,19 @@
           ],
           "sources": [
             {
-              "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-src",
+              "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-ct",
+                  "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-ct",
                   "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Hồng Lĩnh Hà TĩnhVSNam DinhNNEM CHUAĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-st0",
+                      "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-st0",
                       "name": "🎙 NEM CHUA",
                       "stream_links": [
                         {
-                          "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-b0-l0",
+                          "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -943,7 +1025,7 @@
                           ]
                         },
                         {
-                          "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-b0-l1",
+                          "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -960,7 +1042,7 @@
                           ]
                         },
                         {
-                          "id": "qc-9-h-ng-l-nh-h-t-nh-vs-nam-b0-l2",
+                          "id": "qc-10-h-ng-l-nh-h-t-nh-vs-nam-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -985,18 +1067,18 @@
           ]
         },
         {
-          "id": "qc-10-chung-k-t-vs-chung-k-t",
+          "id": "qc-11-chung-k-t-vs-chung-k-t",
           "name": "CHUNG KẾT vs CHUNG KẾT  🕐 11:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMTE6MzB8MDUuMDRXb3JsZCBjdXAgTWFjYW8gPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5DSzwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+Q0hVTkcgS+G6vlQ8L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5DSzwvdGV4dD4KPHRleHQgeD0iNjE1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+Q0hVTkcgS+G6vlQ8L3RleHQ+CjwhLS0gQ2VudGVyIGRpdmlkZXJzIC0tPgo8bGluZSB4MT0iMzM4IiB5MT0iMjE1IiB4Mj0iMzc4IiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGxpbmUgeDE9IjQyMiIgeTE9IjIxNSIgeDI9IjQ2MiIgeTI9IjIxNSIgc3Ryb2tlPSIjZmZmZmZmNTAiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjwhLS0gQ2VudGVyOiB0aW1lIC8gc2NvcmUgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjMzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2ssc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iI2ZmZmZmZiIgZmlsdGVyPSJ1cmwoI2d3KSIgcGFpbnQtb3JkZXI9InN0cm9rZSIgc3Ryb2tlPSIjMDAwMDAwODgiIHN0cm9rZS13aWR0aD0iNSI+MTE6MzA8L3RleHQ+CjwhLS0gQ2VudGVyOiBkYXRlIC8gc3RhdHVzIC0tPgo8dGV4dCB4PSI0MDAiIHk9IjI2NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNiYmJiYmIiPjA1LzA0PC90ZXh0Pgo8IS0tIEJvdHRvbSBmYWRlIC0tPgo8cmVjdCB4PSIwIiB5PSIzODAiIHdpZHRoPSI4MDAiIGhlaWdodD0iNzAiIGZpbGw9InVybCgjYmcpIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -1026,19 +1108,19 @@
           ],
           "sources": [
             {
-              "id": "qc-10-chung-k-t-vs-chung-k-t-src",
+              "id": "qc-11-chung-k-t-vs-chung-k-t-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-10-chung-k-t-vs-chung-k-t-ct",
+                  "id": "qc-11-chung-k-t-vs-chung-k-t-ct",
                   "name": "CHUNG KẾT vs CHUNG KẾT  🕐 11:30 | 05/04 · Sắp diễn ra11:30|05.04World cup Macao 2026CHUNG KẾTVSCHUNG KẾTPPUMAĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-10-chung-k-t-vs-chung-k-t-st0",
+                      "id": "qc-11-chung-k-t-vs-chung-k-t-st0",
                       "name": "🎙 PUMA",
                       "stream_links": [
                         {
-                          "id": "qc-10-chung-k-t-vs-chung-k-t-b0-l0",
+                          "id": "qc-11-chung-k-t-vs-chung-k-t-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -1055,7 +1137,7 @@
                           ]
                         },
                         {
-                          "id": "qc-10-chung-k-t-vs-chung-k-t-b0-l1",
+                          "id": "qc-11-chung-k-t-vs-chung-k-t-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -1072,7 +1154,7 @@
                           ]
                         },
                         {
-                          "id": "qc-10-chung-k-t-vs-chung-k-t-b0-l2",
+                          "id": "qc-11-chung-k-t-vs-chung-k-t-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -1097,18 +1179,18 @@
           ]
         },
         {
-          "id": "qc-11-west-ham-vs-leeds",
+          "id": "qc-12-west-ham-vs-leeds",
           "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiPgo8ZGVmcz4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDgxNDIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMTUzYTIwIiBzdG9wLW9wYWNpdHk9IjAuNTUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMGQyMDM4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMjg1MCIgc3RvcC1vcGFjaXR5PSIwLjU1Ii8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8ZmlsdGVyIGlkPSJndyIgeD0iLTIwJSIgeT0iLTIwJSIgd2lkdGg9IjE0MCUiIGhlaWdodD0iMTQwJSI+CiAgICA8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0IiByZXN1bHQ9ImIiLz4KICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYiIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICA8L2ZpbHRlcj4KICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwb3QiIGN4PSI1MCUiIGN5PSIxMTAlIiByPSI3MCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNGEyNSIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBkMjAzOCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9yYWRpYWxHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNiZykiLz4KPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9InVybCgjc3BvdCkiLz4KPCEtLSBGaWVsZCBkZWNvcmF0aW9uIC0tPgo8ZWxsaXBzZSBjeD0iNDAwIiBjeT0iNTEwIiByeD0iMzUwIiByeT0iMjAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPGVsbGlwc2UgY3g9IjQwMCIgY3k9IjUxMCIgcng9IjE5MCIgcnk9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgo8Y2lyY2xlIGN4PSI0MDAiIGN5PSI1MTAiIHI9IjQwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYwNCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSI0MDAiIHkxPSIwIiB4Mj0iNDAwIiB5Mj0iNDUwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gU2lkZSB3YXNoIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNnbCkiLz4KPHJlY3QgeD0iNDQwIiB5PSIwIiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncikiLz4KPCEtLSBMZWFndWUgYmFyIC0tPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjUyIiBmaWxsPSIjMDAwMDAwNTUiLz4KPHRleHQgeD0iNDAwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiNmZmZmZmZjYyI+U+G6r3AgZGnhu4VuIHJhMTU6MzB8MDUuMDRGQSBDdXBXZXN0IEhhbVZTPC90ZXh0Pgo8bGluZSB4MT0iNjAiIHkxPSI1MiIgeDI9Ijc0MCIgeTI9IjUyIiBzdHJva2U9IiNmZmZmZmYxOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjwhLS0gSE9NRSAtLT4KPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSIxODUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iMTg1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5XSDwvdGV4dD4KPHRleHQgeD0iMTg1IiB5PSIzMDciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmZmZmIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMyI+V2VzdCBIYW08L3RleHQ+CjwhLS0gQVdBWSAtLT4KPGNpcmNsZSBjeD0iNjE1IiBjeT0iMTk1IiByPSI4MCIgZmlsbD0iI2ZmZmZmZjE4IiBzdHJva2U9IiNmZmZmZmYzMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz48Y2lyY2xlIGN4PSI2MTUiIGN5PSIxOTUiIHI9Ijc0IiBmaWxsPSIjMWEzYTZlIi8+PHRleHQgeD0iNjE1IiB5PSIyMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIj5MPC90ZXh0Pgo8dGV4dCB4PSI2MTUiIHk9IjMwNyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNmZmZmZmYiIHBhaW50LW9yZGVyPSJzdHJva2UiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIzIj5MZWVkczwvdGV4dD4KPCEtLSBDZW50ZXIgZGl2aWRlcnMgLS0+CjxsaW5lIHgxPSIzMzgiIHkxPSIyMTUiIHgyPSIzNzgiIHkyPSIyMTUiIHN0cm9rZT0iI2ZmZmZmZjUwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8bGluZSB4MT0iNDIyIiB5MT0iMjE1IiB4Mj0iNDYyIiB5Mj0iMjE1IiBzdHJva2U9IiNmZmZmZmY1MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPCEtLSBDZW50ZXI6IHRpbWUgLyBzY29yZSAtLT4KPHRleHQgeD0iNDAwIiB5PSIyMzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayxzYW5zLXNlcmlmIiBmb250LXNpemU9IjQ2IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZmZmZmIiBmaWx0ZXI9InVybCgjZ3cpIiBwYWludC1vcmRlcj0ic3Ryb2tlIiBzdHJva2U9IiMwMDAwMDA4OCIgc3Ryb2tlLXdpZHRoPSI1Ij4xNTozMDwvdGV4dD4KPCEtLSBDZW50ZXI6IGRhdGUgLyBzdGF0dXMgLS0+Cjx0ZXh0IHg9IjQwMCIgeT0iMjY3IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI2JiYmJiYiI+MDUvMDQ8L3RleHQ+CjwhLS0gQm90dG9tIGZhZGUgLS0+CjxyZWN0IHg9IjAiIHk9IjM4MCIgd2lkdGg9IjgwMCIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNiZykiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -1138,19 +1220,19 @@
           ],
           "sources": [
             {
-              "id": "qc-11-west-ham-vs-leeds-src",
+              "id": "qc-12-west-ham-vs-leeds-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-11-west-ham-vs-leeds-ct",
+                  "id": "qc-12-west-ham-vs-leeds-ct",
                   "name": "West Ham vs Leeds  🕐 15:30 | 05/04 · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-11-west-ham-vs-leeds-st0",
+                      "id": "qc-12-west-ham-vs-leeds-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-11-west-ham-vs-leeds-b0-l0",
+                          "id": "qc-12-west-ham-vs-leeds-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -1167,7 +1249,7 @@
                           ]
                         },
                         {
-                          "id": "qc-11-west-ham-vs-leeds-b0-l1",
+                          "id": "qc-12-west-ham-vs-leeds-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -1184,7 +1266,7 @@
                           ]
                         },
                         {
-                          "id": "qc-11-west-ham-vs-leeds-b0-l2",
+                          "id": "qc-12-west-ham-vs-leeds-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,

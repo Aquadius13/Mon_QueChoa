@@ -329,7 +329,18 @@ def fetch_quechoa_json() -> dict:
         return {}
 
 # ── Lookup từ quechoa.json (từ v9_2) ─────────────────────────
+def _extract_slug(url: str) -> str:
+    """Lấy phần /truc-tiep/xxx từ URL (key matching chính xác 100%)."""
+    m = re.search(r"(/truc-tiep/[^/?#\s]+)", url, re.I)
+    return m.group(1).lower().rstrip("/") if m else ""
+
+
 def build_quechoa_lookup(qdata: dict) -> dict:
+    """
+    Xây dựng lookup từ quechoa.json với 2 loại key:
+      - slug_key:  "/truc-tiep/xxx-yyy-zzz" → match CHÍNH XÁC 100%
+      - name_key:  "teamA_teamB" (normalize) → fallback fuzzy
+    """
     lookup = {}
     for group in qdata.get("groups", []):
         for ch in group.get("channels", []):
@@ -346,15 +357,16 @@ def build_quechoa_lookup(qdata: dict) -> dict:
                 for cnt in src.get("contents", []):
                     for strm in cnt.get("streams", []):
                         for sl in strm.get("stream_links", []):
-                            url   = sl.get("url", "")
-                            stype = sl.get("type", "hls")
-                            sname = sl.get("name", "")
                             if not referer_url:
                                 for hdr in sl.get("request_headers", []):
                                     if hdr.get("key", "").lower() == "referer":
                                         referer_url = hdr.get("value", "")
-                            if url:
-                                streams.append({"name": sname, "url": url, "type": stype})
+                            if sl.get("url"):
+                                streams.append({
+                                    "name":  sl.get("name", ""),
+                                    "url":   sl["url"],
+                                    "type":  sl.get("type", "hls"),
+                                })
 
             info = {
                 "thumb":       thumb,
@@ -365,6 +377,12 @@ def build_quechoa_lookup(qdata: dict) -> dict:
                 "referer_url": referer_url,
             }
 
+            # ── KEY 1: slug từ referer URL (chính xác nhất) ──────
+            slug = _extract_slug(referer_url)
+            if slug:
+                lookup[slug] = info
+
+            # ── KEY 2: tên đội normalize (fallback) ──────────────
             key_ab = normalize_name(team_a) + "_" + normalize_name(team_b)
             key_ba = normalize_name(team_b) + "_" + normalize_name(team_a)
             lookup[key_ab] = info
@@ -373,39 +391,55 @@ def build_quechoa_lookup(qdata: dict) -> dict:
             lookup["_" + normalize_name(team_b)] = info
             lookup.setdefault("_teams_", []).append((team_a, team_b, info))
 
-    log(f"  → Lookup: {len([k for k in lookup if not k.startswith('_')])} cặp đội")
+    slug_count = len([k for k in lookup if k.startswith("/truc-tiep/")])
+    name_count = len([k for k in lookup if not k.startswith("_") and not k.startswith("/")])
+    log(f"  → Lookup: {slug_count} slug, {name_count} tên đội")
     return lookup
 
-def find_in_lookup(lookup: dict, home: str, away: str) -> dict | None:
-    if not lookup or not home or not away:
-        return None
+
+def find_in_lookup(lookup: dict, home: str, away: str,
+                   detail_url: str = "") -> dict | None:
+    """
+    Tìm info trận theo thứ tự ưu tiên:
+      ① Slug URL (100% chính xác) — quechoa9 và quechoa6 cùng slug
+      ② Exact tên đội normalize
+      ③ Substring / fuzzy token
+    """
+    if not lookup: return None
+
+    # ① Slug match — chính xác nhất, không cần fuzzy
+    if detail_url:
+        slug = _extract_slug(detail_url)
+        if slug and slug in lookup:
+            return lookup[slug]
+
+    if not home or not away: return None
     h = normalize_name(home)
     a = normalize_name(away)
 
-    # ① Exact pair
+    # ② Exact pair
     for key in (f"{h}_{a}", f"{a}_{h}"):
         if key in lookup: return lookup[key]
 
-    # ② Substring trên key
+    # ③ Substring
     for key, info in lookup.items():
-        if key.startswith("_"): continue
+        if key.startswith("_") or key.startswith("/"): continue
         parts = key.split("_", 1)
         if len(parts) == 2:
             k1, k2 = parts
             if (h in k1 or k1 in h) and (a in k2 or k2 in a): return info
             if (a in k1 or k1 in a) and (h in k2 or k2 in h): return info
 
-    # ③ Fuzzy token similarity
+    # ④ Fuzzy token similarity
     best_score, best_info = 0.0, None
     for ta, tb, info in lookup.get("_teams_", []):
         score = pair_match_score(home, away, ta, tb)
         if score > best_score:
-            best_score = score
-            best_info  = info
+            best_score = score; best_info = info
     if best_score >= 0.5:
         return best_info
 
-    # ④ Single team fallback
+    # ⑤ Single team
     for name in (h, a):
         if len(name) >= 5 and f"_{name}" in lookup:
             return lookup[f"_{name}"]
@@ -992,7 +1026,10 @@ def main():
 
     for i, m in enumerate(matches, 1):
         # Tìm thumbnail từ quechoa.json (fuzzy match)
-        info       = find_in_lookup(lookup, m["home_team"], m["away_team"])
+        # Lấy detail_url đầu tiên để slug match
+        _first_detail = m["blv_sources"][0]["detail_url"] if m.get("blv_sources") else ""
+        info = find_in_lookup(lookup, m["home_team"], m["away_team"],
+                              detail_url=_first_detail)
         thumb      = ""
         qc_streams = []
         qc_league  = ""

@@ -19,7 +19,7 @@ Chạy:
     python crawler_quechoa9_v10.py --output out.json
 """
 
-import argparse, hashlib, json, re, sys, time, unicodedata
+import argparse, base64, hashlib, json, re, sys, time, unicodedata
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
 
@@ -43,6 +43,135 @@ PLACEHOLDER_IMG = {
     "padding": 2, "background_color": "#0f3460", "display": "contain",
     "url": "https://quechoa9.live/favicon.ico", "width": 512, "height": 512,
 }
+
+# ── Tạo thumbnail SVG động (layout: logo trái | giờ:ngày | logo phải) ──
+def build_match_thumbnail_svg(
+    home_team: str, away_team: str,
+    logo_a: str = "", logo_b: str = "",
+    time_str: str = "", date_str: str = "",
+    status: str = "upcoming", score: str = "",
+    league: str = "",
+) -> str:
+    """
+    Tạo SVG thumbnail 800x450 giống layout hình mẫu:
+    - Nền: gradient xanh tối + đường kẻ sân
+    - Trái: logo + tên đội nhà
+    - Giữa: giờ:ngày (upcoming) hoặc tỉ số (live/finished)
+    - Phải: logo + tên đội khách
+    - Trên cùng: tên giải đấu
+    Trả về data:image/svg+xml;base64,...
+    """
+    W, H = 800, 450
+
+    def esc(s):
+        return (s or "").replace("&","&amp;").replace("<","&lt;") \
+                        .replace(">","&gt;").replace('"',"&quot;")
+
+    # Nội dung vùng giữa tuỳ trạng thái
+    if status == "live" and score and score not in ("VS",""):
+        ctr_top = score; ctr_top_fs = 52; ctr_top_fill = "#ff5555"
+        ctr_bot = "● LIVE"; ctr_bot_fill = "#ff5555"
+    elif status == "finished" and score and score not in ("VS",""):
+        ctr_top = score; ctr_top_fs = 52; ctr_top_fill = "#ffffff"
+        ctr_bot = "Kết thúc"; ctr_bot_fill = "#aaaaaa"
+    else:
+        ctr_top = time_str or "TBD"; ctr_top_fs = 46; ctr_top_fill = "#ffffff"
+        ctr_bot = date_str or ""; ctr_bot_fill = "#bbbbbb"
+
+    def logo_block(cx, cy, r, url, name):
+        initials = "".join(w[0].upper() for w in (name or "?").split()[:2]) or "?"
+        circle_bg = (f'<circle cx="{cx}" cy="{cy}" r="{r+6}" '
+                     f'fill="#ffffff18" stroke="#ffffff33" stroke-width="1.5"/>')
+        if url and url.startswith("http"):
+            img = (f'<image href="{esc(url)}" x="{cx-r}" y="{cy-r}" '
+                   f'width="{r*2}" height="{r*2}" '
+                   f'preserveAspectRatio="xMidYMid meet" opacity="0.95"/>')
+        else:
+            img = (f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#1a3a6e"/>'
+                   f'<text x="{cx}" y="{cy+11}" text-anchor="middle" '
+                   f'font-family="Arial Black,sans-serif" font-size="30" '
+                   f'font-weight="900" fill="#ffffff">{esc(initials)}</text>')
+        return circle_bg + img
+
+    def name_lines(name, max_ch=13):
+        words = (name or "").split(); lines, cur = [], ""
+        for w in words:
+            if len(cur)+len(w)+1 <= max_ch: cur = (cur+" "+w).strip()
+            else:
+                if cur: lines.append(cur)
+                cur = w
+        if cur: lines.append(cur)
+        return lines[:2]
+
+    def name_svg(lines, cx, y0):
+        out = ""
+        for i, ln in enumerate(lines):
+            out += (f'<text x="{cx}" y="{y0+i*24}" text-anchor="middle" '
+                    f'font-family="Arial,sans-serif" font-size="19" font-weight="700" '
+                    f'fill="#ffffff" paint-order="stroke" '
+                    f'stroke="#000" stroke-width="3">{esc(ln)}</text>')
+        return out
+
+    hl = name_lines(home_team); al = name_lines(away_team)
+    lg = esc((league or "")[:38])
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#081420"/>
+    <stop offset="50%" stop-color="#0d2038"/>
+    <stop offset="100%" stop-color="#081420"/>
+  </linearGradient>
+  <linearGradient id="gl" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#153a20" stop-opacity="0.55"/>
+    <stop offset="100%" stop-color="#0d2038" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="gr" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0d2038" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#1a2850" stop-opacity="0.55"/>
+  </linearGradient>
+  <filter id="gw" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <radialGradient id="spot" cx="50%" cy="110%" r="70%">
+    <stop offset="0%" stop-color="#1e4a25" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#0d2038" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="{W}" height="{H}" fill="url(#bg)"/>
+<rect width="{W}" height="{H}" fill="url(#spot)"/>
+<!-- Field decoration -->
+<ellipse cx="{W//2}" cy="{H+60}" rx="350" ry="200" fill="none" stroke="#ffffff07" stroke-width="1.5"/>
+<ellipse cx="{W//2}" cy="{H+60}" rx="190" ry="110" fill="none" stroke="#ffffff05" stroke-width="1"/>
+<circle cx="{W//2}" cy="{H+60}" r="40" fill="none" stroke="#ffffff04" stroke-width="1"/>
+<line x1="{W//2}" y1="0" x2="{W//2}" y2="{H}" stroke="#ffffff06" stroke-width="1"/>
+<!-- Side wash -->
+<rect x="0" y="0" width="360" height="{H}" fill="url(#gl)"/>
+<rect x="440" y="0" width="360" height="{H}" fill="url(#gr)"/>
+<!-- League bar -->
+<rect x="0" y="0" width="{W}" height="52" fill="#00000055"/>
+<text x="{W//2}" y="33" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#ffffffcc">{lg}</text>
+<line x1="60" y1="52" x2="{W-60}" y2="52" stroke="#ffffff18" stroke-width="1"/>
+<!-- HOME -->
+{logo_block(185, 195, 74, logo_a, home_team)}
+{name_svg(hl, 185, 295 + (12 if len(hl)==1 else 0))}
+<!-- AWAY -->
+{logo_block(615, 195, 74, logo_b, away_team)}
+{name_svg(al, 615, 295 + (12 if len(al)==1 else 0))}
+<!-- Center dividers -->
+<line x1="{W//2-62}" y1="{H//2-10}" x2="{W//2-22}" y2="{H//2-10}" stroke="#ffffff50" stroke-width="1.5"/>
+<line x1="{W//2+22}" y1="{H//2-10}" x2="{W//2+62}" y2="{H//2-10}" stroke="#ffffff50" stroke-width="1.5"/>
+<!-- Center: time / score -->
+<text x="{W//2}" y="{H//2+8}" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="{ctr_top_fs}" font-weight="900" fill="{ctr_top_fill}" filter="url(#gw)" paint-order="stroke" stroke="#00000088" stroke-width="5">{esc(ctr_top)}</text>
+<!-- Center: date / status -->
+<text x="{W//2}" y="{H//2+42}" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="600" fill="{ctr_bot_fill}">{esc(ctr_bot)}</text>
+<!-- Bottom fade -->
+<rect x="0" y="{H-70}" width="{W}" height="70" fill="url(#bg)" opacity="0.6"/>
+</svg>"""
+
+    encoded = base64.b64encode(svg.encode("utf-8")).decode("ascii")
+    return f"data:image/svg+xml;base64,{encoded}"
 
 # ── Helpers ───────────────────────────────────────────────────
 def make_id(*parts):
@@ -432,29 +561,6 @@ CDN_THUMB_RE = re.compile(
     r'https?://pub-[a-f0-9]+\.r2\.dev/[^\s\'"<>\\]+\.webp(?:\?[^\s\'"<>\\]*)?',
     re.I
 )
-
-def find_cdn_thumb_recursive(obj, depth: int = 0) -> str:
-    """Tìm CDN kaytee thumbnail URL ở bất kỳ cấp nào trong JSON."""
-    if depth > 15: return ""
-    if isinstance(obj, str):
-        m = CDN_THUMB_RE.search(obj)
-        return m.group(0) if m else ""
-    if isinstance(obj, dict):
-        for key in ("thumb","thumbnail","thumbUrl","thumb_url","poster","coverImage"):
-            if key in obj and isinstance(obj[key], str):
-                r = find_cdn_thumb_recursive(obj[key], depth + 1)
-                if r: return r
-        if "image" in obj and isinstance(obj["image"], dict):
-            r = find_cdn_thumb_recursive(obj["image"], depth + 1)
-            if r: return r
-        for v in obj.values():
-            r = find_cdn_thumb_recursive(v, depth + 1)
-            if r: return r
-    if isinstance(obj, list):
-        for item in obj:
-            r = find_cdn_thumb_recursive(item, depth + 1)
-            if r: return r
-    return ""
 IMG_URL_RE = re.compile(
     r'https?://[^\s\'"<>\\]+\.(?:webp|jpg|jpeg|png)(?:\?[^\s\'"<>\\]*)?',
     re.I
@@ -465,71 +571,49 @@ _THUMB_DOMAINS = re.compile(
     re.I
 )
 _THUMB_EXCLUDE = re.compile(
-    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/'
-    r'|backgrounds?/|opengraph|og-image|og_image|placeholder|default[-_]img)',
+    r'(?:favicon|logo-site|avatar|icon-\d|sprite|\d{1,2}x\d{1,2}|/ads?/)',
     re.I
 )
-# Ảnh mặc định site quechoa9.live (og:image luôn trả về cái này)
-_SITE_DEFAULT = re.compile(r'opengraph-image\d*\.png|quechoatv-logo|favicon\.ico', re.I)
 
 def _is_valid_thumb(url: str) -> bool:
     return bool(url) and not _THUMB_EXCLUDE.search(url) and len(url) > 20
 
 def extract_thumb_from_detail(html: str, bs) -> str:
-    """
-    Lấy thumbnail từ trang chi tiết quechoa9.live (Next.js).
-
-    Thứ tự ưu tiên:
-      ① __NEXT_DATA__ JSON → org_metadata.thumb (CDN kaytee-*.webp) ← chính xác nhất
-      ② CDN r2.dev webp regex trong toàn HTML
-      ③ og:image (CHỈ khi không phải ảnh mặc định site)
-      ④ <img> lớn nhất (width >= 300) từ domain hợp lệ
-    Loại bỏ: backgrounds/, opengraph-image*.png, favicon, logo site
-    """
-    # ① Parse __NEXT_DATA__ JSON — tìm CDN kaytee URL bằng recursive search
+    # 1) __NEXT_DATA__ CDN webp
     next_tag = bs.find('script', id='__NEXT_DATA__')
     if next_tag and next_tag.string:
-        nd = next_tag.string
-        try:
-            nd_data = json.loads(nd)
-            cdn_url = find_cdn_thumb_recursive(nd_data)
-            if cdn_url and _is_valid_thumb(cdn_url):
-                return cdn_url
-        except Exception:
-            pass
-        # Fallback: regex trực tiếp trên raw JSON string
-        m = CDN_THUMB_RE.search(nd)
+        m = CDN_THUMB_RE.search(next_tag.string)
         if m and _is_valid_thumb(m.group(0)):
             return m.group(0)
-
-    # ② CDN r2.dev trong toàn bộ HTML
+    # 2) og:image / twitter:image
+    for attr in [{'property':'og:image'}, {'name':'og:image'}, {'name':'twitter:image'}]:
+        tag = bs.find('meta', attrs=attr)
+        if tag:
+            url = tag.get('content', '')
+            if url and _is_valid_thumb(url) and IMG_URL_RE.match(url):
+                return url
+    # 3) CDN r2.dev webp bat ky trong HTML
     m = CDN_THUMB_RE.search(html)
     if m and _is_valid_thumb(m.group(0)):
         return m.group(0)
-
-    # ③ og:image — chỉ khi KHÔNG phải ảnh mặc định site
-    for attr in [{'property':'og:image'}, {'name':'twitter:image'}]:
-        tag = bs.find('meta', attrs=attr)
-        if tag:
-            url = tag.get('content', '').strip()
-            if url and _is_valid_thumb(url) and not _SITE_DEFAULT.search(url):
-                return url
-
-    # ④ <img> lớn nhất từ domain CDN hợp lệ (width >= 300)
+    # 4) <img> lon nhat (width >= 200)
     best_url, best_w = '', 0
     for img in bs.find_all('img', src=True):
-        src = img.get('src','') or img.get('data-src','')
+        src = img.get('src', '') or img.get('data-src', '')
         if not src or not src.startswith('http'): continue
-        if not _is_valid_thumb(src) or not IMG_URL_RE.search(src): continue
-        if _SITE_DEFAULT.search(src): continue
-        try:    w = int(img.get('width', 0) or 0)
+        if not _is_valid_thumb(src):              continue
+        if not IMG_URL_RE.search(src):            continue
+        try:    w = int(img.get('width', 0))
         except: w = 0
-        if w > best_w and _THUMB_DOMAINS.search(src):
-            best_w, best_url = w, src
-    if best_url and best_w >= 300:
+        if w > best_w: best_w, best_url = w, src
+    if best_url and best_w >= 200:
         return best_url
-
-    return ""
+    # 5) URL anh hop le trong HTML tu domain CDN
+    for m in IMG_URL_RE.finditer(html):
+        url = m.group(0)
+        if _is_valid_thumb(url) and _THUMB_DOMAINS.search(url):
+            return url
+    return best_url
 
 # ── Crawl stream từ 1 URL (từ v9) ────────────────────────────
 def extract_streams_from_url(detail_url: str, html: str, bs) -> list:
@@ -567,32 +651,13 @@ def extract_streams_from_url(detail_url: str, html: str, bs) -> list:
     return filter_streams(hls) if hls else raw
 
 def crawl_blv_source(detail_url: str, blv_name: str, scraper) -> tuple[list, str]:
-    """
-    Crawl 1 trang BLV → (streams, thumb).
-    Nếu không tìm được CDN thumbnail từ quechoa9.live,
-    tự động thử quechoa6.live với cùng slug (cùng backend, có org_metadata.thumb).
-    """
+    """Crawl 1 trang BLV → (streams, thumb). Tái sử dụng HTML đã fetch."""
     html = fetch_html(detail_url, scraper, retries=2)
     if not html:
         return [], ""
     bs     = parse_html(html)
     thumb  = extract_thumb_from_detail(html, bs)
     streams = extract_streams_from_url(detail_url, html, bs)
-
-    # Nếu chưa có thumbnail → thử quechoa6.live cùng slug
-    if not thumb and "quechoa9.live" in detail_url:
-        url6 = detail_url.replace("quechoa9.live", "quechoa6.live")
-        log(f"      → Thử quechoa6.live để lấy thumbnail...")
-        html6 = fetch_html(url6, scraper, retries=2)
-        if html6:
-            bs6   = parse_html(html6)
-            thumb = extract_thumb_from_detail(html6, bs6)
-            if thumb:
-                log(f"      🖼  quechoa6: {thumb.split('/')[-1][:50]}")
-            # Nếu chưa có streams → lấy thêm từ quechoa6
-            if not streams:
-                streams = extract_streams_from_url(url6, html6, bs6)
-
     # Gắn tên BLV vào từng stream
     for s in streams:
         s["blv"] = blv_name
@@ -730,11 +795,30 @@ def build_channel(m: dict, all_streams: list, thumb: str,
         })
 
     # ── Thumbnail ─────────────────────────────────────────────
-    if thumb:
-        img_obj = {"padding":1,"background_color":"#ececec","display":"contain",
-                   "url":thumb,"width":1600,"height":1200}
-    else:
-        img_obj = PLACEHOLDER_IMG
+    # Lấy logo 2 đội từ info (nếu có) — truyền vào qua kwarg
+    logo_a_url = m.get("_logo_a", "")
+    logo_b_url = m.get("_logo_b", "")
+
+    # Luôn tạo SVG động theo layout hình mẫu
+    svg_url = build_match_thumbnail_svg(
+        home_team = m["home_team"],
+        away_team = m["away_team"],
+        logo_a    = logo_a_url,
+        logo_b    = logo_b_url,
+        time_str  = m.get("time_str",""),
+        date_str  = m.get("date_str",""),
+        status    = m["status"],
+        score     = m.get("score",""),
+        league    = league,
+    )
+    img_obj = {
+        "padding":          0,
+        "background_color": "#0d2038",
+        "display":          "contain",
+        "url":              svg_url,
+        "width":            800,
+        "height":           450,
+    }
 
     # ── Tên content ───────────────────────────────────────────
     content_name = display_name
@@ -841,9 +925,13 @@ def main():
             thumb      = info["thumb"]
             qc_streams = info["streams"]
             qc_league  = info["league"]
+            m["_logo_a"] = info.get("logo_a","")
+            m["_logo_b"] = info.get("logo_b","")
             log(f"\n  [{i:02d}/{len(matches)}] {m['base_title']}")
             log(f"    🖼  CDN: {thumb[thumb.rfind('/')+1:]}" if thumb else "    ⚠  Không có thumb CDN")
         else:
+            qc_league  = ""
+            m["_logo_a"] = ""; m["_logo_b"] = ""
             log(f"\n  [{i:02d}/{len(matches)}] {m['base_title']}")
             log(f"    ⚠  Không khớp quechoa.json")
 

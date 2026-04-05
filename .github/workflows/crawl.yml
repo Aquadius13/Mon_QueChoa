@@ -1,0 +1,58 @@
+name: Crawl IPTV & Deploy
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # Chạy mỗi 30 phút
+  workflow_dispatch:           # Cho phép chạy thủ công từ GitHub UI
+  push:
+    branches: [main]
+    paths:
+      - 'crawler_quechoa9_v10.py'
+      - '.github/workflows/crawl.yml'
+
+permissions:
+  contents: write   # Cần để commit file JSON + PNG
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run crawler
+        run: |
+          python crawler_quechoa9_v10.py \
+            --all \
+            --output docs/quechoa9_iptv.json \
+            --base-url https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+        # Lưu JSON + thumbs/ vào thư mục docs/ (GitHub Pages serve từ đây)
+
+      - name: Copy thumbs to docs/
+        run: |
+          mkdir -p docs/thumbs
+          [ -d thumbs ] && cp -r thumbs/. docs/thumbs/ || true
+
+      - name: Commit & push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          # Chỉ commit nếu có thay đổi thực sự
+          git diff --cached --quiet || git commit -m "🔄 Auto-update IPTV $(date '+%H:%M %d/%m/%Y')"
+          git push

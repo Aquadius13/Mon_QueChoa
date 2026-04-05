@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 19:27 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 19:52 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -26,7 +26,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-9d7068548f0e.webp?v=1775391987",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-9d7068548f0e.webp?v=1775392584",
             "width": 1600,
             "height": 1200
           },
@@ -132,7 +132,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-43b70bc9f86a.webp?v=1775391984",
+            "url": "https://quechoa9.live/opengraph-image1.png",
             "width": 1600,
             "height": 1200
           },
@@ -238,7 +238,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-b7de7bf5e61c.webp?v=1775391981",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-b7de7bf5e61c.webp?v=1775392577",
             "width": 1600,
             "height": 1200
           },
@@ -450,7 +450,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-5c74ffe89aef.webp?v=1775392588",
             "width": 1600,
             "height": 1200
           },
@@ -481,7 +481,7 @@
               "contents": [
                 {
                   "id": "qc-5-angers-vs-lyon-ct",
-                  "name": "Angers 0-0 Lyon  🔴 · Live13:00|05.04Ligue 1Angers0:0LyonKKHU MẤNĐặt cược",
+                  "name": "Angers 0-0 Lyon  🔴 · Ligue 1",
                   "streams": [
                     {
                       "id": "qc-5-angers-vs-lyon-st0",

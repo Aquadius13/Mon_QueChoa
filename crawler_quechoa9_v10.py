@@ -19,7 +19,7 @@ Chạy:
     python crawler_quechoa9_v10.py --output out.json
 """
 
-import argparse, hashlib, io, json, os, re, sys, time, unicodedata
+import argparse, base64, hashlib, io, json, os, re, sys, time, unicodedata
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin
@@ -44,7 +44,8 @@ PLACEHOLDER_IMG = {
     "padding": 2, "background_color": "#0f3460", "display": "contain",
     "url": "https://quechoa9.live/favicon.ico", "width": 512, "height": 512,
 }
-THUMBS_DIR = Path("thumbs")   # thư mục chứa thumbnail PNG (serve bởi serve_iptv.py)
+# Thumbnail nhúng base64 thẳng vào JSON — không cần file ngoài
+THUMB_JPEG_QUALITY = 65  # 60-75 là hợp lý (~7-10 KB/ảnh)
 
 # ── Tạo thumbnail PNG bằng Pillow (logo 2 đội thật) ─────────
 try:
@@ -204,6 +205,40 @@ def make_match_thumbnail_png(
     out = io.BytesIO()
     img.convert("RGB").save(out, format="PNG", optimize=True)
     return out.getvalue()
+
+def make_match_thumbnail_b64(
+    home_team: str, away_team: str,
+    logo_a_url: str = "", logo_b_url: str = "",
+    time_str: str = "", date_str: str = "",
+    status: str = "upcoming", score: str = "",
+    league: str = "",
+) -> str:
+    """
+    Tạo thumbnail JPEG → encode base64 → trả về data URI.
+    Nhúng thẳng vào JSON, không cần file ngoài, không cần server.
+    Kích thước: ~7-10 KB base64 mỗi ảnh.
+    """
+    png_bytes = make_match_thumbnail_png(
+        home_team=home_team, away_team=away_team,
+        logo_a_url=logo_a_url, logo_b_url=logo_b_url,
+        time_str=time_str, date_str=date_str,
+        status=status, score=score, league=league,
+    )
+    if not png_bytes:
+        return ""
+    # Chuyển PNG → JPEG (nhẹ hơn ~3-4x) rồi base64
+    try:
+        from PIL import Image
+        img  = Image.open(io.BytesIO(png_bytes)).convert("RGB")
+        out  = io.BytesIO()
+        img.save(out, format="JPEG", quality=THUMB_JPEG_QUALITY, optimize=True)
+        b64  = base64.b64encode(out.getvalue()).decode("ascii")
+        return f"data:image/jpeg;base64,{b64}"
+    except Exception:
+        # Fallback: dùng PNG base64 nếu không convert được
+        b64 = base64.b64encode(png_bytes).decode("ascii")
+        return f"data:image/png;base64,{b64}"
+
 
 
 # ── Helpers ───────────────────────────────────────────────────
@@ -827,50 +862,38 @@ def build_channel(m: dict, all_streams: list, thumb: str,
             }],
         })
 
-    # ── Thumbnail PNG (logo 2 đội thật) ─────────────────────
+    # ── Thumbnail — nhúng base64 thẳng vào JSON ─────────────
     logo_a_url = m.get("_logo_a", "")
     logo_b_url = m.get("_logo_b", "")
 
-    # Dùng thumbnail CDN nếu có (kaytee-*.webp, chất lượng cao nhất)
-    if thumb and "r2.dev/quechoa_thumbs" in thumb:
+    # Ưu tiên 1: thumbnail CDN quechoa (webp đẹp nhất, URL ngoài)
+    if thumb and ("r2.dev/quechoa_thumbs" in thumb or thumb.startswith("http")):
         img_obj = {
             "padding": 1, "background_color": "#ececec",
             "display": "contain", "url": thumb,
             "width": 1600, "height": 1200,
         }
     else:
-        # Tạo PNG từ logo 2 đội
-        slug = re.sub(r"[^a-z0-9]", "-",
-                      (m["home_team"]+"_"+m["away_team"]).lower())[:48]
-        png_filename = f"thumb_{slug}.png"
-        png_path     = THUMBS_DIR / png_filename
-
-        # Tạo PNG nếu chưa có
-        if not png_path.exists():
-            THUMBS_DIR.mkdir(exist_ok=True)
-            png_bytes = make_match_thumbnail_png(
-                home_team = m["home_team"],
-                away_team = m["away_team"],
-                logo_a_url = logo_a_url,
-                logo_b_url = logo_b_url,
-                time_str  = m.get("time_str", ""),
-                date_str  = m.get("date_str", ""),
-                status    = m["status"],
-                score     = m.get("score", ""),
-                league    = league,
-            )
-            if png_bytes:
-                png_path.write_bytes(png_bytes)
-
-        if png_path.exists():
-            # URL sẽ được serve bởi serve_iptv.py tại /thumbs/<filename>
+        # Ưu tiên 2: tạo JPEG base64 từ logo 2 đội (Pillow)
+        data_uri = make_match_thumbnail_b64(
+            home_team  = m["home_team"],
+            away_team  = m["away_team"],
+            logo_a_url = logo_a_url,
+            logo_b_url = logo_b_url,
+            time_str   = m.get("time_str", ""),
+            date_str   = m.get("date_str", ""),
+            status     = m["status"],
+            score      = m.get("score", ""),
+            league     = league,
+        )
+        if data_uri:
             img_obj = {
                 "padding": 0, "background_color": "#0d2038",
-                "display": "contain",
-                "url": f"__LOCAL_IP__/thumbs/{png_filename}",
+                "display": "contain", "url": data_uri,
                 "width": 800, "height": 450,
             }
         else:
+            # Fallback cuối: placeholder
             img_obj = PLACEHOLDER_IMG
 
     # ── Tên content ───────────────────────────────────────────
@@ -921,8 +944,7 @@ def main():
     ap.add_argument("--all",       action="store_true", help="Tất cả trận (không chỉ tâm điểm)")
     ap.add_argument("--no-stream", action="store_true", help="Không crawl stream (nhanh hơn)")
     ap.add_argument("--output",    default=OUTPUT_FILE)
-    ap.add_argument("--port", "-p", default=7979, type=int,
-                    help="Port của serve_iptv.py (mặc định 7979)")
+
     args = ap.parse_args()
 
     log("\n" + "═"*62)
@@ -1020,24 +1042,10 @@ def main():
 
     log(f"\n  📊 Thumbnail CDN: {thumb_matched}/{len(matches)} trận khớp")
 
-    # Bước 4: Ghi file — thay __LOCAL_IP__ bằng IP + port thực tế
+    # Bước 4: Ghi file
     result = build_iptv_json(channels, now_str, group_name)
-    result_str = json.dumps(result, ensure_ascii=False, indent=2)
-
-    # Tự detect IP nội bộ
-    local_ip = "127.0.0.1"
-    try:
-        import socket
-        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as _s:
-            _s.connect(("8.8.8.8", 80))
-            local_ip = _s.getsockname()[0]
-    except Exception:
-        pass
-    port = getattr(args, "port", 7979)
-    result_str = result_str.replace("__LOCAL_IP__", f"http://{local_ip}:{port}")
-
     with open(args.output, "w", encoding="utf-8") as f:
-        f.write(result_str)
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
     log(f"\n{'═'*62}")
     log(f"  ✅ Xong!  📁 {args.output}  ⚽ {len(channels)} trận")

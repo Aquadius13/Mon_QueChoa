@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 20:53 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 21:17 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -23,12 +23,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-b7de7bf5e61c.webp?v=1775395596",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_chung-k-t-chung-k-t.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -57,7 +57,7 @@
               "contents": [
                 {
                   "id": "qc-1-chung-k-t-vs-chung-k-t-ct",
-                  "name": "CHUNG KẾT 0-0 CHUNG KẾT  🔴 · World Cup",
+                  "name": "CHUNG KẾT 0-0 CHUNG KẾT  🔴",
                   "streams": [
                     {
                       "id": "qc-1-chung-k-t-vs-chung-k-t-st0",
@@ -123,124 +123,18 @@
           ]
         },
         {
-          "id": "qc-2-getafe-vs-athletic-club",
-          "name": "Getafe 2-0 Athletic Club  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-397842caa21b.webp?v=1775395592",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 BÒ SỮA",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 2-0",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-2-getafe-vs-athletic-club-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-2-getafe-vs-athletic-club-ct",
-                  "name": "Getafe 2-0 Athletic Club  🔴 · La Liga",
-                  "streams": [
-                    {
-                      "id": "qc-2-getafe-vs-athletic-club-st0",
-                      "name": "🎙 BÒ SỮA",
-                      "stream_links": [
-                        {
-                          "id": "qc-2-getafe-vs-athletic-club-b0-l0",
-                          "name": "Link 1",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/getafe-vs-athletic-club-qgz-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-getafe-vs-athletic-club-b0-l1",
-                          "name": "HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/getafe-vs-athletic-club-qgz-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-2-getafe-vs-athletic-club-b0-l2",
-                          "name": "SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_5_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/getafe-vs-athletic-club-qgz-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-3-angers-vs-lyon",
+          "id": "qc-2-angers-vs-lyon",
           "name": "Angers 0-0 Lyon  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-5c74ffe89aef.webp?v=1775395599",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_angers-lyon.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -264,19 +158,19 @@
           ],
           "sources": [
             {
-              "id": "qc-3-angers-vs-lyon-src",
+              "id": "qc-2-angers-vs-lyon-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-3-angers-vs-lyon-ct",
-                  "name": "Angers 0-0 Lyon  🔴 · Ligue 1",
+                  "id": "qc-2-angers-vs-lyon-ct",
+                  "name": "Angers 0-0 Lyon  🔴 · Live13:00|05.04Ligue 1 KKHU MẤNĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-3-angers-vs-lyon-st0",
+                      "id": "qc-2-angers-vs-lyon-st0",
                       "name": "🎙 KHU MẤN",
                       "stream_links": [
                         {
-                          "id": "qc-3-angers-vs-lyon-b0-l0",
+                          "id": "qc-2-angers-vs-lyon-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -301,18 +195,18 @@
           ]
         },
         {
-          "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv",
+          "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv",
           "name": "Dương Quốc Hoàng 0-0 Olivér Szolnoki  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-4109ae9f2c89.webp?v=1775395605",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_d--ng-qu-c-ho-ng-oliv-r-szolnoki.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -336,19 +230,19 @@
           ],
           "sources": [
             {
-              "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-src",
+              "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-ct",
+                  "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-ct",
                   "name": "Dương Quốc Hoàng 0-0 Olivér Szolnoki  🔴 · 8 BALL WORLD CHAMPIONSHIP",
                   "streams": [
                     {
-                      "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-st0",
+                      "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-st0",
                       "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-b0-l0",
+                          "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -365,7 +259,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-b0-l1",
+                          "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -382,7 +276,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-d-ng-qu-c-ho-ng-vs-oliv-b0-l2",
+                          "id": "qc-3-d-ng-qu-c-ho-ng-vs-oliv-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -407,7 +301,219 @@
           ]
         },
         {
-          "id": "qc-5-west-ham-vs-leeds",
+          "id": "qc-4-sean-mark-malayan-vs-jos",
+          "name": "Sean Mark Malayan 0-0 Joshua Filler  🔴",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-8bd28b155a20.webp?v=1775398556",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "● Live",
+              "color": "#E73131",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 Nhà Đài",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-4-sean-mark-malayan-vs-jos-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-4-sean-mark-malayan-vs-jos-ct",
+                  "name": "Sean Mark Malayan 0-0 Joshua Filler  🔴 · 8 BALL WORLD CHAMPIONSHIP",
+                  "streams": [
+                    {
+                      "id": "qc-4-sean-mark-malayan-vs-jos-st0",
+                      "name": "🎙 Nhà Đài",
+                      "stream_links": [
+                        {
+                          "id": "qc-4-sean-mark-malayan-vs-jos-b0-l0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/sean-mark-malayan-vs-joshua-filler-wph-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-4-sean-mark-malayan-vs-jos-b0-l1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/sean-mark-malayan-vs-joshua-filler-wph-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-4-sean-mark-malayan-vs-jos-b0-l2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_1_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/sean-mark-malayan-vs-joshua-filler-wph-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-5-valencia-vs-celta-vigo",
+          "name": "Valencia 0-0 Celta Vigo  🔴",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-44f94728d149.webp?v=1775398562",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "● Live",
+              "color": "#E73131",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 RƯỢU MẬN",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "⚽ 0-0",
+              "position": "bottom-right",
+              "color": "#E73131",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-5-valencia-vs-celta-vigo-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-5-valencia-vs-celta-vigo-ct",
+                  "name": "Valencia 0-0 Celta Vigo  🔴 · La Liga",
+                  "streams": [
+                    {
+                      "id": "qc-5-valencia-vs-celta-vigo-st0",
+                      "name": "🎙 RƯỢU MẬN",
+                      "stream_links": [
+                        {
+                          "id": "qc-5-valencia-vs-celta-vigo-b0-l0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/valencia-vs-celta-vigo-num-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-5-valencia-vs-celta-vigo-b0-l1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/valencia-vs-celta-vigo-num-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-5-valencia-vs-celta-vigo-b0-l2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/valencia-vs-celta-vigo-num-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-6-west-ham-vs-leeds",
           "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -416,7 +522,7 @@
             "padding": 1,
             "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-2d5d5d07a6f3.webp?v=1775398559",
             "width": 1600,
             "height": 1200
           },
@@ -434,7 +540,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra15:30|05.04FA CupWe",
+              "text": "FA Cup",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -448,19 +554,19 @@
           ],
           "sources": [
             {
-              "id": "qc-5-west-ham-vs-leeds-src",
+              "id": "qc-6-west-ham-vs-leeds-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-5-west-ham-vs-leeds-ct",
-                  "name": "West Ham vs Leeds  🕐 15:30 | 05/04 · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
+                  "id": "qc-6-west-ham-vs-leeds-ct",
+                  "name": "West Ham vs Leeds  🕐 15:30 | 05/04 · FA Cup",
                   "streams": [
                     {
-                      "id": "qc-5-west-ham-vs-leeds-st0",
+                      "id": "qc-6-west-ham-vs-leeds-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-5-west-ham-vs-leeds-b0-l0",
+                          "id": "qc-6-west-ham-vs-leeds-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -477,7 +583,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-west-ham-vs-leeds-b0-l1",
+                          "id": "qc-6-west-ham-vs-leeds-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -494,7 +600,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-west-ham-vs-leeds-b0-l2",
+                          "id": "qc-6-west-ham-vs-leeds-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -519,18 +625,18 @@
           ]
         },
         {
-          "id": "qc-6-verona-vs-lube-civitanov",
+          "id": "qc-7-verona-vs-lube-civitanov",
           "name": "Verona vs Lube Civitanova  🕐 16:00 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_verona-lube-civitanova.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -560,19 +666,19 @@
           ],
           "sources": [
             {
-              "id": "qc-6-verona-vs-lube-civitanov-src",
+              "id": "qc-7-verona-vs-lube-civitanov-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-verona-vs-lube-civitanov-ct",
-                  "name": "Verona vs Lube Civitanova  🕐 16:00 | 05/04 · Sắp diễn ra16:00|05.04SuperLegaVeronaVSLube CivitanovaVVĂN MINHĐặt cược",
+                  "id": "qc-7-verona-vs-lube-civitanov-ct",
+                  "name": "Verona vs Lube Civitanova  🕐 16:00 | 05/04",
                   "streams": [
                     {
-                      "id": "qc-6-verona-vs-lube-civitanov-st0",
+                      "id": "qc-7-verona-vs-lube-civitanov-st0",
                       "name": "🎙 VĂN MINH",
                       "stream_links": [
                         {
-                          "id": "qc-6-verona-vs-lube-civitanov-b0-l0",
+                          "id": "qc-7-verona-vs-lube-civitanov-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -589,7 +695,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-verona-vs-lube-civitanov-b0-l1",
+                          "id": "qc-7-verona-vs-lube-civitanov-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -606,7 +712,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-verona-vs-lube-civitanov-b0-l2",
+                          "id": "qc-7-verona-vs-lube-civitanov-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -631,18 +737,18 @@
           ]
         },
         {
-          "id": "qc-7-h-n-i-tasco-auto-vs-bin",
+          "id": "qc-8-h-n-i-tasco-auto-vs-bin",
           "name": "Hà Nội Tasco Auto vs Binh Chủng TT - ĐB19  🕐 05:00 | 06/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_h--n-i-tasco-auto-binh-ch-ng-tt----b19.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -658,7 +764,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra05:00|06.04VDQGHà N",
+              "text": "Sắp diễn ra05:00|06.04VDQG NNG",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -672,19 +778,19 @@
           ],
           "sources": [
             {
-              "id": "qc-7-h-n-i-tasco-auto-vs-bin-src",
+              "id": "qc-8-h-n-i-tasco-auto-vs-bin-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-7-h-n-i-tasco-auto-vs-bin-ct",
-                  "name": "Hà Nội Tasco Auto vs Binh Chủng TT - ĐB19  🕐 05:00 | 06/04 · Sắp diễn ra05:00|06.04VDQGHà Nội Tasco AutoVSBinh Chủng TT - ĐB19NNGƯỜI CHYMĐặt cược",
+                  "id": "qc-8-h-n-i-tasco-auto-vs-bin-ct",
+                  "name": "Hà Nội Tasco Auto vs Binh Chủng TT - ĐB19  🕐 05:00 | 06/04",
                   "streams": [
                     {
-                      "id": "qc-7-h-n-i-tasco-auto-vs-bin-st0",
+                      "id": "qc-8-h-n-i-tasco-auto-vs-bin-st0",
                       "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-7-h-n-i-tasco-auto-vs-bin-b0-l0",
+                          "id": "qc-8-h-n-i-tasco-auto-vs-bin-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -701,7 +807,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-h-n-i-tasco-auto-vs-bin-b0-l1",
+                          "id": "qc-8-h-n-i-tasco-auto-vs-bin-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -718,7 +824,7 @@
                           ]
                         },
                         {
-                          "id": "qc-7-h-n-i-tasco-auto-vs-bin-b0-l2",
+                          "id": "qc-8-h-n-i-tasco-auto-vs-bin-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -743,18 +849,18 @@
           ]
         },
         {
-          "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb",
+          "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb",
           "name": "Thể Công Tân Cảng vs LPB Ninh Bình  🕐 07:30 | 06/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_th--c-ng-t-n-c-ng-lpb-ninh-b-nh.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -770,7 +876,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra07:30|06.04VDQGThể ",
+              "text": "Sắp diễn ra07:30|06.04VDQG NNG",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -784,19 +890,19 @@
           ],
           "sources": [
             {
-              "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-src",
+              "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-ct",
-                  "name": "Thể Công Tân Cảng vs LPB Ninh Bình  🕐 07:30 | 06/04 · Sắp diễn ra07:30|06.04VDQGThể Công Tân CảngVSLPB Ninh BìnhNNGƯỜI CHYMĐặt cược",
+                  "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-ct",
+                  "name": "Thể Công Tân Cảng vs LPB Ninh Bình  🕐 07:30 | 06/04",
                   "streams": [
                     {
-                      "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-st0",
+                      "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-st0",
                       "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-b0-l0",
+                          "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -813,7 +919,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-b0-l1",
+                          "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -830,7 +936,7 @@
                           ]
                         },
                         {
-                          "id": "qc-8-th-c-ng-t-n-c-ng-vs-lpb-b0-l2",
+                          "id": "qc-9-th-c-ng-t-n-c-ng-vs-lpb-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -855,18 +961,18 @@
           ]
         },
         {
-          "id": "qc-9-geleximco-h-ng-y-n-vs-h",
+          "id": "qc-10-geleximco-h-ng-y-n-vs-h",
           "name": "Geleximco Hưng Yên vs Hóa chất Đức Giang Lào Cai  🕐 10:00 | 06/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_geleximco-h-ng-y-n-h-a-ch-t---c-giang-l-o-cai.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -882,7 +988,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra10:00|06.04VDQGGele",
+              "text": "Sắp diễn ra10:00|06.04VDQG KKH",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -896,19 +1002,19 @@
           ],
           "sources": [
             {
-              "id": "qc-9-geleximco-h-ng-y-n-vs-h-src",
+              "id": "qc-10-geleximco-h-ng-y-n-vs-h-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-9-geleximco-h-ng-y-n-vs-h-ct",
-                  "name": "Geleximco Hưng Yên vs Hóa chất Đức Giang Lào Cai  🕐 10:00 | 06/04 · Sắp diễn ra10:00|06.04VDQGGeleximco Hưng YênVSHóa chất Đức Giang Lào CaiKKHOAI TÂYĐặt cược",
+                  "id": "qc-10-geleximco-h-ng-y-n-vs-h-ct",
+                  "name": "Geleximco Hưng Yên vs Hóa chất Đức Giang Lào Cai  🕐 10:00 | 06/04",
                   "streams": [
                     {
-                      "id": "qc-9-geleximco-h-ng-y-n-vs-h-st0",
+                      "id": "qc-10-geleximco-h-ng-y-n-vs-h-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-9-geleximco-h-ng-y-n-vs-h-b0-l0",
+                          "id": "qc-10-geleximco-h-ng-y-n-vs-h-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -925,7 +1031,7 @@
                           ]
                         },
                         {
-                          "id": "qc-9-geleximco-h-ng-y-n-vs-h-b0-l1",
+                          "id": "qc-10-geleximco-h-ng-y-n-vs-h-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -950,18 +1056,18 @@
           ]
         },
         {
-          "id": "qc-10-sanest-kh-nh-ho-vs-h-n",
+          "id": "qc-11-sanest-kh-nh-ho-vs-h-n",
           "name": "Sanest Khánh Hoà vs Hà Nội Tasco Auto  🕐 13:00 | 06/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_sanest-kh-nh-ho--h--n-i-tasco-auto.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -977,7 +1083,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra13:00|06.04VDQGSane",
+              "text": "Sắp diễn ra13:00|06.04VDQG KKH",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -991,19 +1097,19 @@
           ],
           "sources": [
             {
-              "id": "qc-10-sanest-kh-nh-ho-vs-h-n-src",
+              "id": "qc-11-sanest-kh-nh-ho-vs-h-n-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-10-sanest-kh-nh-ho-vs-h-n-ct",
-                  "name": "Sanest Khánh Hoà vs Hà Nội Tasco Auto  🕐 13:00 | 06/04 · Sắp diễn ra13:00|06.04VDQGSanest Khánh HoàVSHà Nội Tasco AutoKKHU MẤNĐặt cược",
+                  "id": "qc-11-sanest-kh-nh-ho-vs-h-n-ct",
+                  "name": "Sanest Khánh Hoà vs Hà Nội Tasco Auto  🕐 13:00 | 06/04",
                   "streams": [
                     {
-                      "id": "qc-10-sanest-kh-nh-ho-vs-h-n-st0",
+                      "id": "qc-11-sanest-kh-nh-ho-vs-h-n-st0",
                       "name": "🎙 KHU MẤN",
                       "stream_links": [
                         {
-                          "id": "qc-10-sanest-kh-nh-ho-vs-h-n-b0-l0",
+                          "id": "qc-11-sanest-kh-nh-ho-vs-h-n-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -1028,18 +1134,18 @@
           ]
         },
         {
-          "id": "qc-11-perugia-vs-piacenza",
+          "id": "qc-12-perugia-vs-piacenza",
           "name": "perugia vs Piacenza  🕐 15:30 | 06/04",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 1,
-            "background_color": "#ececec",
+            "padding": 0,
+            "background_color": "#0d2038",
             "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
+            "url": "http://10.1.0.122:7979/thumbs/thumb_perugia-piacenza.png",
+            "width": 800,
+            "height": 450
           },
           "labels": [
             {
@@ -1055,7 +1161,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra15:30|06.04SuperLeg",
+              "text": "SuperLega",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -1069,19 +1175,19 @@
           ],
           "sources": [
             {
-              "id": "qc-11-perugia-vs-piacenza-src",
+              "id": "qc-12-perugia-vs-piacenza-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-11-perugia-vs-piacenza-ct",
-                  "name": "perugia vs Piacenza  🕐 15:30 | 06/04 · Sắp diễn ra15:30|06.04SuperLegaperugiaVSPiacenzaNNGƯỜI CHYMĐặt cược",
+                  "id": "qc-12-perugia-vs-piacenza-ct",
+                  "name": "perugia vs Piacenza  🕐 15:30 | 06/04 · SuperLega",
                   "streams": [
                     {
-                      "id": "qc-11-perugia-vs-piacenza-st0",
+                      "id": "qc-12-perugia-vs-piacenza-st0",
                       "name": "🎙 NGƯỜI CHYM",
                       "stream_links": [
                         {
-                          "id": "qc-11-perugia-vs-piacenza-b0-l0",
+                          "id": "qc-12-perugia-vs-piacenza-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -1098,7 +1204,7 @@
                           ]
                         },
                         {
-                          "id": "qc-11-perugia-vs-piacenza-b0-l1",
+                          "id": "qc-12-perugia-vs-piacenza-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -1115,7 +1221,7 @@
                           ]
                         },
                         {
-                          "id": "qc-11-perugia-vs-piacenza-b0-l2",
+                          "id": "qc-12-perugia-vs-piacenza-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -1124,118 +1230,6 @@
                             {
                               "key": "Referer",
                               "value": "https://quechoa9.live/truc-tiep/perugia-vs-piacenza-hps-06-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-12-sporting-cp-vs-arsenal",
-          "name": "Sporting CP vs Arsenal  🕐 19:00 | 07/04",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 KHOAI TÂY",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "Sắp diễn ra19:00|07.04UEFA Cha",
-              "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 19:00 | 07/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-12-sporting-cp-vs-arsenal-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-12-sporting-cp-vs-arsenal-ct",
-                  "name": "Sporting CP vs Arsenal  🕐 19:00 | 07/04 · Sắp diễn ra19:00|07.04UEFA Champions LeagueSporting CPVSArsenalKKHOAI TÂYĐặt cược",
-                  "streams": [
-                    {
-                      "id": "qc-12-sporting-cp-vs-arsenal-st0",
-                      "name": "🎙 KHOAI TÂY",
-                      "stream_links": [
-                        {
-                          "id": "qc-12-sporting-cp-vs-arsenal-b0-l0",
-                          "name": "Link 1",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sporting-cp-vs-arsenal-yoq-07-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-12-sporting-cp-vs-arsenal-b0-l1",
-                          "name": "HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sporting-cp-vs-arsenal-yoq-07-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-12-sporting-cp-vs-arsenal-b0-l2",
-                          "name": "SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_2_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/sporting-cp-vs-arsenal-yoq-07-04-2026"
                             },
                             {
                               "key": "User-Agent",

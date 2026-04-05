@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 16:48 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 16:59 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -23,12 +23,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {
@@ -129,12 +129,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {
@@ -347,12 +347,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {
@@ -459,12 +459,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {
@@ -571,12 +571,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {

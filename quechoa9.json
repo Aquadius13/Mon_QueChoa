@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 16:10 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 16:48 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -18,7 +18,7 @@
       "channels": [
         {
           "id": "qc-1-bergs-z-sinner-j-vs",
-          "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04",
+          "name": "Bergs Z. / Sinner J. 0-0 Machac T. / Ruud C.  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -32,8 +32,8 @@
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -44,15 +44,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra09:00|05.04ATP Mont",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 09:00 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -63,7 +57,7 @@
               "contents": [
                 {
                   "id": "qc-1-bergs-z-sinner-j-vs-ct",
-                  "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04 · Sắp diễn ra09:00|05.04ATP Monte CarloBergs Z. / Sinner J.VSMachac T. / Ruud C.RRƯỢU MẬNĐặt cược",
+                  "name": "Bergs Z. / Sinner J. 0-0 Machac T. / Ruud C.  🔴 · Live09:00|05.04ATP Monte CarloBergs Z. / Sinner J.0:0Machac T. / Ruud C.RRƯỢU MẬNĐặt cược",
                   "streams": [
                     {
                       "id": "qc-1-bergs-z-sinner-j-vs-st0",
@@ -130,7 +124,7 @@
         },
         {
           "id": "qc-2-hoang-anh-gia-lai-vs-phu",
-          "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04",
+          "name": "Hoang Anh Gia Lai 0-0 Phu Dong  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -144,8 +138,8 @@
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -156,15 +150,9 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra10:00|05.04V.League",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 10:00 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
@@ -175,7 +163,7 @@
               "contents": [
                 {
                   "id": "qc-2-hoang-anh-gia-lai-vs-phu-ct",
-                  "name": "Hoang Anh Gia Lai vs Phu Dong  🕐 10:00 | 05/04 · Sắp diễn ra10:00|05.04V.League 1Hoang Anh Gia LaiVSPhu DongKKHOAI TÂYĐặt cược",
+                  "name": "Hoang Anh Gia Lai 0-0 Phu Dong  🔴 · Live10:00|05.04V.League 1Hoang Anh Gia Lai0:0Phu DongKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
                       "id": "qc-2-hoang-anh-gia-lai-vs-phu-st0",
@@ -247,12 +235,12 @@
           "display": "thumbnail-only",
           "enable_detail": false,
           "image": {
-            "padding": 2,
-            "background_color": "#0f3460",
+            "padding": 1,
+            "background_color": "#ececec",
             "display": "contain",
-            "url": "https://quechoa9.live/favicon.ico",
-            "width": 512,
-            "height": 512
+            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-0299c4667e52.webp?v=1775382331",
+            "width": 1600,
+            "height": 1200
           },
           "labels": [
             {
@@ -268,7 +256,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra11:00|05.04V.League",
+              "text": "V.League 1",
               "position": "bottom-right",
               "color": "#00000099",
               "text_color": "#ffffff"
@@ -287,7 +275,7 @@
               "contents": [
                 {
                   "id": "qc-3-song-lam-nghe-an-vs-viet-ct",
-                  "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Song Lam Nghe AnVSViettelVVĂN MINHĐặt cược",
+                  "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04 · V.League 1",
                   "streams": [
                     {
                       "id": "qc-3-song-lam-nghe-an-vs-viet-st0",

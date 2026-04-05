@@ -2,7 +2,7 @@
   "id": "quechoa9-live",
   "name": "QueCho9 — Trực tiếp bóng đá",
   "url": "https://quechoa9.live/",
-  "description": "Cập nhật lúc 05/04/2026 17:03 ICT (ICT)",
+  "description": "Cập nhật lúc 05/04/2026 17:52 ICT (ICT)",
   "disable_ads": true,
   "color": "#0f3460",
   "grid_number": 3,
@@ -17,114 +17,8 @@
       "image": null,
       "channels": [
         {
-          "id": "qc-1-bergs-z-sinner-j-vs",
-          "name": "Bergs Z. / Sinner J. 0-0 Machac T. / Ruud C.  🔴",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://quechoa9.live/opengraph-image1.png",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "● Live",
-              "color": "#E73131",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 RƯỢU MẬN",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "⚽ 0-0",
-              "position": "bottom-right",
-              "color": "#E73131",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-1-bergs-z-sinner-j-vs-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-1-bergs-z-sinner-j-vs-ct",
-                  "name": "Bergs Z. / Sinner J. 0-0 Machac T. / Ruud C.  🔴 · Live09:00|05.04ATP Monte CarloBergs Z. / Sinner J.0:0Machac T. / Ruud C.RRƯỢU MẬNĐặt cược",
-                  "streams": [
-                    {
-                      "id": "qc-1-bergs-z-sinner-j-vs-st0",
-                      "name": "🎙 RƯỢU MẬN",
-                      "stream_links": [
-                        {
-                          "id": "qc-1-bergs-z-sinner-j-vs-b0-l0",
-                          "name": "Link 1",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-bergs-z-sinner-j-vs-b0-l1",
-                          "name": "HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-1-bergs-z-sinner-j-vs-b0-l2",
-                          "name": "SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-2-hoang-anh-gia-lai-vs-phu",
-          "name": "Hoang Anh Gia Lai 0-0 Phu Dong  🔴",
+          "id": "qc-1-hoang-anh-gia-lai-vs-phu",
+          "name": "Hoang Anh Gia Lai 1-0 Phu Dong  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -150,7 +44,7 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "⚽ 0-0",
+              "text": "⚽ 1-0",
               "position": "bottom-right",
               "color": "#E73131",
               "text_color": "#ffffff"
@@ -158,19 +52,19 @@
           ],
           "sources": [
             {
-              "id": "qc-2-hoang-anh-gia-lai-vs-phu-src",
+              "id": "qc-1-hoang-anh-gia-lai-vs-phu-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-2-hoang-anh-gia-lai-vs-phu-ct",
-                  "name": "Hoang Anh Gia Lai 0-0 Phu Dong  🔴 · Live10:00|05.04V.League 1Hoang Anh Gia Lai0:0Phu DongKKHOAI TÂYĐặt cược",
+                  "id": "qc-1-hoang-anh-gia-lai-vs-phu-ct",
+                  "name": "Hoang Anh Gia Lai 1-0 Phu Dong  🔴 · Live10:00|05.04V.League 1Hoang Anh Gia Lai1:0Phu DongKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-2-hoang-anh-gia-lai-vs-phu-st0",
+                      "id": "qc-1-hoang-anh-gia-lai-vs-phu-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-2-hoang-anh-gia-lai-vs-phu-b0-l0",
+                          "id": "qc-1-hoang-anh-gia-lai-vs-phu-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -187,7 +81,7 @@
                           ]
                         },
                         {
-                          "id": "qc-2-hoang-anh-gia-lai-vs-phu-b0-l1",
+                          "id": "qc-1-hoang-anh-gia-lai-vs-phu-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -204,7 +98,7 @@
                           ]
                         },
                         {
-                          "id": "qc-2-hoang-anh-gia-lai-vs-phu-b0-l2",
+                          "id": "qc-1-hoang-anh-gia-lai-vs-phu-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -229,120 +123,8 @@
           ]
         },
         {
-          "id": "qc-3-song-lam-nghe-an-vs-viet",
-          "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04",
-          "type": "single",
-          "display": "thumbnail-only",
-          "enable_detail": false,
-          "image": {
-            "padding": 1,
-            "background_color": "#ececec",
-            "display": "contain",
-            "url": "https://pub-26bab83910ab4b5781549d12d2f0ef6f.r2.dev/quechoa_thumbs/kaytee-0299c4667e52.webp?v=1775382331",
-            "width": 1600,
-            "height": 1200
-          },
-          "labels": [
-            {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
-              "text_color": "#ffffff",
-              "position": "top-left"
-            },
-            {
-              "text": "🎙 VĂN MINH",
-              "position": "top-right",
-              "color": "#00601f",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "V.League 1",
-              "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 11:00 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
-              "text_color": "#ffffff"
-            }
-          ],
-          "sources": [
-            {
-              "id": "qc-3-song-lam-nghe-an-vs-viet-src",
-              "name": "QueCho9 Live",
-              "contents": [
-                {
-                  "id": "qc-3-song-lam-nghe-an-vs-viet-ct",
-                  "name": "Song Lam Nghe An vs Viettel  🕐 11:00 | 05/04 · V.League 1",
-                  "streams": [
-                    {
-                      "id": "qc-3-song-lam-nghe-an-vs-viet-st0",
-                      "name": "🎙 VĂN MINH",
-                      "stream_links": [
-                        {
-                          "id": "qc-3-song-lam-nghe-an-vs-viet-b0-l0",
-                          "name": "Link 1",
-                          "type": "hls",
-                          "default": true,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-3-song-lam-nghe-an-vs-viet-b0-l1",
-                          "name": "HD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_hd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "qc-3-song-lam-nghe-an-vs-viet-b0-l2",
-                          "name": "SD",
-                          "type": "hls",
-                          "default": false,
-                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/nhadai3_sd.m3u8",
-                          "request_headers": [
-                            {
-                              "key": "Referer",
-                              "value": "https://quechoa9.live/truc-tiep/song-lam-nghe-an-vs-viettel-szg-05-04-2026"
-                            },
-                            {
-                              "key": "User-Agent",
-                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam",
-          "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04",
+          "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam",
+          "name": "Hồng Lĩnh Hà Tĩnh 0-0 Nam Dinh  🔴",
           "type": "single",
           "display": "thumbnail-only",
           "enable_detail": false,
@@ -356,8 +138,8 @@
           },
           "labels": [
             {
-              "text": "🕐 Sắp diễn ra",
-              "color": "#d54f1a",
+              "text": "● Live",
+              "color": "#E73131",
               "text_color": "#ffffff",
               "position": "top-left"
             },
@@ -368,33 +150,27 @@
               "text_color": "#ffffff"
             },
             {
-              "text": "Sắp diễn ra11:00|05.04V.League",
+              "text": "⚽ 0-0",
               "position": "bottom-right",
-              "color": "#00000099",
-              "text_color": "#ffffff"
-            },
-            {
-              "text": "🕐 11:00 | 05/04",
-              "position": "bottom-left",
-              "color": "#1a5fa8",
+              "color": "#E73131",
               "text_color": "#ffffff"
             }
           ],
           "sources": [
             {
-              "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-src",
+              "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-ct",
-                  "name": "Hồng Lĩnh Hà Tĩnh vs Nam Dinh  🕐 11:00 | 05/04 · Sắp diễn ra11:00|05.04V.League 1Hồng Lĩnh Hà TĩnhVSNam DinhNNEM CHUAĐặt cược",
+                  "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-ct",
+                  "name": "Hồng Lĩnh Hà Tĩnh 0-0 Nam Dinh  🔴 · Live11:00|05.04V.League 1Hồng Lĩnh Hà Tĩnh0:0Nam DinhNNEM CHUAĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-st0",
+                      "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-st0",
                       "name": "🎙 NEM CHUA",
                       "stream_links": [
                         {
-                          "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-b0-l0",
+                          "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -411,7 +187,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-b0-l1",
+                          "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -428,7 +204,7 @@
                           ]
                         },
                         {
-                          "id": "qc-4-h-ng-l-nh-h-t-nh-vs-nam-b0-l2",
+                          "id": "qc-2-h-ng-l-nh-h-t-nh-vs-nam-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -453,7 +229,119 @@
           ]
         },
         {
-          "id": "qc-5-chung-k-t-vs-chung-k-t",
+          "id": "qc-3-bergs-z-sinner-j-vs",
+          "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04",
+          "type": "single",
+          "display": "thumbnail-only",
+          "enable_detail": false,
+          "image": {
+            "padding": 1,
+            "background_color": "#ececec",
+            "display": "contain",
+            "url": "https://quechoa9.live/opengraph-image1.png",
+            "width": 1600,
+            "height": 1200
+          },
+          "labels": [
+            {
+              "text": "🕐 Sắp diễn ra",
+              "color": "#d54f1a",
+              "text_color": "#ffffff",
+              "position": "top-left"
+            },
+            {
+              "text": "🎙 RƯỢU MẬN",
+              "position": "top-right",
+              "color": "#00601f",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "Sắp diễn ra09:00|05.04ATP Mont",
+              "position": "bottom-right",
+              "color": "#00000099",
+              "text_color": "#ffffff"
+            },
+            {
+              "text": "🕐 09:00 | 05/04",
+              "position": "bottom-left",
+              "color": "#1a5fa8",
+              "text_color": "#ffffff"
+            }
+          ],
+          "sources": [
+            {
+              "id": "qc-3-bergs-z-sinner-j-vs-src",
+              "name": "QueCho9 Live",
+              "contents": [
+                {
+                  "id": "qc-3-bergs-z-sinner-j-vs-ct",
+                  "name": "Bergs Z. / Sinner J. vs Machac T. / Ruud C.  🕐 09:00 | 05/04 · Sắp diễn ra09:00|05.04ATP Monte CarloBergs Z. / Sinner J.VSMachac T. / Ruud C.RRƯỢU MẬNĐặt cược",
+                  "streams": [
+                    {
+                      "id": "qc-3-bergs-z-sinner-j-vs-st0",
+                      "name": "🎙 RƯỢU MẬN",
+                      "stream_links": [
+                        {
+                          "id": "qc-3-bergs-z-sinner-j-vs-b0-l0",
+                          "name": "Link 1",
+                          "type": "hls",
+                          "default": true,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-3-bergs-z-sinner-j-vs-b0-l1",
+                          "name": "HD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_hd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "qc-3-bergs-z-sinner-j-vs-b0-l2",
+                          "name": "SD",
+                          "type": "hls",
+                          "default": false,
+                          "url": "https://ahghndtkyqmm-pull.bpmedialive.com/quechoa/blv_6_sd.m3u8",
+                          "request_headers": [
+                            {
+                              "key": "Referer",
+                              "value": "https://quechoa9.live/truc-tiep/bergs-z-sinner-j-vs-machac-t-ruud-c-mso-05-04-2026"
+                            },
+                            {
+                              "key": "User-Agent",
+                              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "qc-4-chung-k-t-vs-chung-k-t",
           "name": "CHUNG KẾT vs CHUNG KẾT  🕐 11:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -494,19 +382,19 @@
           ],
           "sources": [
             {
-              "id": "qc-5-chung-k-t-vs-chung-k-t-src",
+              "id": "qc-4-chung-k-t-vs-chung-k-t-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-5-chung-k-t-vs-chung-k-t-ct",
+                  "id": "qc-4-chung-k-t-vs-chung-k-t-ct",
                   "name": "CHUNG KẾT vs CHUNG KẾT  🕐 11:30 | 05/04 · Sắp diễn ra11:30|05.04World cup Macao 2026CHUNG KẾTVSCHUNG KẾTPPUMAĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-5-chung-k-t-vs-chung-k-t-st0",
+                      "id": "qc-4-chung-k-t-vs-chung-k-t-st0",
                       "name": "🎙 PUMA",
                       "stream_links": [
                         {
-                          "id": "qc-5-chung-k-t-vs-chung-k-t-b0-l0",
+                          "id": "qc-4-chung-k-t-vs-chung-k-t-b0-l0",
                           "name": "Full HD",
                           "type": "hls",
                           "default": true,
@@ -523,7 +411,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-chung-k-t-vs-chung-k-t-b0-l1",
+                          "id": "qc-4-chung-k-t-vs-chung-k-t-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -540,7 +428,7 @@
                           ]
                         },
                         {
-                          "id": "qc-5-chung-k-t-vs-chung-k-t-b0-l2",
+                          "id": "qc-4-chung-k-t-vs-chung-k-t-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
@@ -565,7 +453,7 @@
           ]
         },
         {
-          "id": "qc-6-west-ham-vs-leeds",
+          "id": "qc-5-west-ham-vs-leeds",
           "name": "West Ham vs Leeds  🕐 15:30 | 05/04",
           "type": "single",
           "display": "thumbnail-only",
@@ -606,19 +494,19 @@
           ],
           "sources": [
             {
-              "id": "qc-6-west-ham-vs-leeds-src",
+              "id": "qc-5-west-ham-vs-leeds-src",
               "name": "QueCho9 Live",
               "contents": [
                 {
-                  "id": "qc-6-west-ham-vs-leeds-ct",
+                  "id": "qc-5-west-ham-vs-leeds-ct",
                   "name": "West Ham vs Leeds  🕐 15:30 | 05/04 · Sắp diễn ra15:30|05.04FA CupWest HamVSLeedsKKHOAI TÂYĐặt cược",
                   "streams": [
                     {
-                      "id": "qc-6-west-ham-vs-leeds-st0",
+                      "id": "qc-5-west-ham-vs-leeds-st0",
                       "name": "🎙 KHOAI TÂY",
                       "stream_links": [
                         {
-                          "id": "qc-6-west-ham-vs-leeds-b0-l0",
+                          "id": "qc-5-west-ham-vs-leeds-b0-l0",
                           "name": "Link 1",
                           "type": "hls",
                           "default": true,
@@ -635,7 +523,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-west-ham-vs-leeds-b0-l1",
+                          "id": "qc-5-west-ham-vs-leeds-b0-l1",
                           "name": "HD",
                           "type": "hls",
                           "default": false,
@@ -652,7 +540,7 @@
                           ]
                         },
                         {
-                          "id": "qc-6-west-ham-vs-leeds-b0-l2",
+                          "id": "qc-5-west-ham-vs-leeds-b0-l2",
                           "name": "SD",
                           "type": "hls",
                           "default": false,
